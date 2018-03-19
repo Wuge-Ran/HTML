@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>全球通</title>
+	<!-- 伪代码：
+		box
+			line
+			head
+			box2
+				c1
+				c2
+				c3
+				c4
+				c5 
+			ul
+				li...
+			ul
+				li...	 -->
+		<style>
+			body{
+				margin: 0px;
+			}
+			h4{
+				margin:0px;
+			}
+			#box{
+				width: 660px;
+				height: 328px;
+				padding: 32px 50px 0px;
+			}
+			#line{
+				width: 660px;
+				height: 2px;
+				background-color: #e7788d;
+			}
+			#head{
+				width: 100%;
+				height: 22px;
+				margin-top: 12px;
+
+			}
+			#earth{
+				float: left;
+			}
+			h4{
+				float: left;
+				margin-left: 10px;
+				line-height: 22px;
+				color: #e7788d;
+			}
+			#box2{
+				width: 660px;
+				height: 146px;
+				border-bottom: 1px dashed #e5e5e5;
+				margin-top: 19px;
+			}
+			#content1,#content2{
+				width: 100px;
+				float: left;
+			}
+			.img{
+				border:1px solid #e5e5e5;
+			}
+			.font{
+				text-align: center;
+				font-size: 13px;
+				margin-top: 10px;
+			}
+			#content2{
+				margin-left: 40px;
+			}
+			#ul1{
+				margin-top: 29px;
+				height: 30px;
+			}
+			li{
+				list-style: none;
+				font-size: 14px;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				float: left;
+			}
+			ul{
+				padding: 0px;
+				margin:0px;
+			}
+			img{
+				display: block;
+			}
+			.li1{
+				background-color: #e7788d;
+				width: 100px;
+				color: #fff;
+				
+			}
+			.li2{
+				width: 98px;
+			}
+			.li3,.li4,.li5,.li6{
+				width: 90px;
+			}
+			.divider{
+				width: 1px;
+				height: 16px;
+				background: #a5a5a5;
+				margin-top: 6px;
+			}
+			.li3{
+				color: red;
+			}
+			.li5{
+				width: 116px;
+			} 
+			.li7{
+				margin-left: 14px;
+			}
+			#ul2{
+				margin-top: 10px;
+				width: 660px;
+				height: 30px;
+			}
+		</style>
+</head>
+<body>
+	<div id="box">
+		<div id="line"></div>
+		<div id="head">
+			<img id="earth" src="img/earth.png" alt="">
+			<h4>全球通业务+</h4>
+		</div>
+		<div id="box2">
+			<div id="content1">
+				<div class="img"><img src="img/miaov.png" alt=""></div>
+				<div class="font">信息管家</div>
+			</div>
+			<div id="content2">
+				<div class="img"><img src="img/music.png" alt=""></div>
+				<div class="font">无线音乐专区</div>
+			</div>
+			<div id="content2">
+				<div class="img"><img src="img/phone.png" alt=""></div>
+				<div class="font">手机证券</div>
+			</div>
+			<div id="content2">
+				<div class="img"><img src="img/plane.png" alt=""></div>
+				<div class="font">飞信</div>
+			</div>
+			<div id="content2">
+				<div class="img"><img src="img/message.png" alt=""></div>
+				<div class="font">短信回执</div>
+			</div>
+		</div>
+		<ul id="ul1">
+			<li class="li1">基本业务</li>
+			<li class="li2">国际漫游</li>
+			<li class="divider"></li>
+			<li class="li3">国际长途</li>
+			<li class="divider"></li>
+			<li class="li4">国内长途</li>
+			<li class="divider"></li>
+			<li class="li5">国内漫游</li>
+			<li class="divider"></li>
+			<li class="li6">本地通话</li>
+			<li class="divider"></li>
+			<li class="li7">更多>></li>
+		</ul>
+		<ul id="ul2">
+			<li class="li1">新业务</li>
+			<li class="li2">国际漫游</li>
+			<li class="divider"></li>
+			<li class="li3">国际长途</li>
+			<li class="divider"></li>
+			<li class="li4">国内长途</li>
+			<li class="divider"></li>
+			<li class="li5">MO手机上网</li>
+			<li class="divider"></li>
+			<li class="li6">本地通话</li>
+			<li class="divider"></li>
+			<li class="li7">更多>></li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+		h3,ul{
+			margin:0px;
+			padding: 0px;
+		}
+		img{
+			display: black;
+		}
+		p{
+			margin:0px;
+		}
+		li{
+			list-style: none;
+		}
+		#box1{
+			width: 410px;
+			height: 705px;
+			background: url(img/border.png) 10px 10px no-repeat;
+			border:1px solid black;
+			padding: 25px 26px; 
+		}
+		#box2{
+			width: 410px;
+			height: 703px;
+		}
+		.content1{
+			width: 390px;
+			height: 266px;
+			padding-top: 20px;
+			padding-left: 20px;
+			border-bottom: 2px solid red;
+		}
+		.head1{
+			width: 376px;
+			height: 20px;
+			color: red;
+			background: url(img/weather.png) no-repeat 0px 3px;
+			overflow: hidden;
+		}
+		.text1{
+			font-size: 14px;
+			margin-left: 25px;
+			float: left;
+		}
+		.line1{
+			width: 215px; 
+			height: 2px;
+			background-color: red;
+			margin-top: 9px;
+			float: left;
+		}
+		.more{
+			margin-left: 9px;
+			float: left;
+		}
+		.item1{
+			margin-top: 18px;
+			margin-left: 11px;
+			margin-bottom: 15px;
+		}
+		.img1{
+			width: 120px;
+			height: 170px;
+			border:1px solid #b5b5b5;
+			padding:4px;
+			float: left;
+		}
+		.item2_box{
+			width: 232px;
+			height: 100%;
+			font-size: 12px;
+			line-height: 26px;
+			margin-left: 12px;
+			float: left;
+		}
+		.item2_box span{
+			color: red;
+		}
+		.item2_box div{
+			width: 220px;
+			height: 1px;
+			background: url(img/border2.png);
+		}
+		.item2_box ul{
+			padding-top: 18px; 
+		}
+		.item2_box li{
+			margin-left: 16px; 
+			background: url(img/point.png) no-repeat 0px 10px;
+			text-indent: 1em;
+			font-weight: bold;
+		}
+		.content2{
+			width: 390px;
+			height: 202px;
+			margin-top: 1px;
+			padding-top: 20px;
+			padding-left: 20px;
+			border-top: 2px solid red;
+			border-bottom: 2px solid red;
+		}
+		.content2 .head1{
+			background: url(img/pill.png) no-repeat 0px 3px;
+		}
+		.cont2_box{
+			width: 390px;
+			height: 135px;
+			padding-top: 28px;
+		}
+		.content2 ul{
+			float: left;
+		}
+		.content2 li{
+			font-size: 12px;
+			background: url(img/point.png) no-repeat 0px 10px;
+			line-height: 26px;
+		}
+		.list2{
+			margin-left: 27px;
+		}

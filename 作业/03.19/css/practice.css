@@ -1,0 +1,14 @@
+		div{
+			width: 500px;
+			height: 40px;
+			border: 1px solid #444444;
+			font:14px/38px "宋体";
+			word-spacing: 20px;
+			text-align: center;
+		}
+		a{
+			text-decoration: none;
+		}
+		a:visited{
+			color: black;
+		}

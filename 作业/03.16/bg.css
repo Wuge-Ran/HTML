@@ -1,0 +1,38 @@
+		#box1{
+			width: 300px;
+			height: 417px;
+			border-top: 2px solid #206f96;
+		}
+		#head{
+			width: 298px;
+			height: 29px;
+			border: 1px solid #cfcfcf;
+			border-top: none;
+			background: url(img/bg.png) repeat-x;
+		}
+		#box2{
+			width: 298px;
+			height: 386px;
+			border: 1px solid #cfcfcf;
+			border-top: none;
+		}
+		#content1{
+			width: 298px;
+			height: 57px;
+			background: url(img/email.png) 16px 25px no-repeat;
+		}
+		#content2{
+			width: 298px;
+			height: 126px;
+			background: #f7f7f7 url(img/mouse.png) 9px 51px no-repeat;
+		}
+		#content3{
+			width: 298px;
+			height: 76px;
+			background: url(img/face.png) 15px 25px no-repeat;
+		}
+		#content4{
+			width: 298px;
+			height: 127px;
+			background: #f7f7f7 url(img/star.png) 12px 49px no-repeat;
+		}

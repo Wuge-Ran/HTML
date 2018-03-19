@@ -1,0 +1,39 @@
+		#box1{
+			width: 800px;
+			height: 500px;
+			background-color: #ff80ab;
+		}
+		#box2{
+			width: 740px;
+			height: 442px;
+			padding:20px 20px;
+		}
+		#head{
+			width: 760px;
+			height: 117px;
+			background: #e15671 url(img/miaov2.png) 290px 28px no-repeat;
+		}
+		#box3{
+			width: 756px;
+			height: 343px;
+			background-color: #ffffff;
+			border: 2px solid #e15671;
+			border-top: none;
+		}
+		#content1{
+			width: 756px;
+			height: 113px;
+			border-bottom: 2px solid #e15671;
+			background: url(img/email.png) 38px 41px no-repeat;
+		}
+		#content2{
+			width: 756px;
+			height: 113px;
+			border-bottom: 2px solid #e15671;
+			background: url(img/mouse.png) 38px 39px no-repeat;
+		}
+		#content3{
+			width: 756px;
+			height: 113px;
+			background: url(img/star.png) 38px 38px no-repeat;
+		}

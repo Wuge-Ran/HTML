@@ -1,0 +1,34 @@
+       #wrap{
+			width: 300px;
+			border-top: 2px solid #206f96;
+		}
+		#box{
+			width: 298px;
+			height: 416px;
+			border: 1px solid #cfcfcf;
+			border-top:none; 
+		}
+		#content1{
+			width: 298px;
+			height: 29px;
+			border-bottom: 1px solid #cfcfcf;
+		}
+		#content2{
+			width: 298px;
+			height: 56px;
+			border-bottom: 1px solid #ececec;
+		}
+		#content3{
+			width: 298px;
+			height: 125px;
+			border-bottom: 1px solid #ececec;
+		}
+		#content4{
+			width: 298px;
+			height: 75px;
+			border-bottom: 1px solid #ececec;
+		}
+		#content5{
+			width: 298px;
+			height: 127px;
+		}
