@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		#box1{
+			width: 360px;
+			height: 458px;
+			padding-top: 42px;
+			padding-left: 50px;
+			background: #e7788d url(img/logo.png) 254px 350px no-repeat;
+			margin: auto;
+		}
+		#box1 div{
+			margin-bottom: 20px;
+		}
+		#user,#password{
+			width: 218px;
+			height: 38px;
+			background: #313131;
+			border: 1px solid black;
+			margin-left: 18px;
+			padding-left: 10px;
+			font-size: 20px;
+			color:#fff;
+		}
+		label{
+			width: 58px;
+			height: 38px;
+			text-align: right;
+			font: 14px/40px "宋体";
+			display: block;
+			float: left;
+
+		}
+		#box1 #pass1{
+			margin-bottom: 0px;
+		}
+		#pass{
+			width: 213px;
+			height: 37px;
+			margin-left: 76px;
+			font: 12px/37px "宋体";
+			color: #bc6173;
+			padding-left: 17px;
+			background: #3a1e24;
+		}
+		#message{
+			width: 218px;
+			height: 65px;
+			background: #313131;
+			border: 1px solid black;
+			margin-left: 18px;
+			padding-left: 10px;
+			padding-top: 13px;
+			font: 14px "宋体";
+			color:#fff;
+		}
+		#man{
+			margin-left: 20px;
+			margin-top: 10px;
+			margin-right: 3px; 
+		}
+		#woman{
+			margin-left: 30px;
+		}
+		#sex input{
+			width: 20px;
+			height: 20px;
+		}
+		#box1 #sex{
+			margin-bottom: 40px;
+		}
+		#sub{
+			width: 170px;
+			height: 34px;
+			color: #fff;
+			border: 2px solid #fff;
+			margin-left: 66px; 
+		}
+		#sub input{
+			width: 170px;
+			height: 34px;
+			background-color: transparent;
+			font:bold 18px/34px "宋体";
+			color: #fff;
+			text-align: center;
+			border:0;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">
+		<form action="">
+			<div>
+				<label for="user">用户名:</label>
+				<input type="text" id="user">
+			</div>
+			<div id="pass1">
+				<label for="password">密码:</label>
+				<input type="password" id="password" value="123456">
+			</div>
+			<div id="pass">密码要8-12位数字或字母组合</div>
+			<div>
+				<label for="message">留言:</label>
+				<textarea name="message" id="message">人生在于折腾</textarea>
+			</div>
+			<div id="sex">
+				<label for="sex">性别:</label>
+				<input type="radio" id="man" name="sex" checked="checked">
+				<span>男</span>
+				<input type="radio" id="woman" name="sex">
+				<span>女</span>
+			</div>
+			<div id="sub">
+				<input type="submit" value="提  交">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

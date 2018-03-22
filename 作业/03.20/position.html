@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- box1
+		 box2
+			cont1
+			cont2
+			cont3
+		 box3
+		 	cont1
+		 	cont2
+		 	cont3 
+		-->
+	<style>
+		#box1{
+			width: 465px;
+			height: 232px;
+			padding: 105px 106px;
+			background: url(img/background.png);
+		}
+		#box2{
+			width: 140px;
+			height: 190px;
+			padding: 20px;
+			background: #fff;
+		}
+		#cont1{
+			width: 140px;
+			height: 116px;
+			background: url(img/logo2.png) #5c3b81 21px 21px no-repeat;
+			position: relative;
+		}
+		#plus{
+			position: absolute;
+			left: 127px;
+			top: 5px;
+		}
+		#cont2{
+			width: 140px;
+			height: 24px;
+			color: #fff;
+			background: #5c3b81;
+			opacity: 0.7;
+			text-indent: 8px;
+			position: relative;
+		}
+		#h{
+			position: absolute;
+			left: 120px;
+			top: 4px;
+		}
+		#cont3{
+			height: 36px;
+			font:14px/36px "楷体";
+
+		}
+		#cont4{
+			width:140px;
+			height: 14px;
+			font-size: 12px;
+		}
+		#itm1{
+			width: 62px;
+			height: 14px;
+			float: left;
+		}
+		#itm2{
+			margin-left: 37px;
+			width: 40px;
+			height: 14px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">
+		<div id="box2">
+			<div id="cont1">
+				<img id="plus" src="img/加号.png" alt="">
+			</div>
+			<div id="cont2">妙味课堂
+				<img id="h" src="img/h.png" alt="">
+			</div>
+			<div id="cont3">妙味云课堂在线</div>
+			<div id="cont4">
+				<div id="itm1">
+				<img id="play" src="img/play.png" alt="">
+				<span>627,400</span>
+				</div>
+				<div id="itm2">
+				<img id="chat" src="img/chat.png" alt="">
+				<span>627</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

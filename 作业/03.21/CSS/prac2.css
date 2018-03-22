@@ -1,0 +1,24 @@
+#box1{
+	width: 750px;
+	height: 370px;
+	background: #f06997 url(../img/miaov.png) 311px 42px no-repeat;
+	padding-left: 50px;
+	padding-top: 130px;
+}
+#box2{
+	width: 700px;
+	height: 320px;
+	background: #fff url(../img/computer.png) 186px 90px no-repeat;
+}
+#cont1{
+	font:20px/91px "微软雅黑";
+	color: #e7788d;
+	padding-left: 196px;
+	margin-bottom: 136px; 
+}
+#cont2{
+	padding-left: 215px;
+	padding-right: 214px;
+	text-align: center;
+	font: 16px/29px "宋体";
+}

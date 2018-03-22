@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+	<style>
+		table,th,td{
+			border: 1px solid #99b0da;
+			border-collapse: collapse;
+			padding: 0;
+		}
+		table{
+			width: 638px;
+			height: 88px;
+		}
+		thead{
+			font: 14px/30px "微软雅黑";
+			background: #dbe3fa;
+		}
+		#row1{
+			font: 12px/28px "宋体";
+			text-align: center;
+		}
+		img{
+			position: relative;
+			top: 5px;
+		}
+		.bg{
+			background-color: #f4f7fc;
+		}
+		#blank{
+			height: 4px;
+		}
+	</style>
+</head>
+<body>
+	<table >
+		<thead>
+			<tr>
+				<th colspan="2">日期</th>
+				<th colspan="2">天气现象</th>
+				<th>气温</th>
+				<th>风向</th>
+				<th>风力</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr id="row1">
+				<td class="bg" rowspan="2">22日星期五</td>
+				<td class="bg">白天</td>
+				<td><img src="img/sun.png" alt=""></td>
+				<td>晴天多云</td>
+				<td>高温7℃</td>
+				<td>无持续风向</td>
+				<td>微风</td>
+			</tr>
+			<tr id="row1">
+				<td class="bg">夜晚</td>
+				<td id="img"><img src="img/moon.png" alt=""></td>
+				<td>晴天多云</td>
+				<td>高温7℃</td>
+				<td>无持续风向</td>
+				<td>微风</td>
+			</tr>
+			<tr id="blank"></tr>
+			<tr id="row1">
+				<td class="bg" rowspan="2">23日星期六</td>
+				<td class="bg">夜晚</td>
+				<td id="img"><img src="img/sun.png" alt=""></td>
+				<td>晴天多云</td>
+				<td>高温7℃</td>
+				<td>无持续风向</td>
+				<td>微风</td>
+			</tr>
+			<tr id="row1">
+				<td class="bg">夜晚</td>
+				<td id="img"><img src="img/多云.png" alt=""></td>
+				<td>晴天多云</td>
+				<td>高温7℃</td>
+				<td>无持续风向</td>
+				<td>微风</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
