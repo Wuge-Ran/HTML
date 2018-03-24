@@ -1,0 +1,104 @@
+h3,h4{
+	margin: 0;
+}
+ul{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	vertical-align: top;
+}
+a{
+	text-decoration: none;
+}
+a:visited{
+	color: black;
+}
+#box{
+	width: 183px;
+	height: 363px;
+	padding-left: 14px;
+	border: 1px solid #e8e8e8;
+}
+#head{
+	width: 183px;
+	height: 43px;
+	font:bold 16px/42px "宋体";
+	background: url(../img/QR.png) 36px 16px no-repeat;
+}
+.content1{
+	width: 169px;
+	height: 150px;
+	margin-bottom: 13px;
+}
+.content1 .itm1{
+	text-align: center;
+	background-color: #f5f5f5;
+}
+.itm1 .head2{
+	display: block;
+	width: 169px;
+	height: 23px;
+	font:bold 12px/34px "宋体";
+}
+.itm1 .text{
+	display: block;
+	width: 169px;
+	height: 27px;
+	color: #9c9c9c;
+	font: 12px/26px "宋体";
+}
+.content2{
+	height: 92px;
+}
+.content2 .itm2 .text{
+	display: block;
+	height: 22px;
+	font:12px/32px "宋体";
+	text-indent: 10px;
+}
+.content2 .itm2,.content2 .itm3{
+	float: left;
+}
+.content2 .itm2{
+	margin-right: 9px;
+}
+.itm3 .text{
+	display: block;
+	height: 22px;
+	font:12px/32px "宋体";
+	text-indent: 4px;
+}
+.content3{
+	height: 12px;
+	font: 12px/12px "宋体";
+	margin-top: 13px;
+}
+.content3 a{
+	display: inline-block;
+}
+.content3 .itm1{
+	width: 41px;
+	border-right: 1px solid #e1e1e1;
+}
+.content3 .itm2{
+	width: 59px;
+	border-right: 1px solid #e1e1e1;
+	text-align: center;
+}
+.content3 .itm3{
+	width: 59px;
+	text-align: center;
+}
+.content4{
+	width: 183px;
+	height: 26px;
+	font: 12px/40px "宋体";
+}
+.content4 .sym{
+	color: #e6e6e6;
+}
+.content4 .text{
+	color: #ff4400;
+}
