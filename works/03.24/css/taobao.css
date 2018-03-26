@@ -24,7 +24,7 @@ a:visited{
 #head{
 	width: 183px;
 	height: 43px;
-	font:bold 16px/42px "宋体";
+	font:bold 12px/42px "宋体";
 	background: url(../img/QR.png) 36px 16px no-repeat;
 }
 .content1{
@@ -101,4 +101,7 @@ a:visited{
 }
 .content4 .text{
 	color: #ff4400;
+}
+.content4 a{
+	display: inline-block;
 }

@@ -1,4 +1,4 @@
-	body,h4{
+	body,h4,h3{
 		margin: 0;
 	}
 	ul{
@@ -9,22 +9,30 @@
 	img{
 		vertical-align: top;
 	}
+	a{
+		text-decoration:none;
+	}
 	#box{
 		width: 260px;
 		height: 707px;
 		background: #f7f7f7;
 		padding: 0 14px;
 		margin: auto;
+		font: 12px "宋体;
+	}
+	h3{
+		display: inline-block;
 	}
 	#head{
 		width: 260px;
 		height: 38px;
 	}
 	#head div{
+		vertical-align: top;
 		width: 160px;
 		height: 38px;
 		display: inline-block;
-		font:14px/26px "宋体";
+		font:12px/26px "宋体";
 		text-indent: 8px;
 	}
 	#content{
@@ -51,14 +59,9 @@
 		line-height: 12px;
 	}
 	#li_itm a{
-		width: 32px;
-		height: 12px;
 		padding-left: 10px;
 		border-left: 1px solid #eaeaea;
-		display: inline-block;
-		text-decoration: none;
 		vertical-align: top;
-		white-space: nowrap;
 	}
 	#li_itm .b{
 		width: 30px;
@@ -75,6 +78,9 @@
 	}
 	.img{
 		margin-top: 12px;
+	}
+	.img img{
+		margin-right: 4px;
 	}
 	#foot{
 		width: 147px;
