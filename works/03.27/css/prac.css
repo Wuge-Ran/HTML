@@ -1,0 +1,93 @@
+body,h3,h4{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	font: 16px "宋体";
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+#box{
+	width: 680px;
+	height: 381px;
+	margin: 50px auto;
+	background: #ff80ab url(../img/logo.png) 308px 27px no-repeat;
+	padding: 99px 60px 20px 60px;
+}
+#content{
+	height: 376px;
+	padding-left: 30px;
+	padding-top: 5px;
+	background-color: #fff;
+}
+#head{
+	height: 70px;
+}
+#head div{
+	vertical-align: top;
+	width: 23px;
+	height: 70px;
+	display: inline-block;
+	padding-top: -1px;
+	margin-right: 4px;
+	text-indent: -9999px;
+	background: url(../img/bike.png) no-repeat 0px 25px;
+}
+#head h3{
+	vertical-align: top;
+	display: inline-block;
+	font: 20px/70px "微软雅黑";
+}
+#list{
+	height: 135px;
+	line-height: 28px;
+	border-bottom: 1px dashed #dcdcdc;
+}
+#list .itm1{
+	width: 323px;
+	display: inline-block;
+	margin-right: -8px;
+}
+#list .itm1 img{
+	border: 1px solid #fff2f2;
+}
+.itm1_text{
+	display: inline-block;
+	width: 185px;
+	height: 111px;
+}
+.itm1_text a{
+	display: block;
+	font-weight: bold;
+	color: #ff4e4e;
+}
+#nav{
+	display: inline-block;
+	width: 323px;
+	height: 110px;
+	padding-top: 30px;
+	margin-right: -8px;
+	font:14px/30px "宋体";
+}
+.mini_list .itm1 h4{
+	display: inline-block;
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	background-color: #a775f1;
+	color: #fff;
+	margin-right: 16px;
+}
+.mini_list .itm1{
+	margin-bottom: 10px;
+}
+#nav a{
+	display: inline-block;
+	margin-right: 8px;
+}

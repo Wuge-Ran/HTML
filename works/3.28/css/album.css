@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+	display: block;
+}
+img{
+	vertical-align: top;
+}
+.clearfix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+#box{
+	width: 730px;
+	height: 430px;
+	padding-left: 13px;
+	margin: 40px auto;
+}
+#head{
+	width: 730px;
+	height: 67px;
+	background: url(../img/head.png) 0 19px no-repeat;
+	text-indent: -9999px;
+}
+#tlist .itm{
+	float: left;
+	font: 12px/23px "宋体";
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+#tlist img{
+	margin-bottom: 5px;
+}
+#tlist span{
+	color: #0f820c;
+}
+.descri{
+	color: #8b8b8b;
+}
+.play{
+	background: url(../img/play.png) no-repeat 0 7px;
+	color: #8b8b8b;
+	text-indent: 14px;
+}
+#tlist .play span{
+	margin-left: 54px;
+	color: #8b8b8b;
+}
+#tlist .br{
+	margin-right: 0;
+}

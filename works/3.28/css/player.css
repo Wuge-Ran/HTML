@@ -1,0 +1,100 @@
+body,h3{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+	display: block;
+}
+img{
+	vertical-align: top;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+#box{
+	width: 384px;
+	height: 483px;
+	padding-left: 25px;
+	padding-top: 19px;
+	margin:50px auto;
+	border: 1px solid red;
+}
+#head{
+	height: 30px;
+	margin-bottom: 11px;
+}
+#head h3{
+	width: 120px;
+	height: 30px;
+	float: left;
+	background: url(../img/head2.png);
+	text-indent: -9999px;
+	border-left: 5px solid #8bcc00;
+}
+#head .icon{
+	float: left;
+	text-indent: -9999px;
+	margin-left: 10px;
+}
+#head .list{
+	float: right;
+	font:12px/12px "宋体";
+	margin-top: 9px;
+}
+#head li{
+	float: left;
+	padding: 0 8px 0 8px;
+	border-right: 1px solid #d8d8d8;
+}
+#head a{
+	color: #0f820c;
+}
+#head a:hover{
+	font-weight: bold;
+	color: #000;
+}
+#tlist{
+	font: 14px/36px "宋体";
+}
+.name{
+	color: #0f820c;
+}
+.songname{
+	float: left;
+}
+.time{
+	float: right;
+	color: #8b8b8b;
+	margin-right: 15px;
+}
+.itm{
+	overflow: hidden;
+}
+.itm .img{
+	display: none;
+	float: right;
+}
+.itm:hover .time{
+	display: none;
+}
+.itm:hover .img{
+	display: inline-block;
+	float: right;
+	margin-top: 12px;
+	margin-right: 16px;
+}
+.itm:hover{
+	height: 35px;
+	border-bottom: 1px dotted #e2e2e2;
+}
+.itm:hover .name{
+	color: #05b600;
+}
