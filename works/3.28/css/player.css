@@ -86,7 +86,7 @@ img{
 	display: none;
 }
 .itm:hover .img{
-	display: inline-block;
+	display:block;
 	float: right;
 	margin-top: 12px;
 	margin-right: 16px;

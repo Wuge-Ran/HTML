@@ -1,0 +1,73 @@
+body{
+	margin: 0;
+	font: 12px arial,"宋体";
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+#box{
+	width: 941px;
+	height: 592px;
+	border-top: 1px solid #05a790;
+	margin: 10px auto;
+}
+#tlist{
+	width: 939px;
+	height: 592px;
+	border-right:1px solid #dfdedd; 
+	border-left:1px solid #dfdedd; 
+}
+#tlist .itm{
+	width: 223px;
+	height: 284px;
+	padding-top: 11px;
+	padding-left:11px;
+	line-height: 19px;
+	float: left;
+	border-right: 1px solid #dfdedd;
+	border-bottom: 1px solid #dfdedd;
+	background-color: #f4f3f2;
+	position: relative;
+}
+#tlist .itm .text{
+	width: 187px;
+	margin-left: 5px;
+	word-break: break-all;
+}
+#tlist .itm img{
+	margin-bottom: 6px;
+}
+#tlist .itm .sale{
+	color: #cc0000;
+	font-size: 16px;
+	margin-left:-1px;
+}
+#tlist .itm .price{
+	color: #878787;
+	text-decoration: line-through;
+}
+#tlist .itm .buy{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+#tlist .buy img{
+	margin-bottom: 0;
+}
+#tlist .no-b{
+	border-right: none;
+}

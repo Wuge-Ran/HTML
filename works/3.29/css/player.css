@@ -1,0 +1,95 @@
+body,h3{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body{
+	font: 12px arial,"宋体";
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+#box{
+	width: 348px;
+	height: 483px;
+	padding-top: 25px;
+	padding-left: 19px;
+	margin: 20px auto;
+}
+#head{
+	height: 30px;
+	margin-bottom: 11px;
+}
+#head h3{
+	width: 121px;
+	height: 30px;
+	float: left;
+	background: url(../img/head2.png) no-repeat;
+	border-left: 5px solid #8bcc00;
+	text-indent: -9999px;
+}
+#head a{
+	float: left;
+}
+#head .play{
+	margin-left: 8px;
+	margin-right: 10px;
+}
+#head nav{
+	width: 113px;
+	height: 12px;
+	float: right;
+	margin-right: 16px;
+	margin-top: 9px;
+}
+#head nav a{
+	line-height: 12px;
+	border-right: 1px solid #d8d8d8;
+	padding: 0 7px 0 7px;
+}
+#head nav .no-b{
+	border-right: none;
+	padding-right: 0;
+}
+#tbody .song{
+	color: #0f820c;
+}
+#tbody li{
+	width: 332px;
+	height: 36px;
+	font: 14px/36px "宋体";
+}
+#tbody .float{
+	float: left;
+}
+li span{
+	padding: 0 6px 0 6px;
+}
+#tbody .time{
+	float: right;
+	color: #8b8b8b;
+}
+#tbody .hover{
+	height: 35px;
+	line-height: 36px;
+	border-bottom: 1px dashed #e1e1e1;
+}
+#tbody .hover .song{
+	color: #05b600;
+}
+#tbody .hover img{
+	float: right;
+	margin-top: 13px;
+}

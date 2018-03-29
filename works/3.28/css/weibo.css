@@ -1,0 +1,77 @@
+body,h3{
+	margin: 0;
+	font:12px "宋体";
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+#box{
+	width: 680px;
+	height: 507px;
+	margin:10px auto;
+}
+#head h3,#head img{
+	float: left;
+	line-height: 36px;
+}
+#head{
+	margin-bottom: 3px;
+}
+#head div{
+	float: right;
+}
+#head .item{
+	margin-left: 10px;
+}
+#tlist{
+	width: 780px;
+	height: 471px;
+}
+#tlist li{
+	width: 322px;
+	height: 133px;
+	border: 1px solid #e6e6e6;
+	float: left;
+	padding-left: 10px;
+	padding-top: 7px;
+	background-color: #f3f3f3;
+	margin: 0 10px 10px 0;
+}
+#tlist .face{
+	float: left;
+	margin-bottom: 12px;
+}
+#tlist .itm{
+	float: left;
+	width: 70px;
+	height: 65px;
+	margin-left: 10px;
+	line-height: 20px;
+}
+#tlist .star{
+	position: relative;
+	top:3px;
+}
+#tlist .name{
+	color: #0a8cd2;
+}
+#tlist .intr{
+	color: #808080;
+}
+#tlist .follow{
+	margin-left: 13px;
+}

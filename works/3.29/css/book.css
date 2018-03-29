@@ -1,0 +1,66 @@
+body,h4,h3{
+	margin: 0;
+	font: 12px "宋体";
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+#box{
+	width: 728px;
+	height: 635px;
+	padding-left: 23px;
+	margin: 10px auto;
+	background-color: #fffff9;
+	border: 1px solid #8d8d8d;
+}
+#head{
+	width: 696px;
+	height: 37px;
+	margin-top: 5px;
+	border-bottom: 1px solid #dddddd;
+	margin-bottom: 23px;
+}
+#head h3{
+	font: 16px/37px "宋体";
+	float: left;
+}
+#head .more{
+	font:bold 12px/37px "宋体";
+	float: right;
+	color: #825d5b;
+	margin-right: 1px;
+}
+#tlist li{
+	width: 110px;
+	height: 277px;
+	margin-right: 36px;
+	float: left;
+}
+#tlist .name{
+	color: #825d5b;
+	font: 14px/26px "宋体";
+}
+#tlist .author{
+	line-height: 24px;
+}
+#tlist .price{
+	color: #825d5b;
+	line-height: 24px;
+}
+#tlist .no-m{
+	margin-right: 0;
+}

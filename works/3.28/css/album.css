@@ -47,13 +47,17 @@ img{
 	color: #8b8b8b;
 }
 .play{
-	background: url(../img/play.png) no-repeat 0 7px;
+	background: url(../img/play.png) no-repeat 0 6px;
 	color: #8b8b8b;
 	text-indent: 14px;
 }
 #tlist .play span{
-	margin-left: 54px;
 	color: #8b8b8b;
+	float: right;
+}
+#tlist .play .number{
+	float: left;
+	margin-left: 2px; 
 }
 #tlist .br{
 	margin-right: 0;
