@@ -1,0 +1,136 @@
+/*css reset*/
+body,h3{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+/*main*/
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+body{
+	font: 14px arial,"宋体";
+}
+#box{
+	width: 333px;
+	height: 483px;
+	padding-top: 25px;
+	margin:10px auto;
+}
+#head{
+	height: 30px;
+	margin-bottom: 12px;
+}
+#head h3{
+	background: url(../img/head2.png) no-repeat;
+	text-indent: -9999px;
+	width: 120px;
+	height: 30px;
+	border-left: 5px solid #8bcc00;
+	float:left;
+}
+.head_icon{
+	float: left;
+	margin-left: 9px;
+}
+.head_icon .plus{
+	margin-right: 0;
+}
+.head_icon img{
+	margin-right: 10px;
+}
+#head nav{
+	float: right; 
+	margin-top: 9px;
+}
+#head a{
+	float: left;
+	font-size: 12px;
+	height: 12px;
+	color: #0f820c;
+	padding-left: 9px;
+	padding-right: 7px;
+	border-right: 1px solid #d8d8d8;
+}
+#head .no-p{
+	padding-right:0;
+	border-right: none;
+}
+#head a:hover{
+	font-weight: bold;
+	color: #333333;
+}
+.itm{
+	margin-bottom: 1px;
+	border-bottom: 1px solid #fff;
+}
+#tlist .itm_left{
+	height: 34px;
+	line-height: 34px;
+	float: left;
+}
+.itm_left .song{
+	color: #0f820c;
+}
+.itm_left span{
+	color: #8b8b8b;
+}
+.itm_left .singer{
+	color: #515151;
+}
+#tlist .itm_right{
+	height: 34px;
+	line-height: 34px;
+	font-size: 12px;
+	float: right;
+	color: #8b8b8b;
+}
+.itm:hover{
+	border-bottom: 1px dotted #e1e1e1;
+}
+.itm:hover .song{
+	color: #05b600;
+}
+.itm_icon{
+	float: right;
+}
+.itm_icon a{
+	display: none;
+	float: left;
+	width: 19px;
+	height: 12px;
+	margin-top: 11px;
+}
+.itm:hover .itm_right{
+	display: none;
+}
+.itm:hover .itm_icon a{
+	display: block;
+}
+.itm_icon .play{
+	background: url(../img/icon.png) no-repeat;
+}
+.itm_icon .plus{
+	background: url(../img/icon.png) no-repeat -19px 0;
+}
+.itm_icon .like{
+	background: url(../img/icon.png) no-repeat -38px 0;
+}
+.itm_icon .star{
+	background: url(../img/icon.png) no-repeat -57px 0;
+}
+.itm_icon .share{
+	background: url(../img/icon.png) no-repeat -76px 0;
+}

@@ -1,5 +1,6 @@
 body{
 	margin: 0;
+	font: 14px arial,"宋体;
 }
 ul{
 	margin: 0;
@@ -24,7 +25,88 @@ img{
 	background: url(../img/body_bg.png) repeat-x;
 }
 #top{
-	width: 960px;
 	height: 30px;
-	padding:0 320px;
+	padding:0 300px;
+}
+.top_list{
+	float: left;
+}
+.top_list li{
+	line-height: 30px;
+	font-size: 12px;
+	float: left;
+	padding: 0 18px;
+	background: url(../img/top_ico.png) no-repeat right 16px;
+}
+.top_list a{
+	color: #c0c0c0;
+}
+.top_list a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+.top_list .no-bg{
+	background: none;
+	padding-right: 0;
+}
+.top_help{
+	width: 324px;
+	height: 30px;
+	font-size: 12px;
+	float: right;
+}
+.top_help .phone{
+	line-height: 30px;
+	padding-left: 30px;
+	margin-right: 38px;
+	font-weight: bold;
+	background: url(../img/top_ico.png) no-repeat 0 -14px;
+	color: #fff;
+	float: left;
+}
+.top_help .help{
+	line-height: 30px;
+	float: left;
+	font-weight: bold;
+	padding-left: 40px;
+	color: #fff;
+	background: url(../img/top_ico.png) no-repeat 0 -45px;
+	margin-right: 15px;
+}
+.top_help img{
+	float: left;
+	margin-top: 9px;
+	margin-left: 10px;
+}
+#head{
+	height: 98px;
+	padding: 0 320px;
+	background: url(../img/header_bg.png) no-repeat center center;
+}
+.head_itm1{
+	height: 98px;
+	padding-left: 84px;
+	float: left;
+	background: url(../img/shopping_bg.png) no-repeat;
+}
+.head_itm1 .text{
+	font-size: 18px;
+	color: #fff;
+	margin-top: 26px;
+}
+.head_itm1 a{
+	display: block;
+	width: 114px;
+	height: 23px;
+	margin-left: 20px;
+	margin-top: 12px;
+	font: bold 16px/23px arial;
+	color: #ffc200;
+	text-align: center;
+	background: url(../img/shopping_bg.png) 0 -100px no-repeat;
+}
+#head .logo{
+	display: block;
+	margin-left: 118px;
+	float: left;
 }

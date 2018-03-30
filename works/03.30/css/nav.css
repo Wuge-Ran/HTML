@@ -1,0 +1,76 @@
+/*css reset*/
+body,h4{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+/*main*/
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+body{
+	font:12px arial,"宋体";
+}
+#box{
+	width: 988px;
+	height: 109px;
+	padding-top: 4px;
+	padding-left: 10px;
+	margin:10px auto;
+	background-color: #f3f3f3;
+}
+.list1{
+	padding-top: 6px;
+	padding-bottom: 8px;
+	border-bottom: 1px solid #e2e2e2;
+}
+h4{
+	float: left;
+	font-family:"黑体";
+	margin-right: 30px;
+	line-height: 18px;
+}
+.list1 a{
+	float: left;
+	line-height: 18px;
+	padding: 0 5px;
+	color: #444444;
+	margin-right: 20px;
+}
+.list1 a:hover{
+	background-color: #0066cc;
+	color: #fff;
+}
+.list1 a:hover span{
+	color: #fff;
+}
+.list1 span{
+	color: #878787;
+}
+.foot{
+	padding-top: 6px;
+}
+.foot a{
+	float: left;
+	color: #fff;
+	background: url(../img/arrow_bg.png) repeat-x;
+	line-height: 22px;
+	padding-left: 12px;
+	padding-right: 5px;
+}
+.foot img{
+	float: left;
+	margin-right: 10px;
+}

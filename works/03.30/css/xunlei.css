@@ -1,0 +1,60 @@
+/*css reset*/
+body,h4{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+/*main*/
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+body{
+	font: 14px "宋体";
+}
+#box{
+	width: 970px;
+	height: 421px;
+	border: 1px solid #dddfdc;
+	border-top: none;
+	margin: 20px auto;
+}
+.itm{
+	float: left;
+	height: 417px;
+	border-top: 4px solid #abe27d;
+	border-right: 1px solid #dddfdc;
+	padding-right: 11px;
+	padding-left: 10px;
+}
+.itm h4{
+	text-align: center;
+	font-size: 16px;
+	color: #85a250;
+	line-height: 41px;
+}
+.itm_hot{
+	padding-bottom: 12px;
+	border-bottom: 1px dashed #dbdbdb;
+}
+.descri{
+	line-height: 23px;
+}
+.descri span{
+	color: #b6b6b6;
+	font-size: 12px;
+}
+.movie2{
+	margin-top: 7px;
+}
