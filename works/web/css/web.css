@@ -1,6 +1,7 @@
+/*css reset*/
 body{
 	margin: 0;
-	font: 14px arial,"宋体;
+	
 }
 ul{
 	margin: 0;
@@ -14,28 +15,38 @@ a{
 img{
 	vertical-align: top;
 }
+input{
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0;
+}
+/*main*/
+body{
+	font: 14px arial,"宋体";
+}
 .clearfix:after{
 	content: "";
 	display: block;
 	clear:both;
 }
 #box{
-	width: 1600px;
 	height: 1800px; 
 	background: url(../img/body_bg.png) repeat-x;
 }
 #top{
+	width: 960px;
 	height: 30px;
-	padding:0 300px;
+	margin:0 auto;
 }
 .top_list{
 	float: left;
 }
 .top_list li{
 	line-height: 30px;
-	font-size: 12px;
+	font-size: 13px;
 	float: left;
-	padding: 0 18px;
+	padding: 0 18px 0 15px;
 	background: url(../img/top_ico.png) no-repeat right 16px;
 }
 .top_list a{
@@ -48,6 +59,9 @@ img{
 .top_list .no-bg{
 	background: none;
 	padding-right: 0;
+}
+.top_list .no-p{
+	padding-left:0; 
 }
 .top_help{
 	width: 324px;
@@ -79,9 +93,11 @@ img{
 	margin-left: 10px;
 }
 #head{
-	height: 98px;
-	padding: 0 320px;
+	margin: 0 auto;
+	width: 960px;
+	height: 100px;
 	background: url(../img/header_bg.png) no-repeat center center;
+	position: relative;
 }
 .head_itm1{
 	height: 98px;
@@ -90,7 +106,7 @@ img{
 	background: url(../img/shopping_bg.png) no-repeat;
 }
 .head_itm1 .text{
-	font-size: 18px;
+	font-size: 20px;
 	color: #fff;
 	margin-top: 26px;
 }
@@ -109,4 +125,49 @@ img{
 	display: block;
 	margin-left: 118px;
 	float: left;
+}
+#head .search{
+	width: 292px;
+	height: 30px;
+	background: url(../img/search.png) no-repeat;
+	position: absolute;
+	left: 668px;
+	top: 34px;
+}
+#head .search .text{
+	width: 230px;
+	height: 30px;
+	padding-left: 20px;
+	float: left;
+	color: #666666;
+}
+#head .search .button{
+	width: 42px;
+	height: 30px;
+	float: left;
+}
+#tnav{
+	height: 44px;
+	text-align: center;
+}
+#tnav li{
+	float: left;
+	width: 74px;
+	height: 26px;
+	font-size: 16px;
+}
+#tnav a{
+	float: left;
+	height: 28px;
+	color: #fff;
+}
+#tnav ul{
+	display: inline-block;
+	margin-top: 8px;
+}
+#tnav li:hover a{
+	background: url(../img/nav_active_bg.png) repeat-x 0 -56px;
+}
+#tnav li:hover{
+	background: url(../img/nav_active_bg.png) no-repeat;
 }

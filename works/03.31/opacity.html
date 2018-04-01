@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优酷弹窗</title>
+	<style>
+		body{
+			height: 10000px;
+		}
+		#box{
+			position: relative;
+			width: 200px;
+			height: 200px;
+			position: fixed;
+			right: 10px;
+			bottom: 10px;
+		}
+		#cont{
+			width: 200px;
+			height: 200px;
+			background-color: skyblue;
+			position: absolute;
+			right: 5px;
+			bottom: 5px;
+			z-index: 1;
+		}
+		#mark{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			left: 5px;
+			top: 5px;
+			background-color: black;
+			opacity: 0.5;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="cont"></div>
+		<div id="mark"></div>
+	</div>
+</body>
+</html>

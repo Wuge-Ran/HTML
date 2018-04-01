@@ -24,10 +24,11 @@ body{
 	font: 14px "宋体";
 }
 #box{
-	width: 970px;
+	width: 972px;
 	height: 421px;
 	border: 1px solid #dddfdc;
 	border-top: none;
+	border-right: none;
 	margin: 20px auto;
 }
 .itm{
@@ -47,14 +48,30 @@ body{
 .itm_hot{
 	padding-bottom: 12px;
 	border-bottom: 1px dashed #dbdbdb;
+	margin-bottom: 12px;
 }
 .descri{
+	display: block;
 	line-height: 23px;
+	background: url(../img/doc.png) no-repeat right 7px;
 }
 .descri span{
-	color: #b6b6b6;
+	color: #a9a9a9;
 	font-size: 12px;
 }
 .movie2{
 	margin-top: 7px;
+}
+.itm_hot img{
+	display: block;
+	padding:1px;
+	border: 1px solid #dddddd;
+}
+.movie{
+	line-height: 22px;
+	margin-bottom: 2px;
+}
+.name span,.movie_descri{
+	font-size: 12px;
+	color:  #a9a9a9;
 }
