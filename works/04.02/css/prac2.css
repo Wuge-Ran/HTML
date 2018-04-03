@@ -1,0 +1,92 @@
+/*css reset*/
+body,h4{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+/*main*/
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+body{
+	font: 12px arial,'微软雅黑';
+}
+#box{
+	width: 879px;
+	height: 250px;
+	border: 1px solid #e8e8e8;
+	margin:30px auto;
+}
+#hlist li{
+	margin-top: -1px;
+	float: left;
+	height: 30px;
+	border-top: 2px solid rgba(255,255,255,0)
+}
+#hlist li:hover{
+	border-top: 2px solid #ff4400;
+}
+#hlist a{
+	display: block;
+	height: 22px;
+	line-height: 22px;
+	margin-top: 8px;
+	padding: 0 15px;
+	border-right: 1px solid #e8e8e8;
+}
+#hlist .no-b{
+	border-right: none;
+}
+#cont1{
+	margin-left: 16px;
+	margin-top: 19px;
+	float: left;
+}
+.wash{
+	position: relative;
+	margin-bottom: 12px;
+}
+.wash img{
+	width: 170px;
+	height: 110px;
+}
+.wash .text{
+	background:rgba(255,255,255,0.8);
+	position: absolute;
+	line-height: 28px;
+	text-align: center;
+	width: 170px;
+	top: 82px;
+}
+.intr h4,.intr a{
+	float: left;
+	line-height: 30px;
+}
+.intr h4{
+	margin-right: 13px;
+}
+.intr a{
+	margin-right: 10px;
+}
+.intr .no-b{
+	margin-right: 0;
+}
+.cont1_itm{
+	float: left;
+	margin-right: 10px;
+}
+.post{
+	float: right;
+}

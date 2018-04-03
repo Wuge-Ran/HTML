@@ -1,0 +1,107 @@
+/*css reset*/
+body,h3{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+/*main*/
+body{
+	font:12px arial,'宋体';
+}
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+#box{
+	width: 1026px;
+	height: 234px;
+	padding-left: 8px;
+	margin: 20px auto;
+}
+h3{
+	float: left;
+	width: 62px;
+	height: 20px;
+	background: url(../img/head.png);
+}
+.QR{
+	width: 14px;
+	height: 12px;
+	float: left;
+	background: url(../img/QR.png) no-repeat;
+	margin-left: 4px;
+	margin-top: 7px;
+}
+#cont{
+	height: 180px;
+	margin-top: 11px;
+}
+.list{
+	float: left;
+}
+.list li{
+	float: left;
+	position: relative;
+	margin-right: 12px;
+}
+.list img{
+	width: 148px;	
+	height: 180px;
+	float: left;
+}
+.list .text{
+	width: 148px;
+	height: 25px;
+	line-height: 25px;
+	position: absolute;
+	top: 155px;
+	background: rgba(255,255,255,0.8);
+	text-align: center;
+}
+.itm{
+	float: left;
+	position: relative;
+}
+.itm div{
+	text-indent: -9999px;
+}
+.itm .left{
+	height: 180px;
+	float: left;
+	background: url(../img/left-arrow.png) no-repeat 0 center;
+	margin-left: 3px;
+}
+.itm .right{
+	height: 180px;
+	float: left;
+	background: url(../img/right-arrow.png) no-repeat 0 center;
+}
+.itm_sister{
+	margin: 0 7px; 
+	width: 180px;
+	height: 180px;
+	float: left;
+
+}
+.itm_text{
+	display: block;
+	width: 180px;
+	height: 25px;
+	line-height: 25px;
+	position: absolute;
+	top: 155px;
+	left: 22px;
+	background: rgba(255,255,255,0.8);
+	text-align: center;
+}
