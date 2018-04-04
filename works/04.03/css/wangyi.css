@@ -97,17 +97,15 @@ body{
 }
 .radio span{
 	line-height: 34px;
-	text-indent: 55px;
+	text-align: center;
 	font-size: 16px;
+	margin-left: 20px;
 	display: inline-block;
-	width: 186px;
+	width: 166px;
 	height: 34px;
 }
 .label_left{
 	margin-left:-1px;
-}
-.label_left span{
-	text-indent: 45px;
 }
 .radio{
 	margin-top: 50px;
@@ -139,8 +137,10 @@ body{
 	height: 25px;
 }
 .text select{
-	width: 100px;
-	height: 26px;
+	width: 98px;
+	height: 25px;
+	border: 1px solid #ababab;
+	font-weight:bold;
 }
 input{
 	padding-left: 5px;
@@ -149,6 +149,7 @@ input{
 }
 #cont .type{
 	font-size: 14px;
+	font-family: '微软雅黑';
 	display: inline-block;
 	width: 67px;
 	height: 16px;
@@ -184,6 +185,11 @@ input{
 .checkbox{
 	margin-left: 75px;
 	line-height: 44px;
+}
+.checkbox input,.checkbox span{
+	margin: 0;
+	vertical-align: middle;
+	border-radius: 
 }
 .button{
 	margin-left: 78px;

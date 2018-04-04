@@ -1,5 +1,5 @@
 /*css reset*/
-body{
+body,h4,p{
 	margin: 0;
 	
 }
@@ -193,7 +193,45 @@ body{
 	background: url(../img/nav_active_bg.png) no-repeat 0 -28px;
 }
 #content{
-	width: 960px;
+	width: 1000px;
 	height: 1290px;
-	background: url();
+	margin: 24px auto 0;
+	background: url(../img/content_bg.png) repeat-y -1000px 0;
+}
+#content .head{
+	width: 1000px;
+	height: 1290px;
+	background: url(../img/content_bg.png) no-repeat;
+}
+#content .foot{
+	width: 1000px;
+	height: 1290px;
+	background: url(../img/content_bg.png) no-repeat -2000px bottom;
+}
+#ad{
+	width: 940px;
+	height: 300px;
+	position: relative;
+	top:10px;
+	margin: 0 auto;
+}
+.banner,.banner li, .descri{
+	position: absolute;
+}
+.banner{
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+.banner li{
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+.descri{
+	height: 52px;
+	left: 0;
+	bottom: 0;
+	z-index: 3;
+	background: rgba(0,0,0,0.8); 
 }
