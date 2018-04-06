@@ -430,3 +430,18 @@ body{
 .peak_list li:hover .song{
 	color: #ff5400;
 }
+.world_list{
+	padding: 13px 0 14px 0;
+	border-bottom: 1px solid #c6c6c6;
+	line-height: 24px;
+}
+.world_list div{
+	float: left;
+	margin-right: 19px;
+}
+.world_list .no-m{
+	margin-right: 0;
+}
+.world_list a{
+	display: block;
+}
