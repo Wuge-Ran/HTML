@@ -1,5 +1,5 @@
 /*css reset*/
-body,h2,h3{
+body,h2,h3,h4{
 	margin: 0;
 }
 button{
@@ -444,4 +444,94 @@ body{
 }
 .world_list a{
 	display: block;
+}
+.hotsinger header{
+	height: 17px;
+	margin-top: 27px;
+	margin-bottom: 19px;
+	text-indent: -9999px;
+	background: url(../img/hot_singer.png) no-repeat;
+}
+.hotsinger .name{
+	line-height: 29px;
+	color: #0c8f44;
+}
+.hotsinger .singer{
+	float: left;
+	margin-right: 34px;
+	margin-bottom: 10px
+}
+.hotsinger .no-m{
+	margin-right: 0;
+}
+.hotsinger ul{
+	height: 178px;
+	border-bottom: 1px dotted #c6c6c6;
+	margin-bottom: 13px;
+}
+.singerlist{
+	word-spacing: 19px;
+	border-bottom: 1px solid #c6c6c6;
+	margin-bottom: 20px;
+}
+.singerlist a{
+	display: inline-block;
+	line-height: 24px;
+}
+.activity{
+	height: 308px;
+	border-bottom: 1px solid #c6c6c6;
+}
+.activity header{
+	width: 72px;
+	height: 17px;
+	background: url(../img/activity.png) no-repeat;
+	margin-bottom: 20px;
+	text-indent: -9999px;
+}
+.activity .hot{
+	margin-bottom: 7px;
+}
+.activity .hot a{
+	display: block;
+	color: #0c8f44;
+	line-height: 24px;
+}
+#cont{
+	height: 2117px;
+}
+.foot_itm1 .download{
+	float: left;
+	width: 257px;
+	height: 110px;
+	margin-right: 100px;
+}
+.foot_itm1{
+	width: 926px;
+	margin:0 auto;
+}
+#foot{
+	background-color: #f7f7f7;
+	color: #515151;
+	word-spacing: 14px;
+}
+.foot_itm1 h4{
+	font:bold 16px/32px '宋体';
+}
+.foot_itm1 a{
+	line-height: 26px;
+}
+.foot_itm1 .product{
+	float: left;
+	margin-right: 88px;
+}
+.foot_itm1 .friendship{
+	float: left;
+	margin-bottom: 55px;
+}
+.foot_itm2{
+	width: 500px;
+	height: 66px;
+	margin:0 auto;
+	background: url(../img/foot_statement.png) no-repeat;
 }
