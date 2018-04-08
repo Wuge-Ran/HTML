@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>wangyiVIP</title>
+	<link rel="stylesheet" href="css/wangyi.css">
+<!-- 	伪代码:
+		box
+			cont
+				top
+					radio
+					ul
+						li*4
+					radio
+					checkbox	
+				bottom
+					select
+					radio
+					div	
+			foot
+				checkbox
+				button -->
+</head>
+<body>
+
+	<div id="box">
+		<section id="cont">
+			<div class="top">
+				<ul class="top_sign clearfix">
+					<li>
+						<label>
+							<input type="radio" name="sign"/>
+							<span>注册新账号</span>
+						</label>
+					</li>
+					<li>
+						<label>
+							<input type="radio" name="sign"/>
+							<span>免费邮箱升级</span>
+						</label>
+					</li>
+				</ul>
+				<ul class="cont_list">
+				<li>
+					<span class="star">*</span>
+					<input type="text" placeholder="请输入用户名" class="text">
+					<select name="" id="email">
+						<option value="">@vip.163.com</option>
+						<option value="">@163.com</option>
+					</select>
+				</li>
+				<li>
+					<span class="star">*</span>
+					<input type="password" placeholder="请输入密码" class="password">
+				</li>
+				<li>
+					<span class="star">*</span>
+					<input type="text" placeholder="请输入手机号" class="phone">
+				</li>
+				<li>
+					<span class="star">*</span>
+					<input type="text" placeholder="请输入验证码" class="v-code">
+					<button>获取验证码</button>
+				</li>
+			</ul>
+			<ul class="sex_list clearfix">
+				<li class="clearfix">
+					<label>
+						<input type="radio" name="sex">
+						<em></em>
+						<span>男</span>
+					</label>
+				</li>
+				<li>
+					<label>
+						<input type="radio" name="sex">
+						<em></em>
+						<span>女</span>
+					</label>
+				</li>
+			</ul>
+			<div class="server">
+				<label>
+					<input type="checkbox" class="v-itm">
+					<span>我已阅读并接受<a href="">"网易VIP邮箱服务条款"</a></span>
+				</label>
+			</div>				
+			</div>
+			<div class="paytime clearfix">
+				<span class="name">支付时长:</span>
+				<select name="" id="">
+					<option value="">1年</option>
+					<option value="">1季度</option>
+					<option value="">1月</option>
+				</select>
+			</div>
+			<div class="payment clearfix">
+				<span class="name">支付方式:</span>
+				<label class="alipay">
+					<input type="radio" name="pay"/>
+					<span>支付宝</span>
+				</label>
+				<label class="wechat">
+					<input type="radio" name="pay"/>
+					<span>微信</span>
+				</label>
+			</div>
+			<div class="money clearfix">
+				<span class="name">应付金额：</span>
+				<span class="amount">540元</span>
+			</div>
+		</section>
+		<footer id="foot">
+			<div class="check">
+				<form action="">
+					<input type="checkbox" class="checkbox">
+					<span>我已阅读并接受“网易vip服务条款”</span>
+					<button>确认开通</button>
+				</form>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

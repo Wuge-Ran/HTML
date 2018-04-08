@@ -52,12 +52,24 @@
 		<header id="head">
 			<h2>QQ音乐</h2>
 			<section>
-				<ul class="head_top clearfix">
-					<li><a href="">音乐馆</a></li>
-					<li><a href="">MV</a></li>
-					<li><a href="">我的音乐</a></li>
-					<li><a href="">下载客户端</a></li>
-				</ul>
+				<div class="head_top">
+					<label>
+						<input type="radio" class="radio" name="head_nav" checked="checked" />
+						<span>音乐馆</span>
+					</label>
+					<label>
+						<input type="radio" class="radio" name="head_nav"/>
+						<span>MV</span>
+					</label>
+					<label>
+						<input type="radio" class="radio" name="head_nav"/>
+						<span>我的音乐</span>
+					</label>
+					<label>
+						<input type="radio" class="radio" name="head_nav"/>
+						<span>下载客户端</span>
+					</label>
+				</div>				
 				<ul class="head_bottom clearfix">
 					<li><a href="">首页</a></li>
 					<li><a href="">排行榜</a></li>
@@ -68,7 +80,7 @@
 				</ul>
 			</section>
 			<form action="post">
-				<input type="text" placeholder="找到好音乐">
+				<input type="text" placeholder="找到好音乐" class="text">
 			</form>
 		</header>
 		<div id="cont" class="clearfix">
@@ -605,7 +617,7 @@
 				</div>
 			</div>
 			<div class="foot_itm2">
-				
+				版权信息
 			</div>
 		</footer>
 	</div>

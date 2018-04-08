@@ -26,9 +26,6 @@ img{
 	display: block;
 	clear:both;
 }
-a:hover{
-	color: #0dad51;
-}
 body{
 	font:12px arial,'微软雅黑';
 }
@@ -65,7 +62,7 @@ body{
 }
 #head{
 	height: 113px;
-	border: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
 }
 #head h2,#head section{
 	float: left;
@@ -79,19 +76,27 @@ body{
 .head_top{
 	font:16px/37px '微软雅黑';
 	margin-bottom: 13px;
-}
-.head_top li{
 	float: left;
-	padding:38px 20px 0 20px;
-	text-align: center;
+	overflow: hidden;
 }
-.head_top li:hover a{
-	color: #fff;
+.head_top label{
+	display: block;
+	float: left;
+	overflow: hidden;
 }
-.head_top li:hover{
-	background: #0dad51;
+.head_top .radio{
+	margin-left: -20px;
+}
+.head_top span{
+	display: inline-block;
+	padding-top: 38px;
+	padding: 38px 20px 0 20px;
+	line-height: 37px;
+	border-radius: 0 0 4px 4px;
+}
+.head_top .radio:checked + span{
+	background-color: #0dad51;
 	color: #fff;
-	border-radius: 0 0 5px 5px; 
 }
 .head_bottom{
 	height: 12px;
@@ -113,7 +118,7 @@ body{
 	margin-top: 42px;
 	margin-left: 78px;
 }
-#head input{
+#head .text{
 	width: 208px;
 	height: 29px;
 	padding-left:10px;
@@ -522,10 +527,14 @@ body{
 	word-spacing: 14px;
 }
 .foot_itm1 h4{
+	color: #757575;
 	font:bold 16px/32px '宋体';
 }
 .foot_itm1 a{
 	line-height: 26px;
+}
+.foot_itm1 a:hover{
+	color: #0c8f44;
 }
 .foot_itm1 .product{
 	float: left;
@@ -540,4 +549,5 @@ body{
 	height: 66px;
 	margin:0 auto;
 	background: url(../img/foot_statement.png) no-repeat;
+	text-indent: -9999px;
 }
