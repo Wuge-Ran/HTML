@@ -1,5 +1,5 @@
 /*css reset*/
-body,h4,p{
+body,h4,p,h3{
 	margin: 0;
 	
 }
@@ -199,26 +199,25 @@ body{
 	background: url(../img/content_bg.png) repeat-y -1000px 0;
 }
 #content .head{
-	width: 1000px;
-	height: 1290px;
+	height: 300px;
 	background: url(../img/content_bg.png) no-repeat;
 }
 #content .foot{
-	width: 1000px;
-	height: 1290px;
+	overflow: hidden;
 	background: url(../img/content_bg.png) no-repeat -2000px bottom;
 }
 #ad{
 	width: 940px;
 	height: 300px;
 	position: relative;
-	top:10px;
-	margin: 0 auto;
+	padding-top: 10px;
+	margin: 0px auto;
 }
 .banner,.banner li, .descri{
 	position: absolute;
 }
 .banner{
+	height: 300px;
 	left: 0;
 	right: 0;
 	z-index: 1;
@@ -229,9 +228,60 @@ body{
 	z-index: 2;
 }
 .descri{
+	width: 940px;
 	height: 52px;
 	left: 0;
 	bottom: 0;
 	z-index: 3;
 	background: rgba(0,0,0,0.8); 
+}
+.descri h4{
+	float: left;
+	font-size: 25px;
+	line-height: 52px;
+	color: #ffc600;
+	padding: 0 35px;
+}
+.descri p{
+	float: left;
+	font-size: 13px;
+	line-height: 16px;
+	color: #ffcccc;
+	width: 625px;
+	margin-top: 12px;
+}
+.cont_side{
+	padding-left: 29px;
+}
+.side_first{
+	float: left;
+	width: 209px;
+	height: 390px;
+}
+.side_first h3{
+	height: 29px;
+	line-height: 28px;
+	text-align: center;
+	color: #fff;
+	border-radius: 10px 10px 0 0;
+	background:#d76368 url(../img/module_menu_bg.png) repeat-x 0 -58px; 
+}
+.side_first .list{
+	width: 207px;
+	height: 339px;
+	padding-top: 20px;
+	margin-top: 1px;
+	font:bold 12px/27px 'arial'; 
+	border:1px solid #f3dc94;
+	background-color: #ffeeb7;
+	border-radius: 0 0 8px 8px; 
+}
+.side_first .list li{
+	width: 193px;
+	margin: 0 auto;
+	text-indent: 32px;
+	border-bottom: 1px solid #fff;
+}
+.side_first .list li:hover{
+	color: #b20e00;
 }

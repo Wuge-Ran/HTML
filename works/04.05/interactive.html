@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>interactive</title>
+	<style>
+		body{
+			float: left;
+			margin: 0;
+		}
+		label{
+			display: block;
+			float: left;
+			overflow: hidden;
+		}
+		.radio{
+			margin-left: -20px;
+		}
+		span{
+			display: inline-block;
+			padding-top: 38px;
+			padding: 38px 20px 0 20px;
+			line-height: 37px;
+			border-radius: 0 0 4px 4px;
+		}
+		.radio:checked + span{
+			background-color: #0dad51;
+			color: #fff;
+
+		}
+	</style>
+</head>
+<body>
+	<label>
+		<input type="radio" class="radio" name="head_nav" />
+		<span>音乐馆</span>
+	</label>
+	<label>
+		<input type="radio" class="radio" name="head_nav"/>
+		<span>MV</span>
+	</label>
+	<label>
+		<input type="radio" class="radio" name="head_nav"/>
+		<span>我的音乐</span>
+	</label>
+	<label>
+		<input type="radio" class="radio" name="head_nav"/>
+		<span>下载客户端</span>
+	</label>
+</body>
+</html>
