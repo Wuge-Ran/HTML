@@ -258,7 +258,6 @@ body{
 	float: left;
 	width: 209px;
 	height: 390px;
-	margin-left: 9px;
 	margin-top: 31px;
 }
 .side_first h3{
@@ -287,4 +286,75 @@ body{
 }
 .side_first .list li:hover{
 	color: #b20e00;
+}
+.cont_side{
+	float: left;
+	width: 210px;
+}
+.side_second{
+	float: left;
+	width: 193px;
+	height: 314px;
+	border:1px solid #e8e8e3;
+	background-color: #f5f5f2;
+	margin-top: 13px;
+	border-radius: 10px;
+	padding: 14px 7px 0 7px;
+	text-align: center;
+}
+.side_second h4{
+	font: 15px/18px 'arial';
+	color: #666666;
+	padding: 0 5px;
+	text-align:center;
+}
+.second_join .text{
+	width: 175px;
+	height: 25px;
+	border: 1px solid #9c9c9c;
+	background-color: #fff;
+	margin-top: 10px;
+}
+.second_join .submit{
+	width: 88px;
+	height: 25px;
+	background-color: #f64848;
+	border-radius: 3px;
+	font:bold 15px/25px arial;
+	color: #fff;
+	margin-top: 7px;
+}
+.second_join .submit:active{
+	background-color: #ab0000;
+}
+.social{
+	margin-top: 13px;
+}
+.social li{
+	border-top: 1px solid #ffffff;
+	padding-left: 62px;
+	text-align: left;
+}
+.social .twitter{
+	height: 45px;
+	line-height: 45px;
+	background: url(../img/shopping_bg.png) no-repeat 10px -170px;
+}
+.social .facebook{
+	height: 41px;
+	padding-top: 7px;
+	line-height: 16px;
+	background: url(../img/shopping_bg.png) no-repeat 10px -215px;
+}
+.social .linkedln{
+	height: 43px;
+	padding-top: 7px;
+	line-height: 16px;
+	background: url(../img/shopping_bg.png) no-repeat 10px -265px;
+}
+.social .email{
+	height: 38px;
+	padding-top: 7px;
+	line-height: 16px;
+	background: url(../img/shopping_bg.png) no-repeat 10px -315px;
 }
