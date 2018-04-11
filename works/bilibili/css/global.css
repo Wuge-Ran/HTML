@@ -1,5 +1,5 @@
 /*css reset*/
-body{
+body,h1,h2,h3,h4{
 	margin: 0;
 }
 ul{
@@ -10,6 +10,7 @@ ul{
 a{
 	color: #000;
 	text-decoration: none;
+	color: inherit;
 }
 img{
 	vertical-align: top;
@@ -19,4 +20,15 @@ img{
 	content: "";
 	display: block;
 	clear:both;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.ps_bottom{
+	color: #fff;
+	position: absolute;
+	bottom: 0;
 }
