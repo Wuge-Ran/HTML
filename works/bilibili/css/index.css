@@ -12,7 +12,7 @@ div,ul,li,h1,h2,h3,h4,a,img,input{
 	background: url(../img/bg.png) no-repeat top center;
 	text-indent:-9999px;
 }
-header{
+#box .box_head{
 	height: 170px;
 	margin-top: -170px;
 
@@ -264,8 +264,9 @@ header{
 	background-repeat: no-repeat;
 }
 #cont_body h3 .text{
-	padding-top: 4px; 
-	line-height: 31px;
+	margin-top: 5px; 
+	line-height: 30px;
+	font-size: 24px;
 	float: left;
 	text-indent: 13px;
 }
@@ -335,7 +336,7 @@ header{
 .live_renew i{
 	width: 15px;
 	height: 22px;
-	background: url(../img/mine_icon.png) no-repeat 2px -24px;
+	background: url(../img/mine_icon.png) no-repeat -7px -24px;
 }
 .live_room .ps_bottom{
 	width: 160px;
@@ -345,7 +346,7 @@ header{
 	text-indent: 2px;
 }
 .live_room .number{
-	background:url(../img/mine_icon.png) no-repeat 0 -1px;
+	background:url(../img/mine_icon.png) no-repeat -15px -1px;
 	text-indent: 20px;
 	padding-right:2px;
 }
@@ -363,37 +364,40 @@ header{
 	margin-bottom: 16px;
 	margin-right: 19px;
 }
-.live_renew{
-	width: 107px;
+.renew_bt{
 	height: 24px;
 	line-height: 22px;
+	padding-right:10px;
 	border:1px solid #ccd0d7;
 	border-radius: 4px;
 	margin-top: 7px;
-	margin-left: 58px;
+}
+.button_set{
+	float: right;
 }
 .live_left{
 	width: 720px;
 }
-.live_renew i{
-	width: 29px;
+.renew_bt i{
+	width: 27px;
 	height: 22px;
-	background: url(../img/mine_icon.png) no-repeat 5px -24px;
+	background: url(../img/mine_icon.png) no-repeat -8px -24px;
 }
-.live_more{
-	width: 54px;
+.more_bt{
 	height: 24px;
 	line-height: 22px;
 	border:1px solid #ccd0d7;
+	padding-right: 9px;
 	margin-top: 7px;
+	margin-left: 10px;
 	border-radius: 4px;
 	margin-right: 20px;
-	text-indent: 11px;
+	text-indent: 10px;
 }
-.live_more i{
+.more_bt i{
 	width: 10px;
 	height: 22px;
-	background: url(../img/mine_icon.png) no-repeat -4px -48px;
+	background: url(../img/mine_icon.png) no-repeat -20px -48px;
 }
 .live_right .head a{
 	float: left;
@@ -405,7 +409,7 @@ header{
 }
 .live_right .head a:hover{
 	border-bottom: 1px solid #00a1d6;
-	background: url(../img/mine_icon.png) no-repeat 19px -68px;
+	background: url(../img/live_tri.png) no-repeat center bottom;
 }
 .live_right .head{
 	height: 31px;
@@ -439,9 +443,6 @@ header{
 	height: 6px;
 	background: url(../img/live_scroll.png) no-repeat;
 }
-.comic {
-	height: 367px;
-}
 .comic .head{
 	height: 35px;
 }
@@ -452,9 +453,261 @@ header{
 	background-position: -143px -910px;
 }
 .comic .head{
+	margin-bottom: 26px;
+}
+.comic .head_left > a{
+	margin-right: 12px;
+	margin-top: 5px;
+	line-height: 26px;
+}
+.comic .head_left > a:hover{
+	color: #00a1d6;
+	border-bottom: 1px solid #00a1d6;
+	background: url(../img/live_tri.png) no-repeat center bottom;
+}
+.comic h3 .text{
+	line-height: 30px;
+}
+img[src*="app1"]{
+	margin-right: 6px;
+}
+.comic_left{
+	width: 720px;
+	margin-bottom: 30px;
+}
+.comic_list .text{
+	line-height: 32px;
+	margin-top: 2px;
+}
+.comic_bottom i{
+	background:url(../img/icons.png) no-repeat;
+}
+.play_number,.danmaku{
+	line-height: 12px;
+	color: #9aa2a9;
+	text-indent: 5px;
+}
+.play_number{
+	width: 68px;
+}
+.play_number i{
+	width: 12px;
+	height: 12px;
+	background-position: -282px -90px;
+}
+.danmaku i{
+	width: 12px;
+	height: 12px;
+	background-position: -282px -218px;
+}
+.comic_list li{
+	margin-bottom: 22px;
 	margin-right: 20px;
 }
-.comic .head > div{
+.comic_right header{
+	width: 260px;
+	height: 27px;
+	padding-top: 5px;
+	margin-bottom: 17px;
+}
+#cont .right_h3{
+	font-size: 17px;
+	line-height: 27px;
+	margin-bottom: 0;
+}
+.comic_type{
+	margin-left: 11px;
+}
+.comic_type li{
+	width: 24px;
+	margin:0 7px;
+	line-height: 26px;
+	float: left;
+}
+.comic_type li:hover{
+	color: #00a1d6;
+	border-bottom: 1px solid #00a1d6;
+	background: url(../img/live_tri.png) no-repeat center bottom;
+}
+.time_length{
+	float: right;
+	width: 57px;
+	height: 24px;
+	border: 1px solid #ccd0d7;
+	outline: none;
+}
+.right_list{
+	margin-bottom: 15px;
+}
+.right_list .number_top{
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin-right: 7px;
+	background-color: #f25d8e;
+	color: #fff;
+}
+.right_list_img{
+	margin-right: 5px;
+}
+.right_list .active{
+	margin-bottom: 20px;
+}
+.intro_text{
+	line-height: 18px;
+	margin-bottom: 6px;
+}
+.right_list_intro{
+	width: 150px;	
+}
+.right_list_intro .rank{
+	line-height: 12px;
+	color: #99a2aa;
+}
+.right_list .normal{
+	margin-bottom: 20px;
+}
+.right_list .number_nor{
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	margin-right: 7px;
+	background-color: #b8c0cc;
+	color: #fff;
+}
+.content_ads{
+	margin-bottom: 12px;
+}
+.Japan_comic_left .h3_img{
+	background-position: -140px -142px;
+}
+.renew_time{
+	margin-left: 20px;
+
+	line-height: 35px;
+	font-size: 18px;
+}
+.renew_time li{
+	float: left;
+	text-align:center;
+	width: 56px;
+	height: 38px;
+	padding-top: 3px;
+	border-bottom: 1px solid #e5e9ef;
+}
+.renew_time li:hover{
+	color: #00a1d6;
+	border-bottom: 1px solid #00a1d6;
+	background: url(../img/live_tri.png) no-repeat center bottom;
+}
+.newcomic_button{
+	width: 106px;
+	height: 36px;
+	margin-top: 1px;
+	margin-left: 28px;
+	font-size: 14px;
+	line-height: 34px;
+	text-align: center;
+	border: 1px solid #f25d8e;
+	color: #f25d8e;
+}
+.Japan_comic_left header{
+	margin-bottom: 9px;
+}
+.renew_list{
+	width: 700px;
+	height: 402px;
+	overflow-y: scroll;
+}
+.renew_list li{
+	float: left;
+	width: 178px;
+	height: 75px;
+	margin-right: 48px;
+	margin-bottom: 33px;
+}
+.renew_detail{
+	width: 94px;
+}
+.renew_list li img{
+	margin-top: 3px;
 	margin-right: 12px;
-	line-height: 44px;
+}
+.renew_name{
+	height:57px;
+	line-height: 18px;
+}
+.renew_num span{
+	color: #aaaaaa;
+}
+.renew_num .episode{
+	padding:0 7px;
+	height: 18px;
+	color: #fff;
+	text-align: center;
+	background-color: #ff8eb3;
+	border-radius: 9px;
+	margin-left: 5px;
+}
+.Japan_comic_left{
+	margin-right: 10px;
+}
+.japan_list span{
+	color: #99a2aa;
+	margin-left: 7px;
+}
+.right_list_foot a{
+	display: block;
+	line-height: 26px;
+	text-align: center;
+	background-color: #e5e9ef;
+}
+.Japan_comic{
+	margin-bottom: 55px;
+}
+.J_comic_recom h3{
+	font: 16px/24px '微软雅黑' !important;
+	margin-bottom: 15px !important;
+}
+.J_comic_recom .head{
+	height: 24px;
+}
+.J_comic_recom .head_left a{
+	margin-top: 0;
+}
+.J_comic_recom .renew_bt,.J_comic_recom .more_bt{
+	margin-top: 0;
+}
+.japan_recom_spe{
+	width: 260px;
+	height: 268px;
+	position: relative;
+}
+.j_recom_bar{
+	width: 260px;
+	height: 31px;
+	color: #fff;
+	line-height: 31px;
+	background-color: rgba(0,0,0,0.1);
+}
+.j_recom_bar .name{
+	margin-left: 10px;
+}
+.j_recom_bar .icons{
+	margin-top:16px;
+	margin-right: 20px;
+}
+.china_comic .h3_img{
+	background-position: -332px -1100px;
+}
+.china_comic .right_list_foot{
+	margin-bottom:15px;
+}
+.china_comic .renew_list{
+	height: 288px;
+}
+.comic_right .right_h3{
+	margin-bottom: 0 !important;
 }

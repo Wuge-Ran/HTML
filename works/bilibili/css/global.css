@@ -21,6 +21,10 @@ img{
 	display: block;
 	clear:both;
 }
+.radius{
+	overflow: hidden;
+	border-radius:4px;
+}
 .fl{
 	float: left;
 }
