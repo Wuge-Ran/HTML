@@ -36,3 +36,6 @@ img{
 	position: absolute;
 	bottom: 0;
 }
+.no-mr{
+	margin-right: 0 !important;
+}
