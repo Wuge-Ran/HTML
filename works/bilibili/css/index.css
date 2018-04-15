@@ -304,6 +304,9 @@ div,ul,li,h1,h2,h3,h4,a,img,input{
 .recom_left .h3_img{
 	background-position: -141px -78px;
 }
+.recom_right{
+	padding-top:7px;
+}
 .recom li{
 	width: 161px;
 	line-height: 20px;
@@ -316,7 +319,6 @@ div,ul,li,h1,h2,h3,h4,a,img,input{
 	width: 260px;
 	height: 34px;
 	padding-top: 11px;
-	margin-top: 7px;
 	border-radius: 4px;
 	background-color: #e5e9ef;
 }
@@ -401,6 +403,9 @@ div,ul,li,h1,h2,h3,h4,a,img,input{
 	border:1px solid #ccd0d7;
 	border-radius: 4px;
 	margin-top: 7px;
+}
+.renew_num{
+	height: 18px;
 }
 .button_set{
 	float: right;
@@ -925,10 +930,7 @@ a[class*="coop"]{
 	background-position: 0 -75px;
 }
 .cont_bottom .right{
-	width: 789px;
-	height: 114px;
-	text-indent: -9999px;
-	background:url(../img/attention.png) no-repeat;
+	color: #99a2aa;
 }
 #cont_bar{
 	width: 50px;
@@ -958,4 +960,28 @@ a[class*="coop"]{
 #cont_bar input:checked +span{
 	background-color: #00a1d6;
 	color: #fff;
+}
+.row1{
+	width: 792px;
+	line-height: 24px;
+}
+.row2{
+	width: 617px;
+	line-height: 23px;
+}
+.row3{
+	line-height: 23px;
+}
+.row2 i{
+	display: inline-block;
+	width: 18px;
+	height: 22px;
+	text-indent:-9999px;
+	background-image: url(../img/footer_icons.png);
+}
+.row2 .logo2{
+	background-position: 0 -22px;
+}
+.row2 .logo3{
+	background-position: 0 -44px;
 }
