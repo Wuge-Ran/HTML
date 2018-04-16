@@ -358,3 +358,7 @@ body{
 	line-height: 16px;
 	background: url(../img/shopping_bg.png) no-repeat 10px -315px;
 }
+img[src*="china_comic_hot"]{
+	display: block;
+	margin-top: 10px;
+}

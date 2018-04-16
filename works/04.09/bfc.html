@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bfc</title>
+	<style type="text/css">
+		p{
+			margin: auto;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+/*			margin: 100px;*/
+			background-color: red;
+			vertical-align: middle;
+/*			display: inline-block;*/
+		}
+/*		em{
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}*/
+		.contanier{
+			height: 1000px;
+			position: relative;
+			background-color: blue;
+			/*overflow: hidden;*/
+			/*border: 1px solid black;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="contanier">
+		<em></em>
+		<p></p>
+	</div>
+	<div class="contanier">
+		<p></p>
+	</div>
+</body>
+</html>

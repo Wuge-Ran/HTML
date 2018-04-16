@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>inline-box</title>
+	<style type="text/css">
+		html{
+			height: 100%;
+		}
+		body{
+			margin: 0;
+			height: 100%;
+		}
+		.box{
+			height: 100%;
+			display: -webkit-box;
+			-webkit-box-pack: center;
+			-webkit-box-align: center;
+			-webkit-box-orient: vertical;
+
+		}
+		.box>div{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #fff;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</body>
+</html>

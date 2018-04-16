@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<style type="text/css">
+		ul{
+			width: 500%;
+			transition: 0.5s;
+		}
+		li{
+			float: left;
+		}
+		.banner{
+			width: 440px;
+			height: 220px;
+			overflow: hidden;
+			margin: 20px auto;
+			border: 2px solid #000;
+			position: relative;
+		}
+		.ban1{
+			position: absolute;
+			bottom: 10px;
+			left: 50%;
+		}
+		label{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			position: absolute;
+			background-clip: content-box;
+			bottom: 10px;
+			left: 50%;
+			background-color: #000;
+			border:2px solid transparent; 
+			z-index: 2;
+		}
+		label:nth-of-type(1){
+            margin-left: -50px;
+        }
+        label:nth-of-type(2){
+            margin-left: -25px;
+        }
+        label:nth-of-type(3){
+            margin-left: 0px;
+        }
+        label:nth-of-type(4){
+            margin-left: 25px;
+        }
+        label:nth-of-type(5){
+        	margin-left: 50px;
+        }
+		input{
+			display: none;
+		}
+		input:checked +label{
+			border: 2px solid red;
+		}
+		.ban1:checked ~ ul{
+			transform: translateX(0%);
+		}
+		.ban2:checked~ ul{
+			transform: translateX(-20%);
+		}
+		.ban3:checked~ ul{
+			transform: translateX(-40%);
+		}
+		.ban4:checked ~ul{
+			transform: translateX(-60%);
+		}
+		.ban5:checked~ ul{
+			transform: translateX(-80%);
+		}
+	</style>
+</head>
+<body>
+	<div class="banner clearfix">	
+		<input type="radio" name="change" class="ban1" id="check1">
+		<label for="check1"></label>
+		<input type="radio" name="change" class="ban2" id="check2">
+		<label for="check2"></label>
+		<input type="radio" name="change" class="ban3" id="check3">
+		<label for="check3"></label>
+		<input type="radio" name="change" class="ban4" id="check4">
+		<label for="check4"></label>
+		<input type="radio" name="change" class="ban5" id="check5">
+		<label for="check5"></label>				
+		<ul class="clearfix">
+		    <li><img src="img/banner1.jpg" alt=""></li>
+		    <li><img src="img/banner2.jpg" alt=""></li>
+		    <li><img src="img/banner3.jpg" alt=""></li>
+		    <li><img src="img/banner4.jpg" alt=""></li>
+		    <li><img src="img/banner5.jpg" alt=""></li>
+		</ul>
+	</div>
+</body>
+</html>

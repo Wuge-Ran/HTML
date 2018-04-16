@@ -741,9 +741,6 @@ img[src*="app1"]{
 .china_comic .h3_img{
 	background-position: -332px -1100px;
 }
-.china_comic .right_list_foot{
-	margin-bottom:15px;
-}
 .china_comic .renew_list{
 	height: 288px;
 }
@@ -984,4 +981,8 @@ a[class*="coop"]{
 }
 .row2 .logo3{
 	background-position: 0 -44px;
+}
+img[src*="china_comic_hot"]{
+	display: block;
+	margin-top: 10px;
 }
