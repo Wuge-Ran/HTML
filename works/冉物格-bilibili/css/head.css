@@ -1,0 +1,127 @@
+div,ul,ol,li,h1,h2,h3,h4,a,img,input{
+	box-sizing: border-box;
+}
+#box{
+	width: 100%;
+	height: 6000px;
+	font: 12px arial,'微软雅黑';
+	
+}
+#box .box_head{
+	height: 170px;
+	background:url(../img/comic-img/head_bg.png) no-repeat -300px 0;
+/*	margin-top: -170px;*/
+}
+
+.head_top_cont{
+	width: 960px;
+	height: 42px;
+	margin:0 auto;
+}
+.head_top{
+	height: 42px;
+	background-color: rgba(255,255,255,0.6);
+	}
+.head_nav{
+	height: 42px;
+	float: left;
+}
+.user{
+	width: 155px;
+	float: right;
+}
+.head_nav li{
+	float: left;
+	padding: 0 10px;
+	line-height: 42px;
+}
+img[src*="user_head"]{
+	margin-top: 2px;
+}
+.head_nav li:nth-child(1){
+	padding-left: 23px;
+	background: url(../img/icons.png) no-repeat -599px -1036px;
+
+}
+.head_nav li:nth-last-child(1){
+	padding-left: 30px;
+	background: url(../img/icons.png) no-repeat -1359px -1164px;
+}
+.head_nav li:hover{
+	background-color: rgba(255,255,255,0.5);
+}
+.user img{
+	float: left;
+}
+.user a{
+	float: left;
+	text-align: center;
+}
+.user a:nth-last-child(1){
+	width: 58px;
+	height: 48px;
+	line-height: 42px;
+	background: url(../img/top_bt.png) no-repeat;
+	color: #fff;
+}
+.user a:nth-child(2){
+	padding: 0 11px 0 22px;
+	line-height: 42px;
+}
+.head_logo{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+.head_middle{
+	width: 960px;
+	height: 120px;
+	margin: 0 auto;
+	margin-top: 7px;
+	position: relative;	
+}
+.head_search {
+	position: absolute;
+	right: 0px;
+	top:66px;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+	border-radius: 3px;
+}
+.head_search a{
+	float: left;
+	width: 68px;
+	height: 32px;
+	line-height: 32px;
+	text-indent: 26px;
+	background:url(../img/icons.png) -661px -655px rgba(255,255,255,0.7);
+	border-radius: 3px;
+	color: #f25d8e;
+}
+.head_search form{
+	float: left;
+	margin-left: 2px;
+}
+.head_search form:hover{
+	background-color: #fff;
+	border-radius: 3px;
+}
+.head_search input[type="text"]{
+	float: left;
+	width: 226px;
+	height: 32px;
+	border: none;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 3px 0 0 3px;
+	outline: none;
+	text-indent: 5px;
+}
+.head_search input[type="submit"]{
+	float: left;
+	width: 42px;
+	height: 32px;
+	border: none;
+	background:url(../img/icons.png) -661px -720px rgba(255,255,255,0.8);
+	border-radius: 0 3px 3px 0;	
+	outline: none;
+	cursor: pointer;
+}

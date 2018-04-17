@@ -1,4 +1,4 @@
-div,ul,li,h1,h2,h3,h4,a,img,input{
+div,ul,ol,li,h1,h2,h3,h4,a,img,input{
 	box-sizing: border-box;
 }
 #box{

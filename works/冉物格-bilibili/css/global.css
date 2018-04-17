@@ -39,3 +39,11 @@ img{
 .no-mr{
 	margin-right: 0 !important;
 }
+.banner_bottom{
+	line-height: 36px;
+}
+.ps_top{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
