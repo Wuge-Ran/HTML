@@ -1,32 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>动画</title>
-	<link rel="stylesheet" type="text/css" href="css/head.css">
+    <meta charset="UTF-8">
+    <title>番剧</title>
+    <link rel="stylesheet" type="text/css" href="css/head.css">
 	<link rel="stylesheet" type="text/css" href="css/foot.css">
 	<link rel="stylesheet" type="text/css" href="css/global.css">
-	<link rel="stylesheet" type="text/css" href="css/comic.css">
-		<!-- box
-			head
-				nav
-				search
-			cont
-				nav
-					ul
-					ul
-				cont_head	
-					banner
-					hot
-				MAD
-					video
-					ol
-			foot
-				 -->
+	<link rel="stylesheet" href="css/jp-comic.css">
+	<link rel="stylesheet" href="css/itm1.css">
 </head>
 <body>
-	<div id="box">
-		<header class="box_head">
+    <div id="box">
+        <header class="box_head">
 			<div class="head_top">
 				<div class="head_top_cont">
 					<ul class="head_nav">
@@ -54,8 +39,8 @@
 					</form>	
 				</div>
 			</div>
-		</header>
-		<div id="content">
+        </header>
+        <div id="content">
 			<nav class="cont_nav">
 				<ul class="nav_toplist clearfix">
 				    <li><i></i><a href="">首页</a></li>
@@ -81,49 +66,186 @@
 				</ul>
 				<ul class="nav_bottomlist clearfix">
 				    <li><a href="">全部</a></li>
-				    <li><a href="">MAD.AMV</a></li>
-				    <li><a href="">MMD.3D</a></li>
-				    <li><a href="">短书.手书.配音</a></li>
-				    <li><a href="">综合</a></li>
+				    <li><a href="">连载动画</a></li>
+				    <li><a href="">完结动画</a></li>
+				    <li><a href="">资讯</a></li>
+					<li><a href="">官方延伸</a></li>
+					<li><a href="">新番时间表</a></li>
+					<li><a href="">番剧索引</a></li>
 				</ul>
 			</nav>
-			<div class="cont_head clearfix">
-				<div class="banner radius fl">
-					<a href=""><img src="img/comic-img/cont_banner.webp" alt=""></a>
-					<div class="banner_bottom ps_bottom clearfix">
-						<div class="text">新歌速递</div>
-						<ul class="banner_icons clearfix">
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>						
+			<div class="head clearfix">
+				<div class="banner fl">
+					<a href=""><img src="img/comic-img/jp-banner.jpg" alt=""></a>
+					<div class="banner_bt ps_bottom">
+						<ul class="clearfix fl">
+							<li><a href=""><img src="img/comic-img/banner_bottom1.png" alt=""></a></li>
+							<li class="active"><a href=""><img src="img/comic-img/banner_bottom2.png" alt=""></a></li>
+							<li><a href=""><img src="img/comic-img/banner_bottom3.png" alt=""></a></li>
+							<li><a href=""><img src="img/comic-img/banner_bottom4.png" alt=""></a></li>
+							<li><a href=""><img src="img/comic-img/banner_bottom5.png" alt=""></a></li>
+						</ul>
+						<a href="" class="text fl">齐木楠雄的灾难</a>
 					</div>
 				</div>
-				<ul class="hot fl">
-					<li class="radius">
-						<a href=""><img src="img/comic-img/cont_hot.webp" alt=""></a>
-						<div class="text ps_bottom">圣人惠MAD!银不了</div>
+				<ul class="head_hot fl">
+					<li class="fl">
+						<a href=""><img src="img/comic-img/jp-hot.png" alt=""></a>
+						<div class="text">【TV动画】Fate/EXTRA Last Encore 尼禄Fes 告知映像</div>
 					</li>
-					<li class="radius">
-						<a href=""><img src="img/comic-img/cont_hot.webp" alt=""></a>
-						<div class="text ps_bottom">圣人惠MAD!银不了</div>
+					<li class="fl">
+						<a href=""><img src="img/comic-img/jp-hot.png" alt=""></a>
+						<div class="text">【TV动画】Fate/EXTRA Last Encore 尼禄Fes 告知映像</div>
 					</li>
-					<li class="radius">
-						<a href=""><img src="img/comic-img/cont_hot.webp" alt=""></a>
-						<div class="text ps_bottom">圣人惠MAD!银不了</div>
+					<li class="fl">
+						<a href=""><img src="img/comic-img/jp-hot.png" alt=""></a>
+						<div class="text">【TV动画】Fate/EXTRA Last Encore 尼禄Fes 告知映像</div>
 					</li>
-					<li class="radius">
-						<a href=""><img src="img/comic-img/cont_hot.webp" alt=""></a>
-						<div class="text ps_bottom">圣人惠MAD!银不了</div>
+					<li class="fl">
+						<a href=""><img src="img/comic-img/jp-hot.png" alt=""></a>
+						<div class="text">【TV动画】Fate/EXTRA Last Encore 尼禄Fes 告知映像</div>
 					</li>
-				</ul>				
+				</ul>
 			</div>
-			<div class="itm MAD clearfix">
+			<div class="lastest">
+				<header class="clearfix">
+					<h3 class="fl">最近更新</h3>
+					<div class="timelist fr radius">
+						新番时间表>
+					</div>	
+				</header>
+				<div class="lastest_cont">
+					<ul class="new_list clearfix">
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li>
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li class="no-bt">
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li class="no-bt">
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li class="no-bt">
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+						<li class="no-bt">
+							<a href=""class="fl"><img src="img/comic-img/jp_recom.png" alt=""></a>
+							<div class="text fl">
+								<div class="name"><a href="">赛马娘</a></div>
+								<div class="renew clearfix">
+									<span class="fl">更新至</span>
+									<span class="episode fl">4话</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="cont_bt">
+						<a href="" class="icon">全部</a>
+					</div>
+				</div>
+			</div>
+			<div class="itm jp_comic clearfix">
 				<div class="left_part fl">
 					<header class="clearfix">
-						<h3 class="fl">MAD.AMV</h3>
+						<h3 class="fl">连载动画</h3>
 						<ul class="new clearfix fl">
 							<li><a href="">有新动态</a></li>
 							<li><a href="">最新投稿</a></li>
@@ -146,8 +268,8 @@
 					<ul class="video">
 						<li>
 							<i class="gold ps_top"></i>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -160,8 +282,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -174,8 +297,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -188,8 +312,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -202,8 +327,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -216,8 +342,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -230,8 +357,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -244,8 +372,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -258,8 +387,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -272,8 +402,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -286,8 +417,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -300,8 +432,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花dsdsf</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -318,10 +451,6 @@
 				<div class="right_part fr">
 					<header>
 						<h3 class="fl">热门</h3>
-						<ul class="type fl">
-						    <li class="active fl"><a href="">全部</a></li>
-						    <li class="fl"><a href="">原创</a></li>
-						</ul>
 						<form class="fr">
 							<select class="radius">
 								<option>三日</option>
@@ -388,10 +517,10 @@
 					</footer>
 				</div>
 			</div>
-			<div class="itm MMD.3D clearfix">
+			<div class="itm jp_comic2 clearfix">
 				<div class="left_part fl">
 					<header class="clearfix">
-						<h3 class="fl">MMD.3D</h3>
+						<h3 class="fl">完结动画</h3>
 						<ul class="new clearfix fl">
 							<li><a href="">有新动态</a></li>
 							<li><a href="">最新投稿</a></li>
@@ -413,8 +542,9 @@
 					</header>
 					<ul class="video">
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -427,8 +557,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -441,8 +572,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -455,8 +587,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -469,8 +602,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -483,8 +617,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -497,8 +632,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -511,8 +647,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -525,8 +662,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -539,8 +677,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -553,8 +692,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -567,8 +707,69 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
+							<div class="play">
+								<div class="number fl">
+									<i class="fl"></i>
+									<span class="fl">68.2万</span>
+								</div>
+								<div class="danmaku fl">
+									<i class="fl"></i>
+									<span class="fl">1434</span>
+								</div>								
+							</div>
+						</li>
+						<li>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
+							<div class="play">
+								<div class="number fl">
+									<i class="fl"></i>
+									<span class="fl">68.2万</span>
+								</div>
+								<div class="danmaku fl">
+									<i class="fl"></i>
+									<span class="fl">1434</span>
+								</div>								
+							</div>
+						</li>
+						<li>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
+							<div class="play">
+								<div class="number fl">
+									<i class="fl"></i>
+									<span class="fl">68.2万</span>
+								</div>
+								<div class="danmaku fl">
+									<i class="fl"></i>
+									<span class="fl">1434</span>
+								</div>								
+							</div>
+						</li>
+						<li>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
+							<div class="play">
+								<div class="number fl">
+									<i class="fl"></i>
+									<span class="fl">68.2万</span>
+								</div>
+								<div class="danmaku fl">
+									<i class="fl"></i>
+									<span class="fl">1434</span>
+								</div>								
+							</div>
+						</li>
+						<li>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -583,12 +784,25 @@
 					</ul>					
 				</div>
 				<div class="right_part fr">
+					<header><h3>完结推荐</h3></header>
+					<ul class="over_recom clearfix">
+						<li>
+							<img src="img/comic-img/over_comic.webp" alt="">
+							<div class="text ps_bottom">
+								<div>幻界战线</div>
+								<div>至这个疯狂的城市</div>
+							</div>
+						</li>
+						<li>
+							<img src="img/comic-img/over_comic.webp" alt="">
+							<div class="text ps_bottom">
+								<div>幻界战线</div>
+								<div>至这个疯狂的城市</div>
+							</div>
+						</li>
+					</ul>
 					<header>
 						<h3 class="fl">热门</h3>
-						<ul class="type fl">
-						    <li class="active fl"><a href="">全部</a></li>
-						    <li class="fl"><a href="">原创</a></li>
-						</ul>
 						<form class="fr">
 							<select class="radius">
 								<option>三日</option>
@@ -641,24 +855,16 @@
 					    	<span class="fl">8</span>
 					    	<div class="name fl">【莓完莓了】Darling in the 白色相簿，你的</div>
 					    </li>
-					    <li class="normal clearfix">
-					    	<span class="fl">9</span>
-					    	<div class="name fl">【莓完莓了】Darling in the 白色相簿，你的</div>
-					    </li>
-					    <li class="normal clearfix">
-					    	<span class="fl">10</span>
-					    	<div class="name fl">【莓完莓了】Darling in the 白色相簿，你的</div>
-					    </li>
 					</ol>
 					<footer>
 						<a href=""><div class="check_more radius">查看更多></div></a>
 					</footer>
 				</div>
 			</div>
-			<div class="itm short_cut clearfix">
+			<div class="itm jp_comic clearfix">
 				<div class="left_part fl">
 					<header class="clearfix">
-						<h3 class="fl">短片·手书·配音</h3>
+						<h3 class="fl">咨询</h3>
 						<ul class="new clearfix fl">
 							<li><a href="">有新动态</a></li>
 							<li><a href="">最新投稿</a></li>
@@ -680,8 +886,9 @@
 					</header>
 					<ul class="video">
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -694,8 +901,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -708,8 +916,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -722,8 +931,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -736,8 +946,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -750,8 +961,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -764,8 +976,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -778,8 +991,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -792,8 +1006,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -806,8 +1021,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -820,8 +1036,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -834,8 +1051,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花dsdsf</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -852,10 +1070,6 @@
 				<div class="right_part fr">
 					<header>
 						<h3 class="fl">热门</h3>
-						<ul class="type fl">
-						    <li class="active fl"><a href="">全部</a></li>
-						    <li class="fl"><a href="">原创</a></li>
-						</ul>
 						<form class="fr">
 							<select class="radius">
 								<option>三日</option>
@@ -922,10 +1136,10 @@
 					</footer>
 				</div>
 			</div>
-			<div class="itm MIX clearfix">
+			<div class="itm jp_comic clearfix">
 				<div class="left_part fl">
 					<header class="clearfix">
-						<h3 class="fl">综合</h3>
+						<h3 class="fl">官方延伸</h3>
 						<ul class="new clearfix fl">
 							<li><a href="">有新动态</a></li>
 							<li><a href="">最新投稿</a></li>
@@ -947,8 +1161,9 @@
 					</header>
 					<ul class="video">
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="silver ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -961,8 +1176,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -975,8 +1191,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -989,8 +1206,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1003,8 +1221,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1017,8 +1236,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1031,8 +1251,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1045,8 +1266,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1059,8 +1281,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1073,8 +1296,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1087,8 +1311,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1101,8 +1326,9 @@
 							</div>
 						</li>
 						<li>
-							<a href=""><img src="img/comic-img/MAD-img.png" alt=""></a>
-							<div class="intro"><a href="">九尾告诉博人一个故事</a></div>
+							<i class="gold ps_top"></i>
+							<a href=""><img src="img/comic-img/jp_comic.png" alt=""></a>
+							<div class="intro"><a href="">【1月完结】紫罗兰的永恒花dsdsf</a></div>
 							<div class="play">
 								<div class="number fl">
 									<i class="fl"></i>
@@ -1119,10 +1345,6 @@
 				<div class="right_part fr">
 					<header>
 						<h3 class="fl">热门</h3>
-						<ul class="type fl">
-						    <li class="active fl"><a href="">全部</a></li>
-						    <li class="fl"><a href="">原创</a></li>
-						</ul>
 						<form class="fr">
 							<select class="radius">
 								<option>三日</option>
@@ -1189,8 +1411,8 @@
 					</footer>
 				</div>
 			</div>
-		</div>
-		<footer id="box_foot">
+        </div>
+        <footer id="box_foot">
 			<div class="footer_cont clearfix">
 				<div class="cont_top clearfix">
 					<div class="bilibili fl">
@@ -1254,7 +1476,7 @@
 					</div>
 				</div>
 			</div>
-		</footer>					
-	</div>	
+		</footer>
+    </div>
 </body>
 </html>

@@ -1,0 +1,158 @@
+/*mad样式*/
+.itm .left_part{
+	width: 720px;
+}
+.itm header{
+	height: 24px;
+	margin-bottom: 20px;
+}
+.itm h3{
+	font: 22px/24px '微软雅黑';
+	margin-right: 12px;
+}
+.itm .new li{
+	float: left;
+	margin: 0 6px;
+}
+.itm .new a{
+	display: block;
+	height: 24px;
+	line-height: 23px;
+}
+.itm .new li:nth-of-type(1){
+	border-bottom: 1px solid #00a1d6;
+	background: url(../img/comic-img/tri.png) no-repeat center bottom;
+}
+.itm .button li{
+	line-height: 22px;
+	border: 1px solid #ccd0d7;
+	padding: 0 10px;
+	margin-right: 10px;
+}
+.button span{
+	line-height: 24px;
+}
+.button .renew i{
+	width: 14px;
+	height: 24px;
+	background: url(../img/comic-img/icons.png) no-repeat -116px 1px;
+	margin-right: 3px;
+}
+.button .more i{
+	width: 7px;
+	height: 24px;
+	background: url(../img/comic-img/icons.png) no-repeat -116px -28px;
+	margin-right: 3px;
+}
+.itm .video{
+	height: 505px;
+}
+.itm .video li{
+	float: left;
+	width: 160px;
+	height: 146px;
+	margin-bottom:22px;
+	margin-right: 20px;
+	position: relative;
+}
+.video .intro{
+    line-height: 34px;
+    width: 160px;
+    height: 34px;
+    overflow: hidden;
+}
+.play{
+	line-height: 12px;
+	color: #9aa2a9;
+}
+.play i{
+	width: 12px;
+	height: 12px;
+	background-image:url(../img/comic-img/icons.png);
+	background-repeat: no-repeat;
+	margin-right: 5px;
+}
+.play .number i{
+	background-position: -50px -74px;
+}
+.right_part header{
+	margin-bottom:20px;
+}
+.play .number{
+	margin-right: 25px;
+}
+.play .danmaku i{
+	background-position: -50px -110px;
+}
+.itm .right_part{
+	width: 260px;
+	height: 548px;
+}
+.itm .right_part .type{
+	line-height: 23px;
+}
+.itm .right_part h3{
+    font: 18px/24px '微软雅黑';
+}
+.right_part .type .active{
+	margin-right: 11px;
+	color: #00a1d6;
+	background: url(../img/comic-img/tri.png) no-repeat center bottom;
+	border-bottom: 1px solid #00a1d6;
+}
+.right_part select{
+	border: 1px solid #ccd0d7;
+	outline: none;
+}
+.right_list li{
+	margin-bottom: 15px;
+}
+.right_list .intro{
+	width: 148px;
+}
+.right_list .name{
+	line-height: 18px;
+}
+.right_list .score{
+	line-height: 16px;
+	color: #99a2aa;
+}
+.right_list span{
+	width: 18px;
+	height: 18px;
+	color: #fff;
+	background-color: #b8c0cc;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 18px;
+}
+.right_list .top{
+	background-color: #f25d8e;
+}
+.right_list img{
+	margin:0 7px;
+}
+.right_list .normal{
+	margin-top:20px;
+}
+.right_part .check_more{
+	width: 260px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	background-color:#e5e9ef;
+}
+.itm{
+	margin-bottom: 30px;
+}
+.gold{
+	width: 36px;
+	height: 23px;
+	background:url(../img/comic-img/icons.png) no-repeat -50px 0;
+}
+.silver{
+	width: 36px;
+	height: 23px;
+	background:url(../img/comic-img/icons.png) no-repeat -50px -33px;
+}
+/*mad样式*/

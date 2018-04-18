@@ -1,0 +1,209 @@
+#content{
+	width: 980px;
+	margin: 0 auto;
+}
+.nav_toplist{
+	width: 980px;
+	height: 59px;
+	padding-top: 14px;
+	border-bottom: 1px solid #e5e9ef;	
+}
+.nav_toplist li{
+	float: left;
+	width: 48px;
+	height: 44px;
+	text-align: center;
+}
+.nav_toplist a{
+	display: block;
+	line-height: 21px;
+}
+.nav_toplist i{
+	display: inline-block;
+	color: #fff;
+	padding:1px 2px;
+	border-radius: 2px;
+	margin: 2px 0;
+	background-color: #fdb9ce;
+	font-size: 10px;
+}
+.nav_toplist li:nth-child(1){
+	width: 33px;
+	text-align: left;
+}
+.nav_toplist .active{
+	color: #00a1d6;
+	border-bottom: 2px solid #00a1d6;
+}
+.nav_toplist li:nth-child(1) i{
+	display: block;
+	margin: 0;
+	margin-left: 2px;
+	width: 18px;
+	height: 18px;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat;
+}
+.nav_spe1 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 2px -25px;
+}
+.nav_spe2 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 0px -53px;
+}
+.nav_spe3 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 0px -81px;
+}
+.nav_spe4 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 0px -110px;
+}
+.nav_bottomlist{
+	margin-bottom: 10px;
+}
+.nav_bottomlist li{
+	float: left;
+	line-height: 48px;
+	padding: 0 20px;
+	color: #838a8e;	
+}
+.nav_bottomlist li:nth-child(1){
+	padding-left: 0;
+	color: #00a1d6;
+}
+.banner{
+    position: relative;
+    margin-right: 20px;
+}
+.banner_bt{
+    background-image: linear-gradient(0,rgba(0,0,0,0.6),rgba(0,0,0,0));
+    width: 620px;
+    height: 58px;
+}
+.banner_bt li{
+    float: left;
+    border: 2px solid #fff;
+    border-radius: 4px;
+    margin: 8px 6px;
+}
+.banner_bt .active{
+    border-color: #f25d8e
+}
+.banner_bt .text{
+    margin-top: 26px;
+    margin-left: 5px;
+}
+.head_hot{
+    width: 340px;
+}
+.head_hot .text{
+    width: 160px;
+    padding-top: 4px;
+    line-height: 20px;
+}
+.head{
+    margin-bottom: 35px;
+}
+.head_hot li{
+    margin-right: 20px;
+    margin-bottom: 14px;
+}
+.head_hot li:nth-of-type(2n){
+    margin-right: 0;
+}
+.timelist{
+    width: 106px;
+    height: 24px;
+    border:1px solid #f25d8e;
+    color: #f25d8e;
+    line-height: 24px;
+    text-align: center;
+}
+.lastest{
+    margin-bottom: 47px;
+}
+.lastest header{
+    margin-bottom: 20px;
+}
+.new_list li{
+    width: 180px;
+    height: 72px;
+    margin-right: 86px;
+    margin-bottom: 36px;
+    float: left;
+}
+.new_list li:nth-of-type(4n){
+    margin-right: 0;
+}
+.new_list li img{
+    margin-right: 12px;
+}
+.new_list .renew{
+    color: #b8c0cc;
+}
+.renew .episode{
+    height: 18px;
+    background-color: #b8c0cc;
+    line-height: 18px;
+    margin-left: 5px;
+    padding: 0px 4px;
+    border-radius:9px;
+    color: #fff;
+}
+.new_list .name{
+    height: 54px;
+}
+.new_list .no-bt{
+    margin-bottom: 25px;
+}
+.lastest_cont .cont_bt{
+    height: 22px;
+    background: url(../img/comic-img/shadow_bt.png) no-repeat ;
+    position: relative;
+}
+.cont_bt .icon{
+    width: 46px;
+    height: 18px;
+    background: url(../img/comic-img/icons.png) no-repeat -88px -55px;
+    position: absolute;
+    right: 47%;
+    top: -5px;
+}
+#box .jp_comic{
+    margin-bottom: 55px;
+}
+.over_recom li{
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+.over_recom{
+    margin-bottom: 20px;
+}
+.over_recom .text{
+    width: 120px;
+    height: 50px;
+    line-height: 22px;
+    padding-left: 10px;
+    background-color: rgba(0,0,0,0.6)
+}
+.over_recom .text div:nth-of-type(2){
+    color: #cccccc;
+}
+.over_recom li:nth-of-type(2){
+    margin-right: 0;
+}
