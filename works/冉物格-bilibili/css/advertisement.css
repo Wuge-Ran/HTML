@@ -1,0 +1,315 @@
+body{
+	font: 12px '微软雅黑';
+}
+#content{
+	width: 980px;
+	margin: 0 auto;
+}
+.nav_toplist{
+	width: 980px;
+	height: 59px;
+	padding-top: 14px;
+	border-bottom: 1px solid #e5e9ef;	
+}
+.nav_toplist li{
+	float: left;
+	width: 48px;
+	height: 44px;
+	text-align: center;
+}
+.nav_toplist a{
+	display: block;
+	line-height: 21px;
+}
+.nav_toplist i{
+	display: inline-block;
+	color: #fff;
+	padding:1px 2px;
+	border-radius: 2px;
+	margin: 2px 0;
+	background-color: #fdb9ce;
+	font-size: 10px;
+}
+.nav_toplist li:nth-child(1){
+	width: 33px;
+	text-align: left;
+}
+.nav_toplist .active{
+	color: #00a1d6;
+	border-bottom: 2px solid #00a1d6;
+}
+.nav_toplist li:nth-child(1) i{
+	display: block;
+	margin: 0;
+	margin-left: 2px;
+	width: 18px;
+	height: 18px;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat;
+}
+.nav_spe1 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 2px -25px;
+}
+.nav_spe2 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 0px -53px;
+}
+.nav_spe3 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 0px -81px;
+}
+.nav_spe4 i{
+	width: 17px;
+	height: 15px;
+	margin: 0;
+	padding: 0;
+	background: url(../img/comic-img/icons.png) no-repeat 0px -110px;
+}
+.cont_banner{
+    margin-top: 25px;
+    margin-bottom: 35px;
+    position: relative;
+}
+.cont_banner .intro{
+    width: 980px;
+    line-height: 34px;
+    background-image: linear-gradient(0,rgba(0,0,0,0.5),rgba(0,0,0,0))
+}
+.cont_banner .intro span{
+    padding-top: 22px;
+    text-indent: 10px;
+}
+.cont_banner .icons li{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 9px;
+    border: 2px solid #fff;
+    border-radius: 4px;
+}
+.cont_banner .icons .active{
+    border-color: #f25d8e;
+}
+.hot_label header{
+    width: 400px;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+.hot_label i{
+    width: 24px;
+    height: 24px;
+    background: url(../img/comic-img/icons.png) no-repeat -166px 0px;
+}
+h3{
+    font: 18px '微软雅黑';
+}
+.hot_label h3{
+    font: 18px/24px '微软雅黑';
+    text-indent: 10px;
+}
+.hot_label span{
+    color: #99a2aa;
+    line-height: 12px;
+    padding-left: 20px;
+    padding-top: 8px;
+}
+.label_list li{
+    line-height: 24px;
+    border-radius: 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border:1px solid #e5e9ef;
+}
+.label_list{
+    margin-bottom: 35px;
+}
+.label_list .active{
+    background-color: #00a1d6;
+    border: 1px solid transparent;
+    color: #fff;
+}
+.main_left header{
+    width: 700px;
+    margin-bottom: 20px;
+    line-height: 24px;
+}
+.main_left i{
+    height: 24px;
+    width: 25px;
+    margin-right: 10px;
+    background: url(../img/comic-img/icons.png) no-repeat -166px -36px;
+}
+.ads_video li{
+    float: left;
+    margin-right: 20px;
+}
+.main_left header .icons{
+    width: 75px;
+    height: 24px;
+    line-height: 22px;
+    border: 1px solid #ccd0d7;
+    cursor: pointer;
+}
+.main_left .icons i{
+    width: 14px;
+    height: 22px;
+    margin: 0 5px 0 9px;
+    background: url(../img/comic-img/icons.png) no-repeat -116px 0;
+    transition: 1s;
+}
+.ads_video{
+    margin-bottom: 39px;
+}
+.left_main header{
+    width: 700px;
+    line-height: 45px;
+    border-bottom: 1px solid #e5e9ef;
+}
+.left_main .sort{
+    margin-bottom: -1px;
+}
+.left_main .sort li{
+    border-bottom: 2px solid transparent;
+    margin-right:20px; 
+}
+.left_main .sort .active{
+    border-bottom: 2px solid #00a1d6;
+    color: #00a1d6;
+}
+.left_main header .show_way{
+    border-left: 1px solid #e5e9ef;
+}
+.left_main .show{
+    height: 17px;
+    margin-top: 20px;
+    line-height: 12px;
+}
+.left_main header .show_way i{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 16px;
+    background: url(../img/comic-img/icons.png) no-repeat;
+}
+.left_main .show_way .l-sort{
+    background-position: -117px -80px;
+}
+.left_main .show_way .p-sort{
+    margin: 0 7px;
+    background-position: -117px -103px;
+}
+.left_main .show_way .i-sort{
+    background-position: -117px -127px;
+}
+.left_main .type li{
+    margin: 0 8px;
+}
+.left_main .type li:nth-last-of-type(1){
+    margin-right:15px;
+}
+.left_main header{
+    margin-bottom: 0;
+}
+.main_video li{
+    float: left;
+    width: 350px;
+    height: 173px;
+    padding-top: 20px;
+    border-right:1px solid #e5e9ef;
+    border-bottom:1px solid #e5e9ef; 
+}
+.intro_message{
+    width: 195px;
+    margin-left: 19px;
+    word-break: break-all;
+}
+.intro_message .name{
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.intro_message .intro{
+    color: #99a2b1;
+    margin-bottom: 15px;
+}
+.intro_message .bt_message{
+    color: #99a2b1;
+    line-height: 15px;
+}
+.intro_message .bt_message span{
+    line-height: 15px;
+}
+.bt_message .play{
+    margin-left: 15px;
+}
+.bt_message .number i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 15px;
+    background: url(../img/comic-img/icons.png) -50px -72px no-repeat;
+}
+.bt_message .danmaku i{
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 15px;
+    background: url(../img/comic-img/icons.png) -50px -110px no-repeat;
+}
+.main_left{
+    width: 700px;
+}
+.ads_video li:nth-last-child(1){
+    margin-right: 0;
+}
+.main_video li:nth-of-type(2n){
+    border-right: none;
+    padding-left: 21px;
+}
+.main_video{
+    margin-bottom: 25px;
+}
+.page_number li{
+    float: left;
+    margin-right: 4px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+.page_number a{
+    display:block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 13px;
+}
+.page_number .active{
+    background-color: #00a1d6;
+    border:1px solid transparent;
+    color: #fff;
+}
+.page_number li:nth-last-of-type(3){
+    border: none;
+}
+.quick_change{
+    color: #99a2aa;
+    margin-bottom: 56px;
+}
+.quick_change input{
+    width: 52px;
+    height: 26px;
+    outline: none;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+.main_left header .icons:hover i{
+    transform: rotate(360deg);
+}

@@ -6,12 +6,17 @@ div,ul,ol,li,h1,h2,h3,h4,a,img,input{
 	font: 12px arial,'微软雅黑';
 	
 }
-#box .box_head{
+#box #box_head{
 	height: 170px;
-	background:url(../img/comic-img/head_bg.png) no-repeat -300px 0;
+	width: 100%;
+	margin: 0 auto;
+	background:url(../img/comic-img/head_bg.png) no-repeat center;
 /*	margin-top: -170px;*/
 }
-
+.head_cont{
+	width: 980px;
+	margin:0 auto;
+}
 .head_top_cont{
 	width: 960px;
 	height: 42px;
