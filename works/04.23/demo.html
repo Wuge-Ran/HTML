@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        (function(){
+            var w = window.screen.width;
+            var targetW = 640;
+            var scale = w/targetW; 
+            document.write('<meta name="viewport" content="width=divice-width,user-scalable=no,initial-scale='+scale+',minimum-scale='+scale+',maximum-scale='+scale+'" />');
+        })();
+        </script>
+    <style>
+        html{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            height: 100%;
+            position: relative;
+        }
+        .top{
+            width: 100%;
+            height: 130px;
+            background-color: #ff0000;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 99;
+        }
+        .bottom{
+            width: 100%;
+            height: 130px;
+            background-color: #ff0000;
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+        }
+        .box{
+            width: 640px;
+            height: 876px;
+            position: relative;
+            
+        }
+        .cont{
+            padding: 130px 0;
+            width: 640px;
+            height: 876px;
+            overflow: scroll;
+        }
+        .mini{
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: #00ff5a;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+    </div>
+    <div class="box">
+        <div class="cont">
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+            <div class="mini"></div>
+        </div>
+    </div>
+    <div class="bottom">
+    </div>
+</body>
+</html>
