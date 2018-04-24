@@ -1,0 +1,202 @@
+html {
+  overflow: hidden;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  overflow: auto;
+  font-size: 0.68518519rem;
+}
+#head {
+  box-sizing: border-box;
+  position: absolute;
+  padding-top: 0.40740741rem;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #c6cbc6;
+  background-color: #fff;
+  z-index: 2;
+}
+#head .top {
+  margin-bottom: 1.16666667rem;
+}
+#head .top h1 {
+  float: left;
+  width: 3.33333333rem;
+  height: 1.5rem;
+  background-image: url(../img/logo.png);
+  background-size: 3.33333333rem 1.5rem;
+  margin-left: 0.92592593rem;
+}
+#head .top .search {
+  float: left;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../img/search.png);
+  background-size: 1.5rem 1.5rem;
+  margin-left: 6.37037037rem;
+}
+#head .top .user {
+  float: left;
+  margin-left: 1rem;
+  width: 1.27777778rem;
+  height: 1.5rem;
+  margin-top: 0.11111111rem;
+}
+#head .top .user img {
+  width: 100%;
+}
+#head .top .download {
+  float: left;
+  width: 4.2962963rem;
+  height: 1.31481481rem;
+  margin-top: 0.11111111rem;
+  border-radius: 6px;
+  background-color: #ff719c;
+  color: #fff;
+  font-size: 0.64814815rem;
+  line-height: 1.31481481rem;
+  text-align: center;
+  margin-left: 0.62962963rem;
+}
+#head .headnav {
+  height: 1.59259259rem;
+}
+#head .headnav li {
+  float: left;
+  width: 1.68518519rem;
+  height: 1.5rem;
+  font-size: 0.66666667rem;
+  line-height: 1.5rem;
+  border-bottom: 0.09259259px solid transparent;
+  margin: 0 0.94444444rem;
+  color: #737573;
+  text-align: center;
+}
+#head .headnav li.active {
+  color: #ff719c;
+  border-bottom: 1px solid #ff719c;
+}
+#head .headnav li:nth-of-type(1) {
+  margin-left: 1.38888889rem;
+}
+#head .headnav li:nth-last-of-type(1) {
+  margin-left: 0;
+  width: 0.7037037rem;
+  color: #a5aaa5;
+}
+#head .bottomnav {
+  height: 2.40740741rem;
+  background-color: #f7f7f7;
+}
+#head .bottomnav li {
+  float: left;
+  line-height: 2.40740741rem;
+  margin: 0 0.66666667rem;
+}
+#head .bottomnav li.active {
+  margin-left: 1.11111111rem;
+  color: #ff719c;
+}
+#wrap {
+  padding: 7.11111111rem 0 5.55555556rem 0.64814815rem;
+  background-color: #eff3ef;
+}
+#wrap .wrap_head {
+  line-height: 2.90740741rem;
+}
+#wrap .wrap_head h3 {
+  font-size: 0.88888889rem;
+  float: left;
+}
+#wrap .wrap_head .rank {
+  float: right;
+  color: #ffa629;
+  overflow: hidden;
+}
+#wrap .wrap_head .rank i {
+  display: inline-block;
+  width: 0.92592593rem;
+  height: 0.75925926rem;
+  background: url(../img/rank.png) no-repeat;
+  background-size: 0.92592593rem 0.75925926rem;
+}
+#wrap .wrap_head .rank .more {
+  background: none;
+  color: #a5aaa5;
+}
+#wrap .cont_list li {
+  width: 9.03703704rem;
+  height: 7.64814815rem;
+  margin-right: 0.62962963rem;
+  margin-bottom: 0.83333333rem;
+  float: left;
+}
+#wrap .cont_list li .video {
+  position: relative;
+}
+#wrap .cont_list li .video img {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+#wrap .cont_list li .video .video_mess {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.90740741rem;
+  line-height: 0.90740741rem;
+  color: #fff;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+#wrap .cont_list li .video .video_mess .play {
+  float: left;
+  margin-left: 0.48148148rem;
+}
+#wrap .cont_list li .video .video_mess .play i {
+  width: 0.74074074rem;
+  height: 0.66666667rem;
+  float: left;
+  margin-top: 0.07407407rem;
+  margin-right: 0.37037037rem;
+  background: url(../img/play.png) no-repeat;
+  background-size: 0.74074074rem 0.66666667rem;
+}
+#wrap .cont_list li .video .video_mess .play span {
+  float: left;
+}
+#wrap .cont_list li .video .video_mess .danmu {
+  float: right;
+  margin-right: 1.53703704rem;
+}
+#wrap .cont_list li .video .video_mess .danmu i {
+  width: 0.74074074rem;
+  height: 0.66666667rem;
+  float: left;
+  margin-top: 0.11111111rem;
+  margin-right: 0.37037037rem;
+  background: url(../img/danmu.png) no-repeat;
+  background-size: 0.74074074rem 0.66666667rem;
+}
+#wrap .cont_list li .name {
+  margin-top: 0.24074074rem;
+  line-height: 0.87037037rem;
+}
+#foot {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  bottom: 0;
+  height: 5.55555556rem;
+  z-index: 2;
+  background-color: #f7f3f7;
+  padding-top: 1.72222222rem;
+}
+#foot p {
+  line-height: 1.75925926rem;
+  text-align: center;
+  color: #9c9e9c;
+}

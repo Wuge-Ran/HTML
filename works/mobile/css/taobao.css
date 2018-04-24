@@ -1,0 +1,47 @@
+/*css reset*/
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+img {
+  vertical-align: top;
+}
+/*main*/
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#head {
+  height: 2.225rem;
+  background-color: #ef3239;
+}
+#head a {
+  float: left;
+  width: 2.45rem;
+  line-height: 1.975rem;
+  text-align: center;
+}
+#head a.task {
+  width: 2.6rem;
+}
+#head h1 {
+  float: left;
+  margin-left: 3.9rem;
+  font-size: 0.55rem;
+  line-height: 1.975rem;
+}
+#head h1 i {
+  font-size: 0.55rem;
+}

@@ -1,0 +1,46 @@
+/*css reset*/
+body,h1,h2,h3{
+	margin: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	color: #000;
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+/*main*/
+@r:40rem;
+.clearfix:after{
+	content: "";
+	display: block;
+	clear:both;
+}
+#head{
+	height: 89/@r;
+	background-color: #ef3239;
+	a{
+		float: left;
+		width: 98/@r;
+		line-height: 79/@r;
+		text-align: center;
+		&.task{
+			width: 104/@r;
+		}
+	}
+	h1{
+		float: left;
+		margin-left: 156/@r;
+		font-size: 22/@r;
+		line-height: 79/@r;
+		i{
+			font-size: 22/@r;
+			margin-right: 10px;
+		}
+	}
+}
