@@ -9,6 +9,9 @@ body{
     overflow: auto;
     font-size: 37/@r;
 }
+a{
+    display: inline-block;
+}
 #head{
     box-sizing: border-box;
     position: absolute;
@@ -101,24 +104,28 @@ body{
     }
 }
 #wrap{
-    padding: 384/@r 0 300/@r 35/@r;
+    padding: 384/@r 35/@r 300/@r 35/@r;
     background-color: #eff3ef;
     .wrap_head{
         line-height: 157/@r;
         h3{
-            font-size: 48/@r;
+            font-size: 44/@r;
             float: left;
         }
         .rank{
             float: right;
             color: #ffa629;
             overflow: hidden;
-            i{
-                display: inline-block;
-                width: 50/@r;
-                height: 41/@r;
-                background: url(../img/rank.png) no-repeat;
-                background-size: 50/@r 41/@r;
+            span{
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 50/@r;
+                    height: 41/@r;
+                    background: url(../img/rank.png) no-repeat;
+                    background-size: 100%;
+                    margin-right: 27/@r;
+                }
             }
             .more{
                 background: none;
@@ -133,6 +140,9 @@ body{
             margin-right: 34/@r;
             margin-bottom: 45/@r;
             float: left;
+            &:nth-of-type(2n){
+                margin-right: 0;
+            }
             .video{
                 position: relative;
                 img{
@@ -185,6 +195,27 @@ body{
                 line-height: 47/@r;
             }
         }
+    }
+    .itm_head{
+        line-height: 115/@r;
+        h3{
+            float: left;
+            font-size: 44/@r;
+        }  
+        .more{
+            float: right;
+            font-size: 38/@r;
+            color: #949a94;
+            &:after{
+                content: "";
+                display: inline-block;
+                width: 17/@r;
+                height: 30/@r;
+                background:url(../img/right_arrow.png) no-repeat;
+                background-size: 100%;
+                margin-left: 32/@r;
+            }
+        }      
     }
 }
 #foot{

@@ -9,6 +9,9 @@ body {
   overflow: auto;
   font-size: 0.68518519rem;
 }
+a {
+  display: inline-block;
+}
 #head {
   box-sizing: border-box;
   position: absolute;
@@ -101,14 +104,14 @@ body {
   color: #ff719c;
 }
 #wrap {
-  padding: 7.11111111rem 0 5.55555556rem 0.64814815rem;
+  padding: 7.11111111rem 0.64814815rem 5.55555556rem 0.64814815rem;
   background-color: #eff3ef;
 }
 #wrap .wrap_head {
   line-height: 2.90740741rem;
 }
 #wrap .wrap_head h3 {
-  font-size: 0.88888889rem;
+  font-size: 0.81481481rem;
   float: left;
 }
 #wrap .wrap_head .rank {
@@ -116,12 +119,14 @@ body {
   color: #ffa629;
   overflow: hidden;
 }
-#wrap .wrap_head .rank i {
+#wrap .wrap_head .rank span::before {
+  content: "";
   display: inline-block;
   width: 0.92592593rem;
   height: 0.75925926rem;
   background: url(../img/rank.png) no-repeat;
-  background-size: 0.92592593rem 0.75925926rem;
+  background-size: 100%;
+  margin-right: 0.5rem;
 }
 #wrap .wrap_head .rank .more {
   background: none;
@@ -133,6 +138,9 @@ body {
   margin-right: 0.62962963rem;
   margin-bottom: 0.83333333rem;
   float: left;
+}
+#wrap .cont_list li:nth-of-type(2n) {
+  margin-right: 0;
 }
 #wrap .cont_list li .video {
   position: relative;
@@ -184,6 +192,27 @@ body {
 #wrap .cont_list li .name {
   margin-top: 0.24074074rem;
   line-height: 0.87037037rem;
+}
+#wrap .itm_head {
+  line-height: 2.12962963rem;
+}
+#wrap .itm_head h3 {
+  float: left;
+  font-size: 0.81481481rem;
+}
+#wrap .itm_head .more {
+  float: right;
+  font-size: 0.7037037rem;
+  color: #949a94;
+}
+#wrap .itm_head .more:after {
+  content: "";
+  display: inline-block;
+  width: 0.31481481rem;
+  height: 0.55555556rem;
+  background: url(../img/right_arrow.png) no-repeat;
+  background-size: 100%;
+  margin-left: 0.59259259rem;
 }
 #foot {
   position: absolute;
