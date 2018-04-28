@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹性盒模型</title>
+    <style>
+        .box{
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid green;
+           /*具备弹性盒模型的特性*/
+				display: flex;
+				/*设置主轴*/
+				flex-direction: row;
+				/*主轴对齐*/
+				justify-content:space-between;
+				/*侧轴对齐*/
+				align-items: flex-start;
+				/*换行*/
+				flex-wrap: wrap;
+				/*换行后两行之间的空隙处理*/
+				align-content: flex-start;
+				/*缩写*/
+				/*flex-flow: column wrap;*/
+        }
+        .box div{
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            font: 48px/100px '宋体';
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+</body>
+</html>
