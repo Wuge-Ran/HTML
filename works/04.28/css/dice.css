@@ -1,0 +1,65 @@
+.box{
+    width: 200px;
+    height: 200px;
+    padding: 200px;
+    border: 1px solid red;
+    margin: 10px auto;
+    
+}
+.dice_list{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-origin: center center 100px;
+    transition: 6s;
+    transform-style: preserve-3d;
+    animation: move 9s infinite linear;
+}
+@keyframes move{
+    0%{
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform: rotateX(-720deg) rotateY(-360deg);
+    }
+}
+.dice_list li{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    font: 48px/200px '宋体';
+    text-align: center;
+    color: #fff;
+}
+.dice_list li:nth-child(1){
+    bottom:200px;
+    background-color: purple;
+    transform: rotateX(-90deg);
+    transform-origin: left bottom;
+    
+}
+.dice_list li:nth-child(2){
+    left:200px;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    background-color:gold;
+}
+.dice_list li:nth-child(3){
+    right:200px;
+    transform: rotateY(90deg);
+    transform-origin: right;
+    background-color: hotpink;
+}
+.dice_list li:nth-child(4){
+    background-color: burlywood;
+}
+.dice_list li:nth-child(5){
+    top:200px;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    background-color: greenyellow;
+}
+.dice_list li:nth-child(6){
+    background-color: sandybrown;
+    transform: translateZ(200px);
+}

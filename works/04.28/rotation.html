@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 1500px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        .list{
+            width: 200%;
+            animation: move 10s infinite linear;
+        }
+        .list li{
+            float: left;
+        }
+        .list li:nth-child(1){
+            width: 300px;
+            height: 300px;
+            background: url(img/1.gif) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(2){
+            width: 300px;
+            height: 300px;
+            background: url(img/2.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(3){
+            width: 300px;
+            height: 300px;
+            background: url(img/3.gif) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(4){
+            width: 300px;
+            height: 300px;
+            background: url(img/4.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(5){
+            width: 300px;
+            height: 300px;
+            background: url(img/5.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(6){
+            width: 300px;
+            height: 300px;
+            background: url(img/1.gif) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(7){
+            width: 300px;
+            height: 300px;
+            background: url(img/2.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(8){
+            width: 300px;
+            height: 300px;
+            background: url(img/3.gif) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(9){
+            width: 300px;
+            height: 300px;
+            background: url(img/4.jpg) no-repeat;
+            background-size: 100%;
+        }
+        .list li:nth-child(10){
+            width: 300px;
+            height: 300px;
+            background: url(img/5.jpg) no-repeat;
+            background-size: 100%;
+        }
+        @keyframes move{
+            0%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(-1500px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>
