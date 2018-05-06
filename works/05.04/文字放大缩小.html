@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>文字放大缩小</title>
+    <style>
+        body{
+            font: 12px '微软雅黑';
+        }
+        span{
+            display: inline-block;
+            user-select: none;
+            width: 30px;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid red;
+            font: 24px/30px '微软雅黑';
+        }
+        span:active{
+            background: red;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="+">+</span>
+        <span id="-">-</span>
+    </div>
+    <p id="p">
+        差一点！这次真的是差一点！皇马差一点就被拜仁在主场翻盘！相较于首回合比赛，拜仁在人员齐整程度和人员状态上都有明显回升，
+        但皇马依旧在上半场借助于本泽马和C罗的作用和拜仁在左路完成对冲，基本上打成五五开；下半场利用失误进球后，齐达内并没能
+        抓住最好的机会通过换人一击毙命，反而被拜仁完全压制。最后时刻皇马门前已经是风声鹤唳，还是纳瓦斯高接抵挡才让皇马撑到最后。
+        这是一场极其惨烈的比赛，皇马虽然晋级，但这样的临场发挥很难去应付欧冠决赛。
+    </p>
+</body>
+<script>
+    var oP=document.getElementById('p');
+    var oPlus=document.getElementById('+');
+    var oMinus=document.getElementById('-');
+    var fz=12;
+    oPlus.onclick=function (){
+      fz++;
+       oP.style.fontSize=fz+'px';
+    }
+    oMinus.onclick=function (){
+        fz--;
+        oP.style.fontSize=fz+'px';
+    }
+</script>
+</html>

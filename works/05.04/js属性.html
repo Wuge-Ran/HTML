@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js属性</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        #bt{
+            width: 40px;
+            height: 25px;
+        }
+        #p{
+            width: 400px;
+            height: 400px;
+            border: 2px solid #000;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var oP=document.getElementById('p');
+            var oText=document.getElementById('text');
+            var oBt=document.getElementById('bt');
+            var oSpan=document.getElementById('span');
+            var br='<br>';
+            oBt.onclick=function (){
+                oP.innerHTML+=oSpan.innerHTML+oText.value+br;
+                oText.value=null;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <p id="p"></p>
+        <div class="wrap">
+            <span id="span">妙味：</span>
+            <input type="text" id="text">
+            <input type="button" id="bt" value="按钮">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title></title>
+
+<style type="text/css">
+
+body,dl,dt,dd{ margin: 0; padding: 0; }
+
+a{ text-decoration: none; }
+
+input{ border: none; }
+
+ 
+
+.wrap .info{ 
+
+width: 300px; 
+
+height: 40px; 
+
+line-height: 40px; 
+
+font-size: 25px;
+
+font-weight: bold;
+
+margin-left: 24px;
+
+margin-top: 20px;
+
+}
+
+.wrap .info a{
+
+display: inline-block; 
+
+float: right; 
+
+width: 120px; 
+
+text-align: center; 
+
+height: 40px; 
+
+background: red; 
+
+font-size: 13px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+
+color: #fff;
+
+}
+
+.box{  
+
+width: 100px; 
+
+height: 100px; 
+
+background:#fff;
+
+border: 4px solid #000;
+
+margin-left: 24px;
+
+margin-top: 30px;
+
+}
+
+#options{
+
+display: none;
+
+}
+
+.mask{ 
+
+position: absolute;
+
+left: 0; 
+
+top: 0; 
+
+width: 100%; 
+
+height: 100%; 
+
+background: #000; 
+
+opacity: 0.5; 
+
+filter: alpha(opacity=50);
+
+}
+
+.choice{ 
+
+width: 290px; 
+
+height: 200px; 
+
+border: 20px solid #9d959d;
+
+background: #fff; 
+
+position: absolute; 
+
+top: 50%;
+
+left: 50%;
+
+margin-top: -110px;
+
+margin-left: -165px;
+
+ 
+
+}
+
+dl{ 
+
+width: 290px; 
+
+height: 32px; 
+
+margin-bottom: 8px;
+
+margin-top: 16px;
+
+line-height: 32px;
+
+}
+
+dt{ 
+
+float: left;
+
+margin-left: 33px;
+
+width: 120px;
+
+}
+
+dd{ 
+
+height: 30px; 
+
+width: 34px; 
+
+margin-right: 5px; 
+
+background: #eee; 
+
+float: left; 
+
+text-align: center; 
+
+line-height: 30px; 
+
+color: #fff;
+
+cursor: pointer;
+
+}
+
+.bH dd,.bW dd{
+
+height: 28px;
+
+width: 32px;
+
+border: 1px solid #ddd;
+
+color: #000;
+
+font-size: 12px;
+
+}
+
+#red{ 
+
+background: red; 
+
+}
+
+#green{ 
+
+background: green; 
+
+}
+
+#blue{ 
+
+background: blue; 
+
+}
+
+#reset{
+
+margin-left: 88px;
+
+}
+
+#reset,#true{
+
+background-color: #002852; 
+
+color: white; 
+
+padding: 7px 15px; 
+
+margin-top: 10px;
+
+}
+
+</style>
+
+<script>
+
+window.onload = function(){
+
+var oSwitch = document.getElementById('switch');
+
+var oOptions = document.getElementById('options');
+
+var oReset = document.getElementById('reset');
+
+var oTrue = document.getElementById('true');
+
+var oBox = document.getElementById('box');
+
+ 
+
+var oRed = document.getElementById('red');
+
+var oBlue = document.getElementById('blue');
+
+var oGreen = document.getElementById('green');
+
+ 
+
+var oW100 = document.getElementById('width100');
+
+var oW200 = document.getElementById('width200');
+
+var oW300 = document.getElementById('width300');
+
+ 
+
+var oH100 = document.getElementById('height100');
+
+var oH200 = document.getElementById('height200');
+
+var oH300 = document.getElementById('height300');
+
+ 
+
+oSwitch.onmousedown  = function(){
+
+oOptions.style.display = 'block';
+
+}
+
+ 
+
+oReset.onclick = function(){
+
+oBox.style.width=100+'px';
+
+oBox.style.height=100+'px';
+
+oBox.style.background='#fff';
+
+}
+
+oTrue.onclick = function(){
+
+oOptions.style.display = 'none';
+
+}
+
+ 
+
+oW100.onclick = function(){
+
+changeWidth('100px');
+
+}
+
+oW200.onclick = function(){
+
+changeWidth('200px');
+
+}
+
+oW300.onclick = function(){
+
+changeWidth('300px');
+
+}
+
+ 
+
+oH100.onclick = function(){
+
+changeHeight('100px');
+
+}
+
+oH200.onclick = function(){
+
+changeHeight('200px');
+
+}
+
+oH300.onclick = function(){
+
+changeHeight('300px');
+
+}
+
+ 
+
+oRed.onclick = function(){
+
+changeColor('red');
+
+}
+
+oBlue.onclick = function(){
+
+changeColor('blue');
+
+}
+
+oGreen.onclick = function(){
+
+changeColor('green');
+
+}
+
+ 
+
+ 
+
+function changeColor(color){
+
+oBox.style.background = color;
+
+}
+
+function changeWidth(width){
+
+oBox.style.width=width;
+
+}
+
+function changeHeight(height){
+
+oBox.style.height=height;
+
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div class="info">设置样式：<a id="switch" href="">点击设置</a></div>
+
+<div class="box" id="box"></div>
+
+</div>
+
+<div id="options">
+
+<div class="mask"></div>
+
+<div class="choice">
+
+<dl class="bgColor">
+
+<dt>请选择背景色:</dt>
+
+<dd id="red">红</dd>
+
+<dd id="green">绿</dd>
+
+<dd id="blue">蓝</dd>
+
+</dl>
+
+<dl class="bH">
+
+<dt>请选择宽(px):</dt>
+
+<dd id="width100">100</dd>
+
+<dd id="width200">200</dd>
+
+<dd id="width300">300</dd>
+
+</dl>
+
+<dl class="bW">
+
+<dt>请选择高(px):</dt>
+
+<dd id="height100">100</dd>
+
+<dd id="height200">200</dd>
+
+<dd id="height300">300</dd>
+
+</dl>
+
+<input id="reset" type="button" name="" value="恢复">
+
+<input id="true" type="button" name="" value="确定">
+
+</div>
+
+</div>
+
+</body>
+
+</html>

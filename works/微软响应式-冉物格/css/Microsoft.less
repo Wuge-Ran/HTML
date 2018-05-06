@@ -1,0 +1,525 @@
+body{
+    font: 16px '微软雅黑';
+    // overflow-x:hidden;
+}
+#box{
+    #head_sm{
+        display: none;
+    }
+    #head{
+        box-sizing: border-box;
+        h1{
+            text-indent: -9999px;
+            width: 108px;
+            height: 23px;
+            margin-top: 13px;
+            background: url(../img/logo.png) no-repeat;
+        }
+        .width{
+            max-width: 1215px;
+            margin:0 auto;
+        }
+        .head_list{
+            li{
+                float: left;
+                margin: 0 27px;
+                line-height: 50px;
+                color: #262626;
+                &:nth-of-type(1){
+                    margin-left: 45px;
+                }
+                &:nth-last-of-type(1)::after{
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icons.png) no-repeat;
+                }
+                &.sm{
+                    width: 14px;
+                    height: 50px;
+                    background: url(../img/icons.png) no-repeat -146px 0;
+                    margin: 0;
+                    display: none;
+                }
+            }
+        }
+        .head_right{
+            margin-top: 17px;
+            li{
+                float: left;
+                margin: 0 13px;
+                line-height: 24px;
+                color: #262626;
+                &:nth-of-type(1){
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icons.png) no-repeat -23px 0;
+                }
+                &:nth-of-type(2){
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icons.png) no-repeat -45px 0;
+                }
+            }
+        }
+    }
+    #wrap{
+        overflow: hidden;
+        .banner_sm{
+            display: none;
+        }
+        .banner{
+            height: 454px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 73px;
+            position: relative;
+            background: url(../img/surface_pro.png) no-repeat;
+            background-size: 100% 100%;
+            margin-bottom: 48px;
+            h3{
+                line-height: 43px;
+                font-size: 24px;
+            }
+            p{
+                line-height: 33px;
+                margin-bottom: 17px;
+            }
+            .buy{
+                width: 130px;
+                height: 40px;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+                line-height: 40px;
+                font-size: 14px;
+            }
+            .banner_bt{
+                position: absolute;
+                left: 45%;
+                bottom: 20px;
+                width: 55px;
+                height: 11px;
+                a{
+                    float: left;
+                    width: 6px;
+                    height: 6px;
+                    box-sizing: border-box;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    margin-top: 3px;
+                    margin-right: 6px
+                }
+                span{
+                    float: right;
+                    font-size: 8px;
+                }
+            }
+        }
+        .b2{
+            margin-bottom: 32px;
+        }
+        .hardware{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            li{
+                width: 267px;
+                margin-bottom: 72px;
+                img{
+                    width: 100%;
+                }
+                h4{
+                    margin-top: 12px;
+                    line-height: 26px;
+                }
+                P{
+                    line-height: 25px;
+                }
+                .buy{
+                    line-height: 35px;
+                    color: #0067b8;
+                }
+            }
+        }
+        .software_h3{
+            line-height: 64px;
+            text-indent: 20px;
+            font-size: 24px;
+        }
+        .software{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            li{
+                width: 267px;
+                margin-bottom: 60px;
+                img{
+                    width: 100%;
+                }
+                h4{
+                    margin-top: 12px;
+                    line-height: 26px;
+                }
+                P{
+                    line-height: 25px;
+                }
+                .buy{
+                    line-height: 35px;
+                    color: #0067b8;
+                }
+            }
+        }
+        .banner2{
+            height: 454px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 73px;
+            position: relative;
+            background: url(../img/banner2.png) no-repeat;
+            background-size: 100% 100%;
+            margin-bottom: 48px;
+            h3{
+                line-height: 43px;
+                font-size: 24px;
+            }
+            p{
+                line-height: 33px;
+                margin-bottom: 17px;
+            }
+            .buy{
+                width: 217px;
+                height: 40px;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+                line-height: 40px;
+                font-size: 14px;
+            }
+            .banner_bt{
+                position: absolute;
+                left: 45%;
+                bottom: 20px;
+                width: 55px;
+                height: 11px;
+                a{
+                    float: left;
+                    width: 6px;
+                    height: 6px;
+                    box-sizing: border-box;
+                    border: 1px solid black;
+                    border-radius: 50%;
+                    margin-top: 3px;
+                    margin-right: 6px
+                }
+                span{
+                    float: right;
+                    font-size: 8px;
+                }
+            }
+        }
+        .focus{
+            margin-bottom: 48px;
+            div{
+                line-height: 32px;
+                color: #666666;
+            }
+            a{
+                width: 32px;
+                height: 32px;
+                margin-left: 12px;
+                &:nth-of-type(1){
+                    background: url(../img/icons.png) no-repeat -69px 0;
+                }
+                &:nth-of-type(2){
+                    background: url(../img/icons.png) no-repeat -106px 0;
+                }
+            }
+        }
+    }
+    #foot{
+        padding-top: 32px;
+        background-color: #f2f2f2;
+        color: #616161;
+        font: 12px/29px '微软雅黑';
+        .foot_cont{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            dl{
+                width: 200px;
+                margin-bottom: 170px;
+                dt{
+                    color: #616161;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .foot_bootom{
+            .language{
+                &::before{
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../img/icons.png) no-repeat 0 -26px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+            .about{
+                width: 894px;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    }
+}
+@media only all and (max-width:1083px){
+    .width{
+        width: 1065px!important;
+    }
+    #head{
+        padding: 0 24px;
+        .width{
+            width: 1025px!important;
+        } 
+    }
+    #box{
+        #wrap{
+            .banner{
+                height: 569px;
+            }
+            .hardware{
+                li{
+                    width: 494px;
+                }
+            }
+            .software{
+                li{
+                    width: 494px;
+                }
+            }
+            .banner2{
+                height: 569px;
+            }
+        }
+        #foot{
+            .foot_cont{
+                box-sizing: border-box;
+                padding: 0 30px;
+                dl{
+                    width: 260px;
+                }
+            }
+            
+            .foot_bootom{
+                display: none;
+            }
+        }
+    }
+}
+@media only all and (max-width:799px){
+    .width{
+        width: 781px!important;
+    }
+    #head{
+        box-sizing: border-box;
+        padding: 0 24px;
+        font-size: 12px;
+        .width{
+            width: 750px!important;
+        } 
+        .head_list{
+            li:nth-last-of-type(1){
+                display: none;
+            }
+            li:nth-of-type(5){
+                margin-right: 10px !important;
+            }
+            .sm{
+                display: block !important;
+            }
+        }
+    }
+    #box{
+        #wrap{
+            .banner{
+                height: 409px;
+            }
+            .hardware{
+                li{
+                    width: 352px;
+                }
+            }
+            .software{
+                li{
+                    width: 352px;
+                }
+            }
+            .banner2{
+                height: 409px;
+            }
+        }
+        #foot{
+            .foot_cont{
+                box-sizing: border-box;
+                padding: 0 30px;
+                dl{
+                    width: 232px;
+                }
+            }
+            .foot_bootom{
+                display: block;
+                .language{
+                    margin-left: 16px;
+                }
+                .about{
+                    width: 781px;
+                    a:nth-last-of-type(1){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only all and (max-width:539px){
+    .width{
+        width: 100%!important;
+    }
+    
+    #box{
+        #head{
+            display: none;
+         }
+         #head_sm{
+             display: block;
+             overflow: hidden;
+             height: 50px;
+             position: relative;
+             .head_list{
+                 width: 50px;
+                 height: 50px;
+                 background: url(../img/icons.png) no-repeat 16px -70px;
+             }
+             h1{
+                 position: absolute;
+                 left: 0;
+                 right: 0;
+                 top: 0;
+                 bottom: 0;
+                 margin: auto;
+                 width: 109px;
+                 height: 24px;
+                 background: url(../img/logo.png) no-repeat;
+                 text-indent: -9999px;
+             }
+             .icons{
+                 margin-top: 15px;
+                 margin-right: 5%;
+                 a{
+                     width: 20px;
+                     height: 20px;
+                     background: url(../img/icons.png) no-repeat;
+                     &:nth-of-type(1){
+                         background-position: -23px 0;
+                         margin-right: 12px;
+                     }
+                     &:nth-of-type(2){
+                        background-position: -45px 0;
+                    }
+                 }
+             }
+         }
+        #wrap{
+            .banner{
+                display: none;
+            }
+            .banner_sm{
+                display: block;
+                margin-bottom: 48px;
+                img{
+                    width: 100%;
+                }
+                .banner_sm_intro{
+                    padding: 44px 0 102px;
+                    text-align: center;
+                    background-color: #e6e6e6;
+                    position: relative;
+                    h3{
+                        font:bold 20px/42px '微软雅黑';
+                    }
+                    p{
+                        line-height: 35px;
+                    }
+                    .buy{
+                        width: 129px;
+                        height: 40px;
+                        margin-top: 15px;
+                        display: inline-block;
+                        line-height: 40px;
+                        background-color: #000;
+                        color: #fff;
+                    }
+                    .banner_bt{
+                        position: absolute;
+                        left: 45%;
+                        bottom: 20px;
+                        width: 55px;
+                        height: 11px;
+                        a{
+                            float: left;
+                            width: 6px;
+                            height: 6px;
+                            box-sizing: border-box;
+                            border: 1px solid black;
+                            border-radius: 50%;
+                            margin-top: 3px;
+                            margin-right: 6px
+                        }
+                        span{
+                            float: right;
+                            font-size: 8px;
+                        }
+                    }
+                }
+            }
+            .banner2_sm{
+                .buy{
+                    width: 217px!important;
+                }
+            }
+            .hardware{
+                li{
+                    width: 96%;
+                    padding: 0 2%;
+                }
+            }
+            .software{
+                li{
+                    width: 96%;
+                    padding: 0 2%;
+                }
+            }
+            .banner2{
+                display: none;
+            }
+        }
+        #foot{
+            .foot_cont{
+                dl{
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+            }
+            .foot_bootom{
+                display: none;
+            }
+        }
+    }
+}

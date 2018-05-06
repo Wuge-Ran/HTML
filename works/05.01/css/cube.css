@@ -16,6 +16,7 @@
 #box .tlist {
   position: relative;
   transform-style: preserve-3d;
+  
   animation: move 5s infinite linear;
   transform-origin: 225px 225px 75px;
 }
