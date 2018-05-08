@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>手机短信模拟</title>
+    <style>
+        #box{
+            width: 237px;
+            height: 420px;
+            border: 2px solid #000;
+            margin: 10px auto;
+            position: relative;
+        }
+        #bottom{
+            position: absolute;
+            box-sizing: border-box;
+            bottom: 0px;
+            height: 49px;
+            width: 100%;
+            border-top: 1px solid salmon;
+            background-color: #fff;
+            padding-top:7px; 
+            padding-left: 4px;
+        }
+        #head{
+            float: left;
+            width: 30px;
+            height: 34px;
+            border-radius: 4px;
+            border: 1px solid #ded6e7;
+        }
+        #head img{
+            width: 100%;
+            height: 100%;
+            user-select: none;
+        }
+        #input{
+            box-sizing: border-box;
+            float: left;
+            width: 140px;
+            height: 36px;
+            border-radius: 4px;
+            margin-left: 5px;
+            border: 1px solid #ded6e7;
+            outline: none;
+        }
+        #send{
+            float: left;
+            width: 55px;
+            text-align: center;
+            line-height: 36px;
+            cursor: pointer;
+        }
+        #wrap{
+            box-sizing: border-box;
+            height:  100%;
+            padding-bottom: 50px;
+            overflow-y:scroll ;
+        }
+        .textLeft{
+            float: left;
+            max-width: 160px;
+            word-break: break-all;
+            padding: 5px;
+            background: violet; 
+            color:#fff;
+            margin-left: 30px;
+            border-radius:4px;
+        }
+        .textRight{
+            float: right;
+            max-width: 160px;
+            word-break: break-all;
+            padding: 5px;
+            background: #9cce00; 
+            color:#fff;
+            margin-right: 25px;
+            border-radius:4px;
+        }
+        .text{
+            margin-bottom: 10px;
+            overflow: hidden;
+            position: relative;
+            font-size: 12px;
+        }
+        .headimg1{
+            width: 30px;
+            height: 20px;
+            position: absolute;
+            user-select: none;
+            left: 0;
+            top: 0;
+        }
+        .headimg2{
+            width: 25px;
+            user-select: none;
+            height: 25px;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="wrap"></div>
+        <div id="bottom">
+            <div id="head"><img src="img/cry.jpg" alt="" id="img"></div>
+            <input type="text" name="" id="input">
+            <div id="send">发送</div>
+        </div>
+    </div>
+</body>
+<script>
+    var oImg=document.getElementById('img');
+    var oInput=document.getElementById('input');
+    var oSend=document.getElementById('send');
+    var oWrap=document.getElementById('wrap');
+    var oHead=document.getElementById('head');
+    var i=true;
+    oHead.onclick=function(){
+        if(i){
+            oImg.src='img/smile.jpg';
+            i=false;
+        }else{
+            oImg.src='img/cry.jpg';
+            i=true;
+        }
+    }
+    oSend.onclick=function (){
+        if(oInput.value==''){
+            alert('请输入内容');
+        }else if(i==true){
+            oWrap.innerHTML='<div class="text">' + '<img src="img/cry.jpg" alt="" id="img" class="headimg1"/>' + '<div class="textLeft">' + oInput.value + '</div>'+ '</div>'+ oWrap.innerHTML ;
+            oInput.value='';
+        }else if(i==false){
+            oWrap.innerHTML='<div class="text">' + '<img src="img/smile.jpg" alt="" id="img" class="headimg2"/>' + '<div class="textRight">' + oInput.value + '</div>'+ '</div>'+ oWrap.innerHTML ;
+            oInput.value='';
+        }
+    }
+</script>
+</html>
