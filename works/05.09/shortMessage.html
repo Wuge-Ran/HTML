@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>短信</title>
+    <!-- 思路：
+    1.先写结构
+    2.点击图片切换图片,设置一个变量控制true&false
+    3.点击‘发送’分为img1和img2两种情况，img1左浮动，img2右浮动 
+    4.图片绝对定位，文字条用margin撑出空间
+    -->
+</head>
+<link rel="stylesheet" href="css/message.css">
+<body>
+    <div id="box">
+        <div id="wrap"></div>
+        <div id="bt">
+            <img src="img/1.png" alt="" id="img">
+            <input type="text" placeholder="请输入" id="text">
+            <span id="send">发送</span>
+        </div>
+    </div>
+    <script src="js/message.js"></script>
+</body>
+</html>

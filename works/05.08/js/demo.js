@@ -45,7 +45,7 @@ oH3.onclick=function(){
     oWrap.style.height='400px';
 }
 oRestore.onclick=function(){
-    oWrap.style='width: 100px,height: 100px,background-color: red';
+    oWrap.style.cssText='width: 100px;height: 100px;background-color: red';
 }
 oSure.onclick=function(){
     oMask.style.display='none';

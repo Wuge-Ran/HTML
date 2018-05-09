@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>if</title>
+    <style>
+        #box{
+            width: 40px;
+            margin: 10px auto;
+        }
+        #btn{
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #000;
+            user-select: none;
+        }
+        #list{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+        }
+        #list li{
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #000;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="btn">我的</div>
+        <ul id="list">
+            <li>微信</li>
+            <li>QQ</li>
+            <li>手机</li>
+        </ul> 
+    </div>
+    <script>
+        var oBtn=document.getElementById('btn');
+        var i=true;
+        oBtn.onclick=function (){
+            if(i){
+                list.style.display='block';
+                i=false;
+            }else{
+                list.style.display='none';
+                i=true;
+            }
+        }
+    </script>
+</body>
+</html>

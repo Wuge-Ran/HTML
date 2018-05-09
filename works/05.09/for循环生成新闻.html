@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for循环生成新闻</title>
+</head>
+<body>
+    <input type="button" value="按钮" id="btn">
+    <ul id="list"></ul>
+</body>
+<script>
+    var arr=['鲍仁君：胡德拒绝出场？他淡出骑士轮换早有征兆05-08 20:52',
+            '-29效率值再次全队最低 德罗赞才是猛龙真毒瘤05-08 12:06',
+            '147万年薪奇兵改变76人命运 0-3逆转真不是梦？05-08 11:54',
+            '老詹被步行者逼出最强模式 骑士离完美还差一环05-08 11:35',
+            '詹姆斯究竟有多么恐怖？他竟让猛龙怀疑人生05-08 11:23'
+            ]
+    var oList=document.getElementById('list');
+    var oBtn=document.getElementById('btn'); 
+    var bl=true; 
+    oBtn.onclick=function (){
+        if(bl){
+            for(var i=0;i<arr.length;i++){
+                oList.innerHTML+='<li>' + arr[i] + '</li>';
+            }
+            bl=false;
+        }
+    }      
+</script>
+</html>
