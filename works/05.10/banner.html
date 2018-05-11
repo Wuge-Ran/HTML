@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>banner</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #box{
+            width: 840px;
+            margin: 20px auto;
+            position: relative;
+        }
+        #head_bt{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+        #head_bt span{
+            box-sizing: border-box;
+            width: 197px;
+            height: 54px;
+            font: 24px/54px '微软雅黑';
+            text-align: center;
+            color: #fff;
+            border: 1px solid #fff;
+            cursor: pointer;
+            margin-top: 10px;
+            user-select: none;
+        }
+        #img{
+            width: 100%;
+        }
+        #pic{
+            position: relative;
+        }
+        #head{
+            position: absolute;
+            width: 100%;
+            height: 46px;
+            background-image: linear-gradient(0,rgba(0,0,0,0),rgba(0,0,0,0.8));
+            top: 0;
+            left: 0;
+            line-height: 46px;
+            color: #fff;
+            text-align: center;
+        }
+        #p{
+            background: #000;
+            color: #898b88;
+            font: 18px/54px '微软雅黑'; 
+            text-align: center;
+        }
+        #foot{
+            position: absolute;
+            width: 100%;
+            height: 46px;
+            background-image: linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,0.8)) ;
+            bottom: 0;
+            left: 0;
+            line-height: 46px;
+            color: #fff;
+            text-align: center;
+        }
+        #pic span{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 36px;
+            color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            user-select: none;
+        }
+        #pic span:hover{
+            color: #fff;
+        }
+        #left{
+            left: 0;
+            top: 45%;
+        }
+        #right{
+            right: 0;
+            top: 45%;
+        }
+        .click{
+            background: #fff;
+            color: #000!important;
+        }
+        #window{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 450px;
+            height: 222px;
+            background-color: rgba(0,0,0,0.7);
+            margin: auto;
+            text-align: center;
+            display: none;
+        }
+        #out{
+            width: 51px;
+            height: 43px;
+            margin-left: 408px;
+            background: url(img/out.png) no-repeat;
+            cursor: pointer;
+        }
+        #text{
+            font: 24px/48px '微软雅黑';
+            color: #fff;
+            text-align: center;
+        }
+        #att{
+            font: 24px/48px '微软雅黑';
+            color: #fff;
+        }
+        #ensure{
+            display: inline-block;
+            width: 119px;
+            height: 37px;
+            border: 1px solid #fff;
+            border-radius:4px;
+            line-height: 37px;
+            text-align: center;
+            color: #fff; 
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="head_bt">
+            <span class="click">循环切换</span>
+            <span>顺序切换</span>
+        </div>
+        <p id="p">循环切换</p>
+        <div id="pic">
+            <header id="head"></header>
+            <img src="img/1.jpg" alt="" id="img">
+            <span id="left"><</span>
+            <span id="right">></span>
+            <footer id="foot"></footer>
+        </div>
+        <div id="window">
+            <div id="out"></div>
+            <p id="text">JavaScript提示</p>
+            <div id="att">没了，别点了</div>
+            <div id="ensure">确定</div>
+        </div>
+    </div>
+    <script>
+        var oBtn=document.querySelectorAll('#head_bt span');
+        var oLeft=document.querySelector('#left');
+        var oRight=document.querySelector('#right');
+        var oP=document.querySelector('#p');
+        var oImg=document.querySelector('#img');
+        var oHead=document.querySelector('#head');
+        var oFoot=document.querySelector('#foot');
+        var oWindow=document.querySelector('#window');
+        var arr=['1.jpg','2.jpg','3.jpg','4.jpg'];
+        var aText=['文字描述1','文字描述2','文字描述3','文字描述4'];
+        var num=0;
+        // 按钮开关
+        var turnOff1=true;
+        var turnOff2=true;
+        oBtn[0].onclick=function (){
+            this.className='click';
+            oBtn[1].className='';
+            oP.innerHTML='循环切换';
+            turnOff1=true;
+        }
+        oBtn[1].onclick=function (){
+            this.className='click';
+            oBtn[0].className='';
+            oP.innerHTML='顺序切换';
+            turnOff1=false;
+        }
+        // 初始化
+        function tab(){
+            oHead.innerHTML=num+1+'/'+arr.length;
+            oFoot.innerHTML=aText[num];
+            oImg.src='img/'+arr[num];
+        }
+        tab();
+        //if状态判断
+        oLeft.onclick=function (){
+            if(turnOff2){
+                    num--;
+                if(turnOff1){
+                    if(num<0){
+                        num=arr.length-1;
+                    }
+                    tab();
+                }else{
+                    if(num<0){
+                        num=0;
+                        turnOff2=false;
+                        oWindow.style.display='block';
+                    }
+                    tab();
+                }
+            }
+        }
+        oRight.onclick=function (){
+            if(turnOff2){
+                    num++;
+                if(turnOff1){
+                    if(num>arr.length-1){
+                        num=0;
+                    }
+                    tab();
+                }else{
+                    if(num>arr.length-1){
+                        num=arr.length-1;
+                        turnOff2=false;
+                        oWindow.style.display='block';
+                    }
+                    tab();
+                }
+            }else{
+                oWindow.style.display='block';
+            }
+           
+        }
+    </script>
+</body>
+</html>

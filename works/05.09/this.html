@@ -5,8 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>this拓展练习</title>
+    <style>
+        h3{
+            margin: 0;
+            margin-top: 200px;
+            border-bottom: 2px solid #b9b9b9;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            list-style: none;
+            width: 550px;
+        }
+        li{
+            width: 89px;
+            height: 126px;
+            background: url(img/app.png) no-repeat;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        div{
+            width: 346px;
+            height: 214px;
+            position: absolute;
+            left: 0px;
+            top: -215px;
+            background: url(img/window.png) no-repeat;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    
+    <h3>最新上线</h3>
+    <ul>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+        <li>
+            <div></div>
+        </li>
+    </ul>
+    <script>
+        var aDiv=document.getElementsByTagName('div');
+        var aLi=document.getElementsByTagName('li');
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].onmouseover=function (){
+                this.getElementsByTagName('div')[0].style.display='block';
+            }
+            aLi[i].onmouseout=function (){
+                this.getElementsByTagName('div')[0].style.display='none ';
+            }
+        }
+    </script>
 </body>
 </html>
