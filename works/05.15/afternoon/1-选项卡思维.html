@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			div {
+				width: 300px;
+				height: 300px;
+				border: 1px solid #000;
+				display: none;
+			}
+			.yellow {
+				background: yellow;
+			}
+		</style>
+		<script>
+			/*
+				
+				选项卡思维应用：
+					1. 轮播图
+					2. 整屏切换
+					3. 新闻列表切换
+			*/
+		</script>
+	</head>
+
+	<body>
+		<button class="yellow">娱乐新闻</button>
+		<button>世界杯专题</button>
+		<button>体育新闻</button>
+
+		<div style="display: block;">
+			娱乐新闻
+		</div>
+		<div>
+			世界杯专题
+		</div>
+		<div>
+			体育新闻
+		</div>
+
+		<script>
+			/*
+				需求：
+					点击某个按钮，让对应的面板出现
+				步骤：
+					1. 获取按钮，绑定点击
+					2. 点击按钮，加上class为yellow，其他的按钮class为空
+					3. 点击按钮对应的面板出现
+						一一对应关系？
+
+						点击按钮，需要知道点击的按钮，在所有的按钮中的位置（下标）
+
+						知道了按钮所处的位置，通过这位置就可以找到对应div的位置
+			*/
+			var btns = document.querySelectorAll('button')
+			var divs = document.querySelectorAll('div')
+			// 存一下集合的下标
+			var len = btns.length;
+
+			//1. 每一个按钮绑定点击处理
+			for( var i = 0; i < len; i++ ){
+				// 4. 给每一个按钮添加一个属性，记录下标
+				btns[i].index = i;
+				btns[i].onclick = function (){
+
+					// 3. 给每一个按钮去掉class
+					for( var j = 0; j < len; j++ ){
+						btns[j].className = '';
+						// 6. 让所有的div都隐藏
+						divs[j].style.display = 'none'
+					}
+
+					// 2. 给点击的按钮添加class
+					this.className = 'yellow';	
+
+					// 5. 找到点击按钮的下标 this.index
+					// 让对用的div显示
+					divs[this.index].style.display = 'block'
+				}
+			}	
+
+
+		</script>
+	</body>
+</html>

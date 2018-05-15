@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QQlist</title>
+    <style>
+        /*css reset*/
+        body,h3{
+        margin: 0;
+        }
+        ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        }
+        a{
+        color: #000;
+        text-decoration: none;
+        }
+        img{
+        vertical-align: top;
+        }
+        /*tool*/
+        .clearfix:after{
+        content: "";
+        display: block;
+        clear:both;
+        }
+        /* main */
+        #tlist{
+            width: 364px;
+            height: 213px;
+            margin: 20px auto;
+        }
+        h3{
+            background:#63f7ff url(img/arr1.png) no-repeat 4px 4px;
+            text-indent: 15px;
+            user-select: none;
+        }
+        li{
+            cursor: pointer;
+        }
+        .inlist li{
+            height: 40px;
+        }
+        .inlist{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul id="tlist">
+        <li>
+            <h3>我的好友</h3>
+            <ul class="inlist">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </li>
+        <li>
+            <h3>企业好友</h3>
+            <ul class="inlist">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>            
+        </li>
+        <li>
+            <h3>黑名单</h3>
+            <ul class="inlist">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>                
+        </li>
+    </ul>
+</body>
+<script>
+    var tLi=document.querySelectorAll('#tlist>li');
+    var inList=document.querySelectorAll('.inlist');
+    var aH3=document.querySelectorAll('h3');
+    var aLiOne=inList[0].querySelectorAll('li');
+    var aLiTwo=inList[1].querySelectorAll('li');
+    var aLiThree=inList[2].querySelectorAll('li');
+    var obj=aLiOne[1];
+    for(var i=0;i<tLi.length;i++){
+        aH3[i].index=i;
+        aH3[i].bl=true;
+        aH3[i].onclick=function (){
+            if(this.bl==true){
+                for(var i=0;i<tLi.length;i++){
+                    inList[i].style.display='none'; 
+                    aH3[i].style.background='#63f7ff url(img/arr1.png) no-repeat 4px 4px'; 
+                    aH3[i].bl=true;
+            }
+                inList[this.index].style.display='block';
+                aH3[this.index].style.background='#f7f794 url(img/arr2.png) no-repeat 1px 8px';
+                this.bl=false;
+            }else{
+                inList[this.index].style.display='none';
+                aH3[this.index].style.background='#63f7ff url(img/arr1.png) no-repeat 4px 4px';
+                this.bl=true;
+            }
+        }
+    }
+    for(var j=0;j<aLiOne.length;j++){
+        aLiOne[j].bl=true;
+        aLiOne[j].onclick=function (){
+            if(this.bl==true){
+                obj.style.background='none';
+                obj.bl=true;
+                obj=this;
+                this.style.background='skyblue';
+                this.bl=false;
+            }else{
+                this.style.background='none';
+                this.bl=true;
+            }
+        }
+    }
+    for(var j=0;j<aLiTwo.length;j++){
+        aLiTwo[j].bl=true;
+        aLiTwo[j].onclick=function (){
+            if(this.bl==true){
+                obj.style.background='none';
+                obj.bl=true;
+                obj=this;
+                this.style.background='skyblue';
+                this.bl=false;
+            }else{
+                this.style.background='none';
+                this.bl=true;
+            }
+        }
+    }
+    for(var j=0;j<aLiThree.length;j++){
+        aLiThree[j].bl=true;
+        aLiThree[j].onclick=function (){
+            if(this.bl==true){
+                obj.style.background='none';
+                obj.bl=true;
+                obj=this;
+                this.style.background='skyblue';
+                this.bl=false;
+            }else{
+                this.style.background='none';
+                this.bl=true;
+            }
+        }
+    }
+</script>
+</html>

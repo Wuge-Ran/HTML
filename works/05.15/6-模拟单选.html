@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				点击button，添加背景颜色为red
+				其他的button，背景颜色为空
+				保证每次点击后，只有点击的这个button才有背景颜色，其余的都没有
+
+				步骤：
+					1. 获取元素
+					2. 给每一个按钮绑定点击处理
+					3. 点击的时候，做如下事情：
+						a. 先把所有的按钮背景为空
+						b. 给点击的元素背景为red
+			*/
+		</script>
+	</head>
+
+	<body>
+		<button>男</button>
+		<button>女</button>
+		<button>保密</button>
+		<button>男</button>
+		<button>女</button>
+		<button>保密</button>
+		<button>男</button>
+		<button>女</button>
+		<button>保密</button>
+		<button>男</button>
+		<button>女</button>
+		<button>保密</button>
+		<button>男</button>
+		<button>女</button>
+		<button>保密</button>
+		<script>
+			var buttons = document.querySelectorAll('button');
+
+			/*
+				定义一个变量，用来记录当前点击的那个元素（点谁记谁）
+			*/
+			var currentClickElement; // 这变量用来记录点击的元素
+			// 给每一个按钮绑定点击处理
+			for( var i = 0; i < buttons.length; i++ ){
+				buttons[i].onclick = function (){
+					// 没记录之前，currentClickElement是谁？
+					// 是上一次记录的元素
+					// 判断一下currentClickElement有没有存值
+					if(currentClickElement){
+						currentClickElement.style.background = '';
+					}
+					
+					this.style.background = 'red';
+					// 点谁记录谁
+					currentClickElement = this;
+				}
+			}
+		</script>
+	</body>
+</html>

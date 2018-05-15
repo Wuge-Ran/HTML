@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			.red {
+				background: red;
+			}
+		</style>
+		<script>
+			
+		</script>
+	</head>
+
+	<body>
+		<button class="miaov">男</button>
+		<button>女</button>
+		<button>保密</button>
+		<hr>
+		<input type="checkbox" name="sex">男
+		<input type="checkbox" name="sex">女
+		<input type="checkbox" name="sex">保密
+		<script>
+			var buttons = document.querySelectorAll('button');
+
+			// 写第一个 如果有class为red，去掉；没有class为red，就加上。
+			var stateRed = false;  // 没有class为red
+
+			buttons[0].onclick = function (){
+				// 学会一步一步调试
+				// 当代码不按照你的预期执行，如果是if，去看左右两边的条件，把两边的条件打出来
+				console.log(this.className);
+				if(this.className == ''){
+					console.log(123);
+					this.className = 'red';	
+				}else{
+					this.className = '';
+				}
+				
+			}
+			
+		</script>
+	</body>
+</html>

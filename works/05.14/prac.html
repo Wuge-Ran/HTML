@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prac</title>
+    <style>
+        button{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <button>男</button>
+    <button>女</button>
+    <button>保密</button>
+</body>
+<script>
+    var btn=document.querySelectorAll('button');
+    var current=null;
+    for(var i=0;i<btn.length;i++){
+        btn[i].onclick=function (){
+            if(current){
+                current.style.background='none';
+            }
+            current=this;
+            this.style.background='red';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			.red {
+				background: red;
+			}
+		</style>
+		<script>
+			
+		</script>
+	</head>
+
+	<body>
+		<button class="miaov">男</button>
+		<button>女</button>
+		<button>保密</button>
+		<hr>
+		<input type="checkbox" name="sex">男
+		<input type="checkbox" name="sex">女
+		<input type="checkbox" name="sex">保密
+		<script>
+			var buttons = document.querySelectorAll('button');
+
+			var stateRed = 0; // 0 没有calss为red 1class为red
+
+			// 给每一个按钮添加一个状态，来记录自己有没有class为red
+
+			for( var i = 0; i < buttons.length; i++ ){
+				// 给每一个按钮添加属性，用来记录是否有class为red
+				// 初始的时候，都没有class为red，所以初始为0
+				buttons[i].stateRed = 0;
+				buttons[i].onclick  =function (){
+					// 每次从自己身上找记录的状态属性 stateRed
+					if(this.stateRed == 0){
+						this.className = 'red';
+						this.stateRed = 1;
+					}else{
+						this.className = '';
+						this.stateRed = 0;
+					}
+						
+				}
+			}
+		</script>
+	</body>
+</html>

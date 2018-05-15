@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bt_banner</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        body{
+            background-color: #222222;
+        }
+        #wrap{
+            width: 400px;
+            height: 500px;
+            background: #fff url(img/loader_ico.gif) no-repeat center center;
+            margin: 10px auto;
+            position: relative;
+        }
+        img,#box{
+            width: 100%;
+            height: 100%;
+        }
+        #btList{
+            position: absolute;
+            left: -50px;
+            top:0;
+        }
+        #btList li{
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+        #btList .active{
+            background-color: gold;
+        }
+        #head,#foot{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            font: 16px/30px '微软雅黑';
+            background: #000000;
+            color: #fff;
+            text-align: center;
+        }
+        #head{
+            top: 0;
+        }
+        #foot{
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="box">
+            <header id="head">数字正在计算中。。。</header>
+            <img src="" alt="" id="img">
+            <ul id="btList">
+            </ul>
+            <footer id="foot">描述正在加载中。。。</footer>
+        </div>
+    </div>
+    <script>
+        var aImg=['1.png','2.png','3.png','4.png'];
+        var aText=['图1','图2','图3','图4'];
+        var oHead=document.querySelector('#head');
+        var oFoot=document.querySelector('#foot');
+        var oUl=document.querySelector('#btList');
+        var oImg=document.querySelector('#img');
+        var aLi=oUl.getElementsByTagName('li');
+        var num=0;
+        var obj=null;
+        function change(){
+            oImg.src='img/'+aImg[num];
+            oHead.innerHTML=num+1+'/'+aImg.length;
+            oFoot.innerHTML=aText[num];
+        }
+        // 初始化
+        function tab(){
+            for(var i=0;i<aImg.length;i++){
+                oUl.innerHTML+='<li></li>';
+            }
+            change();
+            aLi[num].className='active';
+        }
+        tab();
+        obj=aLi[num];
+        for(var i=0;i<aLi.length;i++){
+            aLi[i].onclick= function (){
+                aLi[i].index=i;
+                obj.className='';
+                obj=this;
+                this.className='active';
+                num=this.index;
+                change();
+            }
+        }
+    </script>
+</body>
+</html>

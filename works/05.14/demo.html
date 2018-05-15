@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        input{
+            border: none;
+            width: 100px;
+            height: 70px;
+            font: 24px/70px '微软雅黑';
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="按钮">
+    <input type="button" value="按钮">
+    <input type="button" value="按钮">
+    <input type="button" value="按钮">
+    <input type="button" value="按钮">
+    <script>
+        var oInput=document.querySelectorAll('input');
+        for(var i=0;i<oInput.length;i++){
+            oInput[i].onclick=function (){
+                this.style.background='green';
+            }
+        }
+    </script>
+</body>
+</html>

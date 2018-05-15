@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,li{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        #list li{
+            float: left;
+            width: 200px;
+            margin-right: 10px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="bt">
+        <input type="button" name="" value="图1">
+        <input type="button" name="" value="图1">
+        <input type="button" name="" value="图1">
+    </div>
+    <ul id="list">
+        <li><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/1.jpg" alt=""></li>
+    </ul>
+</body>
+<script>
+    var oBt=document.querySelectorAll('input');
+    var aLi=document.querySelectorAll('#list li');
+    var aImg=['1.jpg','2.jpg','3.jpg','4.jpg'];
+    var aText=['图1','图2','图3','图4']
+    for(var i=0;i<oBt.length;i++){
+        oBt[i].num=0;
+        oBt[i].index=i;
+        oBt[i].onclick=function (){
+            this.num++;
+            if(this.num==aImg.length){
+                this.num=0;
+            }
+            this.value=aText[this.num];
+            aLi[this.index].querySelector('img').src='img/'+aImg[this.num];
+        }
+    }
+</script>
+</html>
