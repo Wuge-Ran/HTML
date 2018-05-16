@@ -1,0 +1,30 @@
+#box{
+    width: 280px;
+    margin: 0 auto;
+}
+#box>li{
+    margin-bottom: 10px;
+}
+#box h3{
+    height: 46px;
+    background: rgba(0, 0, 0, .7) url(../img/arr2.png) no-repeat 15px 20px;
+    font:18px/46px '微软雅黑';
+    color: #fff;
+    text-indent: 30px;
+    user-select: none;
+}
+#box ul{
+    display: none;
+}
+#box ul li{
+    height: 42px;
+    background: #000;
+    font:16px/42px '微软雅黑';
+    color: #fff;
+    text-indent: 30px;
+    
+}
+#box ul li:hover{
+    background: #f4f4f4;
+    color: #000;
+}

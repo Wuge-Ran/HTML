@@ -77,8 +77,8 @@
         right: 0;
         top: 45%;
     }
-    .active{
-         
+    #foot .active{
+         background: #d1d861;
     }
     #tlist{
         width: 600%;
@@ -143,10 +143,13 @@
             fImg[j].src='img/'+aImg[j];
         }
         oImg.src='img/'+aImg[0];
+        fLi[0].className='active';
     }
     tab();
     var obj=fLi[0];
+    var obj2=fLi[0];
     for(var i=0;i<fLi.length;i++){
+        fLi[i].index=i;
         fLi[i].onmouseover=function (){
             obj.querySelector('.smImg').style.display='none';
             obj=this;
@@ -154,6 +157,14 @@
         }
         fLi[i].onmouseleave=function (){
             this.querySelector('.smImg').style.display='none';
+        }
+        fLi[i].onclick=function (){
+            if(obj2){
+                obj2.className='';
+            }
+            obj2=this;
+            oImg.src='img/'+aImg[this.index];
+            this.className='active';
         }
     }
 </script>

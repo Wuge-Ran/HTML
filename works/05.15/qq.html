@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/qq.css">
+    <title>qqList</title>
+</head>
+<body>
+    <ul id="box">
+        <li>
+            <h3>我的好友</h3>
+            <ul id="friend_me">
+                <li>leo</li>
+                <li>leo</li>
+                <li>leo</li>
+                <li>leo</li>
+                <li>leo</li>
+            </ul>
+        </li>
+        <li>
+            <h3>企业好友</h3>
+            <ul id="friend_company">
+                <li>leo</li>
+                <li>leo</li>
+                <li>leo</li>
+                <li>leo</li>
+                <li>leo</li>
+            </ul>
+        </li>
+        <li>
+            <h3>黑名单</h3>
+            <ul id="black">
+                <li>leo1</li>
+                <li>leo2</li>
+                <li>leo3</li>
+            </ul>            
+        </li>
+    </ul>
+</body>
+<script>
+    var aH3=document.querySelectorAll('#box h3');
+    var aInnerList=document.querySelectorAll('#box ul');
+    // 给每个h3设置点击事件
+    for(var i=0;i<aH3.length;i++){
+        // 给h3添加索引
+        aH3[i].index=i;
+        // 给h3设置开关,true为打开，false关闭
+        aH3[i].turnoff=false;
+        aH3[i].onclick=function (){
+            // 点击切换背景
+            this.style.background='rgba(240,102,123,0.7) url(img/arr1.png) no-repeat 15px 20px';
+            
+            // 配合开关事件点击收起放出两种状态
+            if(this.turnoff){
+                // 通过index找到对应的ul
+                aInnerList[this.index].style.display='none';
+                this.style.background='rgba(0, 0, 0, .7) url(img/arr2.png) no-repeat 15px 20px';
+                this.turnoff=false;
+            }else{
+                aInnerList[this.index].style.display='block';
+                this.style.background='rgba(240,102,123,0.7) url(img/arr1.png) no-repeat 15px 20px';
+                this.turnoff=true;
+            }
+        }
+    }
+</script>
+</html>
