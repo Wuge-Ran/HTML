@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>checkbox</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox">
+    <div></div>
+</body>
+<script>
+    var oInp=document.querySelector('input');
+    var oDiv=document.querySelector('div');
+    oInp.checked=true;
+    // 初始化
+    if(oInp.checked){
+        oDiv.style.background='red'
+    }else{
+        oDiv.style.background='';
+    }
+    oInp.onclick=function (){
+        if(this.checked){
+            oDiv.style.background='red';
+        }else{
+            oDiv.style.background='';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>百度评分</title>
+		<style>
+			body,h1 {
+				margin: 0;
+				padding: 0;
+				-webkit-font-smoothing: antialiased;
+			}
+			.starts{
+				overflow:hidden;
+			}
+			.starts span{
+				display: block;
+				float: left;
+				padding: 3px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="pingfen.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="baidu">
+				<div class="caption">
+					<h1></h1>
+					<span>总体评价</span>
+				</div>
+				<div class="context">
+					<div class="starts">
+						<span>☆</span>
+						<span>☆</span>
+						<span>☆</span>
+						<span>☆</span>
+						<span>☆</span>
+					</div>
+					<div class="info"></div>
+				</div>
+				<div class="tips">
+					小提示：点击星星就能打分
+				</div>
+			</div>
+		</div>
+		<script>
+            var aStar=document.querySelectorAll('.starts span');
+            var oCont=document.querySelectorAll('.context');
+            var point=-1;
+            function star(index){
+                for(var j=0;j<aStar.length;j++){
+                    aStar[j].style.color='';
+                }
+                if(index<=1){
+                    for(var j=0;j<=index;j++){
+                        aStar[j].style.color='pink';
+                    }
+                }else{
+                    for(var j=0;j<=index;j++){
+                        aStar[j].style.color='red';
+                    }
+                }
+            }
+            for(var i=0;i<aStar.length;i++){
+                // 在星星上添加一个自定义属性
+                aStar[i].index=i;
+                aStar[i].onmouseover=function (){
+                    star(this.index);
+                }
+                aStar[i].onmouseout=function (){
+                    if(point==-1){
+                        // 点击之前清空
+                        for(var j=0;j<aStar.length;j++){
+                            aStar[j].style.color='';
+                        }
+                    }else{
+                        // 点击之后一直保持星星数
+                        star(point);
+                    }
+                }
+                aStar[i].onclick = function (){
+                    // 点击改变开关状态
+                    point=this.index;
+                }
+
+            }
+        </script>
+	</body>
+</html>

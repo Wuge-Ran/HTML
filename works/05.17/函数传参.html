@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <button>-</button>
+            <span class="num">0</span>
+            <button>+</button>
+            <span>单价：</span>
+            <em>12.5元</em>
+            <span>总价</span>
+            <span class="all">0</span>
+        </li>
+        <li>
+            <button>-</button>
+            <span class="num">0</span>
+            <button>+</button>
+            <span>单价：</span>
+            <em>10元</em>
+            <span>总价</span>
+            <span class="all">0</span>
+        </li>
+    </ul>
+    <script>
+        var aLi=document.querySelectorAll('li');
+        
+        function a(oLi){
+            var aBtn=oLi.querySelectorAll('button');
+            var oNum=oLi.querySelector('.num');
+            var n=oNum.innerHTML;
+            aBtn[0].onclick=function (){
+                n--;
+                oNum.innerHTML=n;
+            }
+        }
+        a(aLi[0]);
+        a(aLi[1]);
+    </script>
+</body>
+</html>

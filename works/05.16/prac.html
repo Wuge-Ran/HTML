@@ -90,20 +90,18 @@
         aLi[i].onclick=function (){
             if(this.turnoff){
                 this.className='';
-                this.turnoff=false;
                 a--;
             }else{
                 this.className='active';
-                this.turnoff=true;
                 a++;
             }
+            this.turnoff=!this.turnoff;
             if(a==aLi.length){
                 oFull.style.backgroundImage='url(img/checked.png)';
-                oFull.turnoff=true;
             }else{
                 oFull.style.backgroundImage='url(img/unchecked.png)';
-                oFull.turnoff=false;
             }
+            oFull.turnoff=!oFull.turnoff;
         }
     }
     oFull.onclick=function (){
@@ -111,19 +109,18 @@
             for(var i=0;i<aLi.length;i++){
                 aLi[i].className='';
                 aLi[i].turnoff=false;
-                a=0;
             }
+            a=0;
             oFull.style.backgroundImage='url(img/unchecked.png)';
-            oFull.turnoff=false;
         }else{
             for(var i=0;i<aLi.length;i++){
                 aLi[i].className='active';
                 aLi[i].turnoff=true;
-                a=aLi.length;
             }
+            a=aLi.length;
             oFull.style.backgroundImage='url(img/checked.png)';
-            oFull.turnoff=true;
         }
+        oFull.turnoff=!oFull.turnoff;
     }
 </script>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        var aBtn=document.querySelectorAll('button');
+        var aDiv=document.querySelectorAll('div');
+        var obj=null;
+        for(var i=0;i<aBtn.length;i++){
+            aBtn[i].index=i;
+            aBtn[i].onclick=function (){
+                if(obj){
+                    obj.style.background='';
+                    aDiv[obj.index].style.display='none';
+                }
+                obj=this;
+                this.style.background='red';
+                aDiv[this.index].style.display='block';
+            }
+        }
+    </script>
+</body>
+</html>

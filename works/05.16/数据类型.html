@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据类型</title>
+    <style>
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="text">
+    <input type="button" name="" id="button" value="按钮">
+</body>
+<script>
+    var oText=document.getElementById('text');
+    var oBtn=document.getElementById('button');
+    oBtn.onclick=function (){
+        var str=oText.value;
+        if(str==''){
+            alert('请输入内容')
+        }else if(isNaN(str)){
+            alert('请输入纯数字')
+        }else if(str.charAt(0)==0){
+            alert('开头不能为0')
+        }else if(!(parseInt(str)==parseFloat(str))){
+            alert('不能输入小数点')
+        }else if(str.length>10||str.length<5){
+            alert('输入的数字必须在5位以上、10位以内')
+        }else{
+            alert('通过！')
+        }
+    }
+</script>
+</html>
