@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #tList{
+            width: 855px;
+            height: 168px;
+        }
+        h3{
+            width: 855px;
+            padding: 0 38px;
+            color: #fff;
+            background-color: #6ba542;
+        }
+        li{
+            padding: 0 38px;
+            line-height: 60px;
+            border-bottom: 1px solid #c0e0e0;
+        }
+        #tList i{
+            display:inline-block;
+            vertical-align: middle;
+            width: 28px;
+            height: 28px;
+            background: url(img/pen.png) no-repeat;
+            user-select: none;
+            cursor: pointer;
+        }
+        .edit{
+            display: none;
+        }
+        .edit span{
+            user-select: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h3>分类名称</h3>
+    <ul id="tList">
+        <li>
+            <div class="show">
+                <span>妙味实体课堂</span>
+                <i></i>
+            </div>
+            <div class="edit">
+                <input type="text">
+                <span class="save">保存</span>
+                <span class="cancel">取消</span>
+            </div>
+        </li>
+        <li>
+            <div class="show">
+                <span>妙味实体课堂</span>
+                <i></i>
+            </div>
+            <div class="edit">
+                <input type="text">
+                <span class="save">保存</span>
+                <span class="cancel">取消</span>
+            </div>
+        </li>
+    </ul>
+    <script>
+        var aLi = document.querySelectorAll('li');
+        function tab(li){
+            var oI = li.querySelector('i');
+            var oShow = li.querySelector('.show');
+            var oEdit = li.querySelector('.edit');
+            var oSave = li.querySelector('.save');
+            var oInput = li.querySelector('input');
+            var oCancel = li.querySelector('.cancel');
+            var oName = li.querySelector('.show span');
+            oI.onclick = function (){
+                oShow.style.display = 'none';
+                oEdit.style.display = 'block';
+                oInput.value = oName.innerHTML;
+            }
+            oCancel.onclick = function (){
+                oShow.style.display = 'block';
+                oEdit.style.display = 'none';
+            }
+            oSave.onclick = function (){
+                oName.innerHTML = oInput.value;
+                oShow.style.display = 'block';
+                oEdit.style.display = 'none';
+            }
+        }
+        for(var i = 0;i<aLi.length;i++){
+            tab(aLi[i]);
+        }
+    </script>
+</body>
+</html>
