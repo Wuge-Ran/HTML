@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class = "box">
+        <button>红</button>
+        <button>黄</button>
+        <button>蓝</button>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class = "box">
+        <button>红</button>
+        <button>黄</button>
+        <button>蓝</button>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class = "box">
+        <button>红</button>
+        <button>黄</button>
+        <button>蓝</button>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <div class = "box">
+        <button>红</button>
+        <button>黄</button>
+        <button>蓝</button>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    <script>
+        var aBox = document.querySelectorAll(".box");
+        function tab(div){
+            var btns = div.querySelectorAll('button');
+            var divs = div.querySelectorAll('div');
+            var obj = null;
+            for(var i= 0;i<btns.length;i++){
+                btns[i].index = i;
+                btns[i].onclick = function (){
+                    if(obj){
+                        divs[obj.index].style.display = 'none';
+                    }
+                    obj = this;
+                    divs[this.index].style.display = 'block';
+                }
+            }
+        }
+        for(var i= 0;i<aBox.length;i++){
+            tab(aBox[i]);
+        }
+    </script>
+</body>
+</html>

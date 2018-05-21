@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>传参练习</title>
+</head>
+<body>
+    <div class="calc">
+        <input type="text" id="">
+        <span>+</span>
+        <input type="text" id="">
+        <button>=</button>
+        <span class="result">0</span>
+    </div>
+    <div class="calc">
+        <input type="text" id="">
+        <span>+</span>
+        <input type="text" id="">
+        <button>=</button>
+        <span class="result">0</span>
+    </div>
+    <div class="calc">
+        <input type="text" id="">
+        <span>+</span>
+        <input type="text" id="">
+        <button>=</button>
+        <span class="result">0</span>
+    </div>
+    <div class="calc">
+        <input type="text" id="">
+        <span>+</span>
+        <input type="text" id="">
+        <button>=</button>
+        <span class="result">0</span>
+    </div>
+</body>
+<script>
+    var aCalc = document.querySelectorAll('.calc');
+    function tab(div){
+        var inputs = div.querySelectorAll('input');
+        var btn = div.querySelector('button');
+        var oResult = div.querySelector('.result');
+        btn.onclick = function (){
+           oResult.innerHTML = Number(inputs[0].value) + Number(inputs[1].value);
+           inputs[0].value = '';
+           inputs[1].value = '';
+        }
+    }
+    for(var i =0;i<aCalc.length;i++){
+        tab(aCalc[i]);
+    }
+</script>
+</html>

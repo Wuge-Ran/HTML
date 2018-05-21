@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>纪录片</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #box{
+            width: 402px;
+            height: 594px;
+            margin: 0 auto;
+            background: #dee7e7;
+        }
+        h3{
+            line-height: 40px;
+        }
+        .time li{
+            font: 14px/40px '微软雅黑';
+            float: left;
+            padding: 0 5px;
+            cursor: pointer;
+            border: 1px solid #a0c4d9;
+            margin-left: -1px;
+        }
+        .time .active{
+            border-bottom: none;
+            background: #fff; 
+        }
+        #wrap li{
+            font: 16px/40px '微软雅黑';
+            border-bottom: 2px dashed #fff;
+            cursor: pointer;
+        }
+        #wrap li span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            font: 14px/20px '微软雅黑';
+            background-color: #256b94;
+            margin-left: 5px;
+            text-align: center;
+            color: #fff;
+        }
+        #wrap ul{
+            display: none;
+        }
+        #wrap .active{
+            display: block;
+        }
+        #wrap .hover{
+            height: 80px;
+            background: #fff;
+            display: none;
+        }
+        #wrap .hover img{
+            width: 86px;
+            height: 66px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <header class="clearfix">
+            <h3 class="fl">观看排行榜</h3>
+            <ul class="time fr">
+                <li class="active">每日</li>
+                <li>每周</li>
+                <li>全部</li>
+            </ul>
+        </header>
+        <div id="wrap">
+        </div>
+    </div>
+    <script>
+        var timeLis = document.querySelectorAll('.time li');
+        var oWrap = document.querySelector('#wrap');
+        var wrapUls = oWrap.getElementsByTagName('ul');
+        var obj = timeLis[0];
+        
+        var str1 = '';
+        var aTitle = ['《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌',
+        '《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌',
+        '《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌',
+        '《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌']
+        var aTitle1 = ['《爱我别走》是由张震岳创作词曲、编曲、制作。','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌',
+        '《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌',
+        '《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌']
+        var aTitle2 = ['《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌',
+        '《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌',
+        '《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌','《房间》是刘瑞琦个人首张专辑《私房歌》的主打歌']
+        var arr =[aTitle,aTitle1,aTitle2];
+        // 初始化
+        for(var i = 0;i < timeLis.length;i++){
+            str1 += '<ul>'+'</ul>' ;
+        }
+        oWrap.innerHTML = str1;
+        wrapUls[0].className = 'active';
+        function abc(arr,n){
+            var str2 = '';
+            for(var i = 0;i<arr.length;i++){
+                str2 += '<li>' + '<div class="show">' + '<span>' + (i+1) + '</span>' + arr[i] + '</div>'  + '<div class="hover">' + '<input type="button" value="播放"/>' + '</div>' + '</li>';
+            }
+            wrapUls[n].innerHTML = str2;
+        }
+        for(var i = 0;i<arr.length;i++){
+            abc(arr[i],i);
+        }
+        var objUl = wrapUls[0];
+        for(var i = 0;i < timeLis.length;i++){
+            timeLis[i].index = i;
+            timeLis[i].onclick = function (){
+                obj.className = '';
+                obj = this;
+                this.className = 'active';
+                if(objUl){
+                    objUl.className = '';
+                }
+                objUl = wrapUls[this.index];
+                wrapUls[this.index].className = 'active';
+            }
+        }
+        function hover(ul){
+            var aLi = ul.querySelectorAll('li');
+            for(var i = 0;i<aLi.length;i++){
+                aLi[i].onmouseover = function (){
+                    this.querySelector('.show').style.display = 'none';
+                    this.querySelector('.hover').style.display = 'block';
+                }
+                aLi[i].onmouseout = function (){
+                    this.querySelector('.show').style.display = 'block';
+                    this.querySelector('.hover').style.display = 'none';
+                }
+            }
+        }
+        for(var i =0;i<wrapUls.length;i++){
+            hover(wrapUls[i]);
+        }
+    </script>
+</body>
+</html>

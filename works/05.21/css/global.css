@@ -1,9 +1,8 @@
 /*css reset*/
-body,h3{
-    margin: 0;
-    font: 20px '微软雅黑';
+body,h1,h2,h3,h4{
+	margin: 0;
 }
-ul,ol{
+ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -22,8 +21,8 @@ img{
 	clear:both;
 }
 .fl{
-	float: left;
+    float: left;
 }
 .fr{
-	float: right;
+    float: right;
 }
