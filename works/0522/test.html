@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</body>
+<script>
+    var length = 10;
+    function fn() {
+        console.log(this.length);
+    }
+
+    var obj = {
+        length: 5,
+        method: function(fn) {
+            fn();
+            arguments[0]();
+        }
+    };
+
+    obj.method(fn, 1);
+</script>
+</html>

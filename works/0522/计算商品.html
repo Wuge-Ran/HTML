@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #box{
+            width: 480px;
+            height: 593px;
+            margin: 0 auto;
+            background: url(img/bg.png) no-repeat;
+            overflow: hidden;
+        }
+        h1{
+            text-indent: -9999px;
+            width: 173px;
+            height: 44px;
+            background: url(img/miaov.png) no-repeat;
+            margin: 54px auto 42px;
+        }
+        button{
+            width: 43px;
+            height: 38px;
+            background-color: #292b2a;
+            color: #fff;
+            outline: none;
+        }
+        #tlist li{
+            padding: 0 45px;
+            margin-bottom: 20px;
+        }
+        .num{
+            width: 43px;
+            height: 38px;
+            margin: 0 10px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 38px;
+        }
+        .count{
+            width: 200px;
+            height: 37px;
+            margin-left: 23px;
+            background-color: #171717;
+            color: #747474;
+            padding-left: 13px;
+            line-height: 38px;
+        }
+        footer{
+            color: #747474;
+            padding: 30px 40px;
+        }
+        footer span{
+            display: inline-block;
+            width: 45px;
+            height: 35px;
+            background-color: #fff;
+            vertical-align: middle;
+            margin: 0 10px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .priceAll{
+            width: 65px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>logo</h1>
+        <ul id="tlist">
+            <li class="clearfix">
+                <button class="fl">-</button>
+                <span class="num fl">0</span>
+                <button class="fl">+</button>
+                <div class="count fl">
+                    单价：<span class="unit">12.5</span>元
+                    小计：<span class="price">0</span>元
+                </div>
+            </li>
+            <li class="clearfix">
+                <button class="fl">-</button>
+                <span class="num fl">0</span>
+                <button class="fl">+</button>
+                <div class="count fl">
+                    单价：<span class="unit">10.5</span>元
+                    小计：<span class="price">0</span>元
+                </div>
+            </li>
+            <li class="clearfix">
+                <button class="fl">-</button>
+                <span class="num fl">0</span>
+                <button class="fl">+</button>
+                <div class="count fl">
+                    单价：<span class="unit">8.5</span>元
+                    小计：<span class="price">0</span>元
+                </div>
+            </li>
+            <li class="clearfix">
+                <button class="fl">-</button>
+                <span class="num fl">0</span>
+                <button class="fl">+</button>
+                <div class="count fl">
+                    单价：<span class="unit">8</span>元
+                    小计：<span class="price">0</span>元
+                </div>
+            </li>
+            <li class="clearfix">
+                <button class="fl">-</button>
+                <span class="num fl">0</span>
+                <button class="fl">+</button>
+                <div class="count fl">
+                    单价：<span class="unit">14.5</span>元
+                    小计：<span class="price">0</span>元
+                </div>
+            </li>
+        </ul>
+        <footer>
+            <div>
+                商品共合计<span class="numAll">0</span>件
+                共花费了：<span class="priceAll">0</span>元
+            </div>
+            <div>
+                其中最贵的商品单价为：<span class="max">0</span>元
+            </div>
+        </footer>
+    </div>
+    <script>
+        var aLi = document.querySelectorAll('#tlist li');
+        var aNum = document.getElementsByClassName('num');
+        var numAll = document.querySelector('footer .numAll');
+        var priceAll = document.querySelector('footer .priceAll');
+        var oPrice = document.getElementsByClassName('price');
+        var oUnit = document.querySelectorAll('.unit');
+        var oMax = document.querySelector('footer .max');
+        function countAll(){
+            var all = 0;
+            var allPrice = 0;
+            var max = 0;
+            for(var i = 0;i<aNum.length;i++){
+                all += parseInt(aNum[i].innerHTML);
+                allPrice += parseFloat(oPrice[i].innerHTML);
+                if(aNum[i].innerHTML != 0 && max < oUnit[i].innerHTML){
+                    max = parseFloat(oUnit[i].innerHTML);
+                }
+            }
+            numAll.innerHTML = all;
+            priceAll.innerHTML = allPrice;
+            oMax.innerHTML = max;
+        }
+        function tab(li){
+            var num = 0;
+            var btns = li.querySelectorAll('button');
+            var oNum = li.querySelector('.num');
+            var price = li.querySelectorAll('.count span')[0].innerHTML;
+            var count = li.querySelectorAll('.count span')[1];
+            btns[0].onclick = function (){
+                num--;
+                if(num < 0){
+                    num = 0;
+                }
+                oNum.innerHTML = num;
+                count.innerHTML = price*num;
+                countAll();
+            } 
+            btns[1].onclick = function (){
+                num++;
+                oNum.innerHTML = num;
+                count.innerHTML = price*num;
+                countAll();
+            } 
+        }
+        for(var i = 0;i<aLi.length;i++){
+            tab(aLi[i]);
+        }
+    </script>
+</body>
+</html>
