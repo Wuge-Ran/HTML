@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			// 封装一个方法，把传入的字符串的首字母转成大写,返回首字母转大写的字符串
+			var str = ""
+			function toFirstUpperCase(str){
+				// 把首字母转成大写
+                var fir = (str.charAt(0)).toUpperCase();
+                //后面的也获取到
+                var other = str.substring(1);
+                //拼起来
+				return (fir + other);
+			}
+            console.log(toFirstUpperCase('happy'));
+			toFirstUpperCase('abc'); // "Abc"
+
+			// 2  封装一个方法,把传入的字符串的每一个单词的首字母转成大写，返回转成大写的字符串
+
+			function toAllUpperCase(str){
+				// 每一个参数转成大写
+                var arr = str.split(" ");
+                var aTrans = new Array();
+                for(var i = 0;i<arr.length;i++){
+                     aTrans[i] = toFirstUpperCase(arr[i]);
+                }
+                var result =  aTrans.join(' ');
+				return 	result	
+			}
+			toAllUpperCase('i am wang i very smart'); // 'I Am Wang I Very Smart'
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>
