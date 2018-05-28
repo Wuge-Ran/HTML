@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arr方法</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var arr = ['a','b','c'];
+    var a = arr.push('d');//往数组后面添加内容，返回修改后的arr长度。
+    // console.log(arr);
+    // console.log(a); 
+    var a = arr.unshift('f');//往数组前添加内容，返回修改后的arr长度。
+    // console.log(arr);
+    // console.log(a);
+    var a = arr.pop();// 删除数组最后一位，返回删除的那个元素
+    // console.log(arr);
+    // console.log(a);
+    var a = arr.shift();//删除数组第一位，返回删除的那个元素
+    // console.log(arr);
+    // console.log(a); 
+    var a = arr.splice(1,1,'h');//删除对应的元素（index+length），然后添加新元素至该位置，返回删除的元素数组；
+    // console.log(arr);
+    // console.log(a);
+    var a = arr.slice(1,2);//截取起始位置到结束位置之前的元素，返回这个新数组
+    // console.log(arr);
+    // console.log(a);
+    var a = arr.reverse();//把原数组反转并返回
+    // console.log(arr);
+    // console.log(a); 
+    var a = arr.concat(1,2);//数组连接，返回连接后的新数组
+    console.log(arr);
+    console.log(a);
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list"></ul>
+</body>
+<script>
+    var user = [
+        {
+            name : 'leo',
+            age : 20
+        },
+        {
+            name : 'leo2',
+            age : 18
+        }
+    ]
+    var oUl = document.getElementById('list');
+    oUl.innerHTML = user.map(function (item){
+        return '<li>\
+                    姓名：' + item.name + 
+                    '年龄：' + item.age + '岁'+
+                '</li>';    
+        }).join('');
+</script>
+</html>

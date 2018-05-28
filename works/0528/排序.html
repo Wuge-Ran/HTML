@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排序</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // var arr = ['日','一','二','三','四','五','六']
+    // var date = new Date();
+    // var str = date.getFullYear() + '年' + (date.getMonth()+1<10?'0' + (date.getMonth()+1):date.getMonth()+1) + '月' + date.getDate() + '日' + '周' + arr[date.getDay()];
+    // console.log(str);
+    function getMonthDate(year,month){
+        var date = new Date();
+        date.setFullYear(year);
+        date.setMonth(month);
+        date.setDate(0);
+        return date.getDate();
+    }
+    console.log(getMonthDate(2002,2));
+    getMonthDate(2000,2);
+     
+    console.log(getFirstDateWeek(2018,6))
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var str = 'if i were a girl';
+    function toFirstUpperCase(str){
+        str = str.trim();
+        var arr = str.split(' ');
+        var first = [];
+        var other = [];
+        var fin = [];
+        for(var i = 0;i<arr.length;i++){
+            first[i] = (arr[i].charAt(0)).toUpperCase();
+            other[i] = arr[i].slice(1);
+            fin[i] = first[i] + other[i];!
+        }
+        return fin.join(' ');
+    }
+    console.log(toFirstUpperCase(str));
+    toFirstUpperCase(str);
+</script>
+</html>

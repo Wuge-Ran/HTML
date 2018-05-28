@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日历</title>
+    <link rel="stylesheet" href="css/global.css"/>
+    <style>
+        #box{
+            width: 560px;
+        }
+        #olist{
+            height: 50px;
+            font: 16px/50px '微软雅黑';
+            text-align: center;
+        }
+        #olist li{
+            float: left;
+            width: 80px;
+        }
+        #tlist .before,#tlist .after{
+            background-color: skyblue;
+            color: #fff;
+        }
+        #olist li:nth-last-of-type(1),#olist li:nth-last-of-type(2){
+            color: red;
+        }
+        #tlist li{
+            box-sizing: border-box;
+            width: 80px;
+            height: 80px;
+            font: 24px/80px '微软雅黑';
+            background-color: bisque;
+            text-align: center;
+            float: left;
+            border: 1px solid white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id='olist'>
+            <li>一</li>
+            <li>二</li>
+            <li>三</li>
+            <li>四</li>
+            <li>五</li>
+            <li>六</li>
+            <li>日</li>
+        </ul>
+        <div>
+            <button class="yMinus"><<</button>
+            <span class="year"></span>
+            <button class="yPlus">>></button>
+            <button class="mMinus"><<</button>
+            <span class="month"></span>
+            <button class="mPlus">>></button>
+        </div>
+        <ul id="tlist" class="clearfix">
+            <!-- <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li> -->
+        </ul>
+    </div>
+    <script>
+        var oUl = document.querySelector('#tlist');
+        var oYear = document.querySelector('.year');
+        var oMonth = document.querySelector('.month');
+        // 初始化
+        var date = new Date();
+        oYear.innerHTML = date.getFullYear() + '年';
+        oMonth.innerHTML = date.getMonth()+1 + '月';
+        // 用方法获取该月的天数
+        function getMonthDay(year,month){
+            var date = new Date();
+            date.setFullYear(year);
+            date.setMonth(month);
+            date.setDate(0);
+            return date.getDate();
+        }
+        // 用方法获取该月第一天是周几
+        function getFirstWeekDay(year,month){
+            var date = new Date();
+            date.setFullYear(year);
+            date.setMonth(month-1);
+            date.setDate(1);
+            return date.getDay();
+        }
+        //把前面的空白填上
+        function before(year,month){
+            var afterMonth = getMonthDay(year,month-1);
+            var arr = [];
+            var arr2 = [];
+            var num = getFirstWeekDay(year,month);
+            var str = '';
+            for(var i = 0;i<afterMonth;i++){
+                arr[i] = i+1;
+            }
+            arr.reverse();
+            for(var i = 0;i < num-1;i++){
+                arr2[i] = arr[i];
+            }
+            arr2.reverse();
+            for(var i = 1;i < num;i++){
+                str += '<li class = "before">' + arr2[i-1] + '</li>';
+            }
+            oUl.innerHTML += str;
+        }
+        // 把日子填上去
+        function addDay(year,month){
+            var num = getMonthDay(year,month);
+            var str = '';
+            for(var i = 1;i <= num;i++){
+                str += '<li>' + i + '</li>';
+            }
+            oUl.innerHTML += str;
+        }
+        //把后面的空格补上
+        function after(year,month){
+            var str = '';
+            var num = 42 - (getFirstWeekDay(year,month)===0?6:getFirstWeekDay(year,month)-1) - getMonthDay(year,month);
+            for(var i = 1;i <= num;i++){
+                str += '<li class="after">' + i + '</li>';
+            }
+            oUl.innerHTML += str;
+        }
+        //初始化
+        function tab(year,month){
+            year = parseInt(year);
+            month = parseInt(month);
+            before(year,month);
+            addDay(year,month);
+            after(year,month);
+        }
+        tab( oYear.innerHTML,oMonth.innerHTML);
+        function 
+    </script>
+</body>
+</html>

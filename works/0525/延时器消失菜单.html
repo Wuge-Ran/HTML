@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>延时器消失菜单</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #tlist{
+            box-sizing: border-box;
+            width: 780px;
+            height: 54px;
+            padding: 5px;
+            border-radius: 4px;
+            background-image:linear-gradient(0,#215a9c 40%,#7395bd);
+        }
+        #tlist li{
+            line-height: 44px;
+            color: #fff;
+            padding: 0 20px;
+            float: left;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+        #slist > li{
+            height: 40px;
+            background: #dee7ef;
+            padding: 0 30px;
+            margin-top: 10px;
+            position: absolute;
+            display: none;
+        }
+        #slist > li li{
+            cursor: pointer;
+        }
+        #slist > li li:hover{
+            text-decoration: underline;
+            color: #215a9c;
+        }
+        #slist > li:nth-child(1){
+            position: absolute;
+        }
+        #slist > li:nth-child(2){
+            left: 50px;
+        }
+        #slist > li:nth-child(3){
+            left: 100px;
+        }
+        #slist > li:nth-child(4){
+            left: 150px;
+        }
+        #slist ul li{
+            line-height: 40px;
+            float: left;
+            margin:0 5px;
+        }
+        #tlist div{
+            float: right;
+            line-height: 44px;
+            color: #fff;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="tlist">
+        <div>>>更多</div>
+    </ul>
+    <ul id="slist">
+        
+    </ul>
+    <script>
+        var arr_bar = ['首页','关于我们','作品','博客']
+        var tList = document.querySelector('#tlist');
+        var sList = document.querySelector('#slist');
+        var tList_aLi = tList.getElementsByTagName('li');
+        var sList_aLi = sList.getElementsByClassName('bar');
+        var text=[
+		['最近更新','活动','报名试听','学员反馈'],
+		['妙味讲师','培训方式','培训理念','联系我们'],
+		['般固','MATRIX','留学e网','ECMall'],
+		['JS教程','弹出层效果','3D球面标签云','Windows计算器']
+        ];
+        function tab(){
+            for(var i = 0;i<arr_bar.length;i++){
+                tList.innerHTML +='<li>' + arr_bar[i] + '</li>';
+                sList.innerHTML +='<li class="bar"><ul></ul></li>';
+            }            
+        }
+        tab();
+        var sList_aUl = document.querySelectorAll('#slist li ul');
+        function tab2(){
+            for(var i = 0;i<text.length;i++){
+                for(var j = 0;j<text[i].length;j++){
+                    sList_aUl[i].innerHTML +='<li>' +  text[i][j] + '</li>';
+                }
+            }
+        }
+        tab2();
+        var obj = null;
+        var obj2 = null;
+        var obj3 = null;
+        for(var i =0;i<arr_bar.length;i++){
+            tList_aLi[i].index = i;
+            sList_aLi[i].index = i;
+            tList_aLi[i].onmouseenter = function (){
+                this.style.backgroundColor = '#84a5c6';
+                if(obj){
+                    obj.style.display = '';
+                    // clearInterval(obj2.timer);
+                }
+                obj = sList_aLi[this.index];
+                sList_aLi[this.index].style.display = 'block';
+            }
+            tList_aLi[i].onmouseleave = function (){
+                this.style.backgroundColor = '';
+                obj2 = this;
+                // 鼠标移出时添加定时器
+               this.timer = setTimeout(function(){
+                    sList_aLi[obj2.index].style.display = 'none';
+                },500);
+                // console.log(this.timer);
+            }
+            sList_aLi[i].onmouseenter = function (){
+                // 鼠标移入下面的li时，清除定时器
+                clearInterval(tList_aLi[this.index].timer);
+            }
+            sList_aLi[i].onmouseout = function (){
+                obj3 = this;
+                //移出下面的li时把定时器添加上
+                tList_aLi[this.index].timer = setTimeout(function(){
+                    obj3.style.display = 'none';
+                },500);
+            }
+        }
+    </script>
+</body>
+</html>

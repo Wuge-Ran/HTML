@@ -10,6 +10,7 @@
 			// 封装一个方法，把传入的字符串的首字母转成大写,返回首字母转大写的字符串
 			var str = ""
 			function toFirstUpperCase(str){
+				str = str.trim();
 				// 把首字母转成大写
                 var fir = (str.charAt(0)).toUpperCase();
                 //后面的也获取到
@@ -17,12 +18,12 @@
                 //拼起来
 				return (fir + other);
 			}
-            console.log(toFirstUpperCase('happy'));
-			toFirstUpperCase('abc'); // "Abc"
+            console.log(toFirstUpperCase(' happy '));
 
 			// 2  封装一个方法,把传入的字符串的每一个单词的首字母转成大写，返回转成大写的字符串
 
 			function toAllUpperCase(str){
+				str = str.trim();
 				// 每一个参数转成大写
                 var arr = str.split(" ");
                 var aTrans = new Array();
@@ -32,6 +33,7 @@
                 var result =  aTrans.join(' ');
 				return 	result	
 			}
+			console.log(toAllUpperCase('          i am wang i very smart            '));
 			toAllUpperCase('i am wang i very smart'); // 'I Am Wang I Very Smart'
 		</script>
 	</head>

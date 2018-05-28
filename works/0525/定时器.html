@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>定时器</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        #box{
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button>循环播放</button>
+        <button>停止</button>
+    </div>
+    <script>
+        var arr = ['1.png','2.png','3.jpg'];
+        var oDiv = document.querySelector('#box');
+        var btns = document.getElementsByTagName('button');
+        var timer = null;
+        var n = 1;
+        oDiv.style.backgroundImage = 'url(img/'+ arr[0] +')';
+        btns[0].onclick = function (){
+            clearInterval(timer);
+            timer = setInterval(cir,500);
+        }
+        btns[1].onclick = function (){
+            clearInterval(timer);
+        }
+        function cir(){
+            oDiv.style.backgroundImage = 'url(img/'+ arr[n] +')';
+            n++;
+            n %= arr.length;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+            background: red;
+            text-align: center;
+            font:18px/50px '微软雅黑';
+            color: #fff;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <button>向前</button>
+    <button>向后</button>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <script>
+        var btns = document.querySelectorAll('button');
+        var ul = document.querySelector('ul');
+        var aLi = document.querySelectorAll('li');
+        var arr = new Array();
+        function tab(){
+            for(var i =0;i<aLi.length;i++){
+                aLi[i].innerHTML = arr[i];
+            }
+        }
+        for(var i =0;i<aLi.length;i++){
+            arr[i] = aLi[i].innerHTML;
+        }
+        btns[0].onclick = function (){
+            arr.push(arr.shift());
+            tab();
+        }
+        btns[1].onclick = function (){
+            arr.unshift(arr.pop());
+            tab();
+        }
+    </script>
+</body>
+</html>

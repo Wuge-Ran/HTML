@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>filter</title>
+</head>
+<body>
+    <button><18岁</button>
+    <ul id="tlist"></ul>
+    <script>
+        var btn = document.querySelector('button');
+        var oUl = document.querySelector('#tlist');
+        var arr = [
+            {
+                name:'duoduo',
+                age:31
+            },
+            {
+                name:'rwg',
+                age:24
+            },
+            {
+                name:'fe',
+                age:29
+            },
+            {
+                name:'Bar',
+                age:17
+            }
+        ]
+        function fn(array){
+            oUl.innerHTML = array.map(function (item){
+                return '<li>姓名：' + item.name + '年龄: '+ item.age + '岁' + '</li>';
+            }).join('');
+        } 
+        fn(arr);
+        btn.onclick = function (){
+            var newArr = arr.filter(function (item){
+                return item.age<18;
+            });
+            fn(newArr); 
+        }
+    </script>
+</body>
+</html>

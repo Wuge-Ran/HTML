@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+    </ul>
+</body>
+<script>
+    var oUl = document.querySelector('ul');
+    var btns = document.getElementsByTagName('button');
+    var arr = [
+        {
+          name:'duoduo',
+          age:18  
+        },
+        {
+          name:'aa',
+          age:19  
+        },
+        {
+          name:'bb',
+          age:20  
+        }
+    ]
+    function tab(){
+        for(var i = 0;i<arr.length;i++){
+            oUl.innerHTML +='<li>\
+                                <span>姓名：'+ arr[i].name +'</span>\
+                                <span>年龄：'+ arr[i].age +'岁</span>\
+                                <button>删除</button>\
+                            </li>'
+        }
+        dele();
+    }
+    tab();
+    function dele(){
+        for(var i = 0;i<btns.length;i++){
+            btns[i].index = i;
+            btns[i].onclick = function (){
+                arr.splice(this.index,1);
+                oUl.innerHTML = '';
+                tab();
+            }
+        }
+    }
+</script>
+</html>

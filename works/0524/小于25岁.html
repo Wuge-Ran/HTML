@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <button id="btn"><25岁的</button>
+		<ul id="list">
+			<!-- <li>
+				姓名：XXXX
+				性别：XXXX
+				年龄：XXXX
+			</li>
+			<li>
+				姓名：XXXX
+				性别：XXXX
+				年龄：XXXX
+			</li> -->
+        </ul>
+        <script>
+            var btn = document.querySelector('#btn');
+            var oUl = document.querySelector('#list');
+            var users = [
+				{
+					name: 'leo1',
+					sex:'男',
+					age:30
+				},
+				{
+					name: 'leo2',
+					sex:'女',
+					age:18
+				},
+				{
+					name: 'leo2',
+					sex:'女',
+					age:20
+				},
+				{
+					name: 'leo2',
+					sex:'女',
+					age:50
+				}
+			];
+            oUl.innerHTML = users.map(function(item){
+                return '<li>\
+                            姓名：' + item.name + '\
+                            性别：' + item.sex + '\
+                            年龄：' + item.age + '\
+                        </li>'
+            }).join();
+            btn.onclick = function (){
+                var newArr = users.filter(function(item){
+                    return item.age<25;
+                });
+                oUl.innerHTML = newArr.map(function(item){
+                       '<li>\
+                            姓名：' + item.name + '\
+                            性别：' + item.sex + '\
+                            年龄：' + item.age + '\
+                        </li>'
+                }).join();
+            }
+        </script>
+</body>
+</html>

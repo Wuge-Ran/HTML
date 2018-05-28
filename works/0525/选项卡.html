@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <div>红</div>
+    <div>黄</div>
+    <div>蓝</div>
+    <script>
+        var btns = document.querySelectorAll('button');
+        var divs = document.querySelectorAll('div');
+        var index = null;
+
+        for(var i =0;i<btns.length;i++){
+                tab(i);
+        }
+        function tab(i){
+           btns[i].onclick = function (){
+               if(index!==null){
+                   divs[index].style.display = 'none';
+               }
+               index = i;
+               divs[i].style.display = 'block';
+
+           }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自动生成</title>
+</head>
+<body>
+    <ul>
+
+    </ul>
+</body>
+<script>
+    var oUl = document.querySelector('ul');
+    var aBtn = document.getElementsByTagName('button');
+    var arr = [
+        {
+            name:'momo',
+            age:18
+        },
+        {
+            name:'baibao',
+            age:20
+        },
+        {
+            name:'gege',
+            age:24
+        }
+    ]
+    function tab(){
+        for(var i =0;i<arr.length;i++){
+            oUl.innerHTML +='<li>\
+                                <span>' + '姓名:' + arr[i].name + '</span>\
+                                <span>' + '年龄:' + arr[i].age + '</span>\
+                                <button>' +  '删除' + '</button>\
+                             </li>'
+        }
+        dele();
+    }
+    tab()
+    function dele(){
+        for(var i =0;i<aBtn.length;i++){
+            aBtn[i].index = i;
+            aBtn[i].onclick = function (){
+                arr.splice(this.index,1);
+                oUl.innerHTML = '';
+                tab();
+            }
+        }
+    }
+</script>
+</html>

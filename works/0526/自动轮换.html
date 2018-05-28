@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        #box{
+            width: 480px;
+            height: 212px;
+            margin: 0 auto; 
+        }
+        #head li{
+            float: left;
+            line-height: 45px;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+        #head .active{
+            background-color: #005a63;
+            color: #fff;
+        }
+        #cont>li{
+            display: none;
+            width: 450px;
+            height: 135px;
+        }
+        #cont .show{
+            display: block;
+        }
+        img{
+            float: left;
+            width: 300px;
+            height: 100%;
+        }
+        .textList{
+            float: left;
+        }
+        .textList li{
+            text-align: center;
+            width: 150px;
+            height: 44px;
+            line-height: 44px;
+        }
+        .textList .active{
+            background-color: #639cc6;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="head" class="clearfix">
+        </ul>
+        <ul id="cont">
+
+        </ul>
+    </div>
+    <script>
+         var arr = [{title : '菜单一',subtitle : ['图片1','图片2','图片3'],
+         pics : ['img/1.png','img/2.png','img/3.png']},
+         { title : '菜单二',subtitle : ['图片4','图片5','图片6'],
+         pics : ['img/1.jpg','img/2.jpg','img/3.jpg']}];
+         var oHead = document.querySelector('#head');
+         var oCont = document.querySelector('#cont');
+        //  初始化
+        for(var i = 0;i<arr.length;i++){
+            oHead.innerHTML +='<li>' + arr[i].title + '</li>';
+            oCont.innerHTML +='<li></li>';
+        }
+        var head_lis = document.querySelectorAll('#head li');
+        var cont_lis = document.querySelectorAll('#cont li');
+        head_lis[0].className = 'active';
+        cont_lis[0].className = 'show';
+        for(var i = 0;i<arr.length;i++){      
+            cont_lis[i].innerHTML ='<img src="" alt="">\
+                                        <ul class="textList">\
+                                        </ul>' 
+        }
+        var texts = document.querySelectorAll('.textList');
+        var imgs = document.querySelectorAll('img');
+        imgs[0].src = 'img/1.png';
+        for(var i = 0;i<arr.length;i++){
+            for(var j = 0;j<arr[i].subtitle.length;j++){
+                texts[i].innerHTML +='<li>' + arr[i].subtitle[j] + '</li>';
+            }
+        }
+        var text_lis1 = texts[0].querySelectorAll('li');
+        var text_lis2 = texts[1].querySelectorAll('li');
+        var arr_lis = [text_lis1,text_lis2];
+        text_lis1[0].className = 'active';
+        //自动轮播
+        function autoPlay(){
+            var n = 0;
+            var m = 0;
+            var obj = text_lis1[0];
+            var obj2 = head_lis[0];
+            var obj3 = cont_lis[0];
+            var timer = setInterval(function (){
+                n++;
+                if (n === arr[0].pics.length){
+                    n = 0;
+                    m++
+                    m %= arr.length;
+                    obj2.className = '';
+                    head_lis[m].className = 'active';
+                    obj2 = head_lis[m];
+                    obj3.className = '';
+                    cont_lis[m].className = 'show';
+                    obj3 = cont_lis[m];
+                };
+                imgs[m].src = arr[m].pics[n];
+                obj.className = '';
+                arr_lis[m][n].className = 'active';
+                obj = arr_lis[m][n];
+            },1000);
+        };
+        autoPlay();
+    </script>
+</body>
+</html>
