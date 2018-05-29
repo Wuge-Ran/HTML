@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+		<div id="calendar">
+			<div class="left-datas">
+				<div class="datas-select-header">
+					<div class="datas-year">
+						<select>
+
+						</select>
+					</div>
+					<div class="datas-month">
+						<button><</button>
+						<select>
+							<option value="1">1月</option>
+							<option value="2">2月</option>
+							<option value="3">3月</option>
+							<option value="4">4月</option>
+                            <option value="5">5月</option>
+                            <option value="6">6月</option>
+                            <option value="7">7月</option>
+                            <option value="8">8月</option>
+                            <option value="9">9月</option>
+                            <option value="10">10月</option>
+                            <option value="11">11月</option>
+                            <option value="12">12月</option>
+						</select>
+						<button>></button>
+					</div>
+					<button>返回今天</button>
+				</div>
+				<div class="datas-mian">
+					<div class="datas-header">
+						<span>一</span>
+						<span>二</span>
+						<span>三</span>
+						<span>四</span>
+						<span>五</span>
+						<span>六</span>
+						<span>日</span>
+					</div>
+					<div class="datas-content">
+					</div>
+				</div>
+			</div>
+			<div class="right-show">
+				<p class="current-ymd"></p>
+				<div class="current-data-box">
+					<p class="current-data"></p>
+				</div>
+			</div>
+		</div>
+		<script>
+            // 设置当天的日期
+            var currentYmd = document.querySelector('.current-ymd');
+            var currentData = document.querySelector('.current-data');
+            var datasYear = document.querySelector('.datas-year select');
+            var datasMonth = document.querySelector('.datas-month select');
+            var datasContent = document.querySelector('.datas-content');
+            var week = ['日','一','二','三','四','五','六']
+            var date = new Date();
+            var curYear = date.getFullYear();
+            var curMonth = (date.getMonth()+1) > 10? date.getMonth()+1 : '0' + (date.getMonth()+1);
+            var curDate = date.getDate() > 10? date.getDate() : '0' + date.getDate();
+            var curDay = date.getDay();
+
+            currentYmd.innerHTML = curYear + '-' +  curMonth + '-' + curDate + '  ' + '星期' + week[curDay];
+            currentData.innerHTML = curDate;
+            for(var i = 1990;i <= 2030; i++){
+                datasYear.innerHTML += '<option value="'+ i +'">' + i + '</option>'; 
+            }
+            datasYear.selectedIndex = curYear-1990;
+            datasMonth.selectedIndex = curMonth-1;
+            //设置取到当前月有几号，当月一号是周几的方法
+            function thisMonthDayNum(year,month){
+                var date = new Date(year,month,0);
+                return date.getDate();
+            }
+            function MonthFirstWeekDay(year,month){
+                var date = new Date(year,month-1,1);
+                return date.getDay();
+            }
+            //添加前面的span
+            function addBefore(year,month){
+                var date = new Date(year,month-1,0);
+                var before = date.getDate();
+                var str ='';
+                var arr = [];
+                var arr2 = [];
+                //先把上一个月的日子存起来
+                for(var i = 1;i<=before;i++){
+                    arr[i-1]=i;
+                }
+                // 颠倒一下
+                arr.reverse();
+                var num = (MonthFirstWeekDay(year,month)-1) === -1?6: (MonthFirstWeekDay(year,month)-1);
+                // 然后用新数组再把num以内的数字收集起来
+                for(var i =0;i<num;i++){
+                    arr2[i]=arr[i];
+                }
+                //再颠倒一下就可以加进去了
+                arr2.reverse();
+                for(var j = 0;j<num;j++){
+                    str += '<span class="other-date">' + arr2[j] +'</span>';
+                }
+                datasContent.innerHTML += str;
+            }
+            //添加这个月的日期span
+            function addCont(year,month){
+                var str ='';
+                var num = thisMonthDayNum(year,month);
+                for(var i = 0;i < num;i++){
+                    if(curDate===i+1){
+                        str += '<span class="current-date">' + (i+1) + '</span>'
+                    }else{
+                        str += '<span>' + (i+1) + '</span>'
+                    }
+                }
+                datasContent.innerHTML += str;
+            }
+            //添加后面的span
+            function addAfter(year,month){
+                var str = '';
+                var num = 42 -((MonthFirstWeekDay(year,month)-1) === -1?6: (MonthFirstWeekDay(year,month)-1))-(thisMonthDayNum(year,month));
+                for(var i = 0;i<num;i++){
+                    str += '<span class="other-date">' + (i+1) +'</span>';
+                } 
+                datasContent.innerHTML += str;
+            }
+            //初始化方法
+            var nowY = null;
+            var nowM = null;
+            var nowD = null;
+            function tab(year,month){
+                datasContent.innerHTML = '';
+                var date = new Date(year,month-1);
+                nowY = date.getFullYear();
+                nowM = (date.getMonth()+1) > 10? date.getMonth()+1 : '0' + (date.getMonth()+1);
+                addBefore(nowY,nowM);
+                addCont(nowY,nowM);
+                addAfter(nowY,nowM);
+            }
+            tab(curYear,curMonth);
+            //加减月份，注意保持年份一致;
+            var minus = document.querySelectorAll('button')[0];
+            var plus = document.querySelectorAll('button')[1];
+            var backToday = document.querySelectorAll('button')[2];
+            minus.onclick = function (){
+                curMonth--;
+                tab(curYear,curMonth);
+                datasYear.selectedIndex = nowY-1990;
+                datasMonth.selectedIndex = nowM-1;
+            }
+            plus.onclick = function (){
+                curMonth++;
+                tab(curYear,curMonth);
+                datasYear.selectedIndex = nowY-1990;
+                datasMonth.selectedIndex = nowM-1;
+            }
+            //年份跟月份的下拉菜单
+            datasYear.onchange = function (){
+                curYear = this.value;
+                tab(curYear,curMonth);
+            }
+            datasMonth.onchange = function (){
+                curMonth = this.value;
+                tab(curYear,curMonth);
+            }
+            //返回今天
+            backToday.onclick = function (){
+                var date = new Date();
+                nowY = date.getFullYear();
+                nowM = date.getMonth()+1;
+                console.log(nowY,nowM);
+                tab(nowY,nowM);
+                datasYear.selectedIndex = nowY-1990;
+                datasMonth.selectedIndex = nowM-1;
+            }
+		</script>
+	</body>
+</html>

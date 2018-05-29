@@ -36,7 +36,11 @@
             float: left;
             border: 1px solid white;
         }
-
+        button{
+            width: 40px;
+            height: 20px;
+            
+        }
     </style>
 </head>
 <body>
@@ -70,44 +74,38 @@
     </div>
     <script>
         var oUl = document.querySelector('#tlist');
-        var oYear = document.querySelector('.year');
-        var oMonth = document.querySelector('.month');
+        var oYear = document.getElementsByClassName('year')[0];
+        var oMonth = document.getElementsByClassName('month')[0];
         // 初始化
         var date = new Date();
-        oYear.innerHTML = date.getFullYear() + '年';
-        oMonth.innerHTML = date.getMonth()+1 + '月';
+        var thisYear = date.getFullYear();
+        var thisMonth = date.getMonth()+1;
         // 用方法获取该月的天数
         function getMonthDay(year,month){
-            var date = new Date();
-            date.setFullYear(year);
-            date.setMonth(month);
-            date.setDate(0);
+            var date = new Date(year,month,0);
             return date.getDate();
         }
         // 用方法获取该月第一天是周几
         function getFirstWeekDay(year,month){
-            var date = new Date();
-            date.setFullYear(year);
-            date.setMonth(month-1);
-            date.setDate(1);
+            var date = new Date(year,month-1,1);
             return date.getDay();
         }
         //把前面的空白填上
         function before(year,month){
-            var afterMonth = getMonthDay(year,month-1);
+            var beforeMonth = getMonthDay(year,month-1);
             var arr = [];
             var arr2 = [];
-            var num = getFirstWeekDay(year,month);
+            var num = getFirstWeekDay(year,month)==0?6:getFirstWeekDay(year,month)-1;
             var str = '';
-            for(var i = 0;i<afterMonth;i++){
+            for(var i = 0;i<beforeMonth;i++){
                 arr[i] = i+1;
             }
             arr.reverse();
-            for(var i = 0;i < num-1;i++){
+            for(var i = 0;i < num;i++){
                 arr2[i] = arr[i];
             }
             arr2.reverse();
-            for(var i = 1;i < num;i++){
+            for(var i = 1;i <= num;i++){
                 str += '<li class = "before">' + arr2[i-1] + '</li>';
             }
             oUl.innerHTML += str;
@@ -124,7 +122,7 @@
         //把后面的空格补上
         function after(year,month){
             var str = '';
-            var num = 42 - (getFirstWeekDay(year,month)===0?6:getFirstWeekDay(year,month)-1) - getMonthDay(year,month);
+            var num = 42 - (getFirstWeekDay(year,month)==0?6:getFirstWeekDay(year,month)-1) - getMonthDay(year,month);
             for(var i = 1;i <= num;i++){
                 str += '<li class="after">' + i + '</li>';
             }
@@ -132,14 +130,35 @@
         }
         //初始化
         function tab(year,month){
-            year = parseInt(year);
-            month = parseInt(month);
+            var date = new Date(year,month-1);
+            oYear.innerHTML = date.getFullYear() + '年';
+            oMonth.innerHTML = date.getMonth()+1 + '月';
+            oUl.innerHTML = '';
             before(year,month);
             addDay(year,month);
             after(year,month);
         }
-        tab( oYear.innerHTML,oMonth.innerHTML);
-        function 
+        tab(thisYear,thisMonth);
+        var yMinus = document.querySelector('.yMinus');
+        var yPlus = document.querySelector('.yPlus');
+        var mMinus = document.querySelector('.mMinus');
+        var mPlus = document.querySelector('.mPlus');
+        yMinus.onclick = function (){
+           thisYear--;
+           tab(thisYear,thisMonth);
+        }
+        yPlus.onclick = function (){
+            thisYear++;
+            tab(thisYear,thisMonth);
+        }
+        mMinus.onclick = function (){
+            thisMonth--;
+            tab(thisYear,thisMonth);
+        }
+        mPlus.onclick = function (){
+            thisMonth++;
+            tab(thisYear,thisMonth);
+        }
     </script>
 </body>
 </html>
