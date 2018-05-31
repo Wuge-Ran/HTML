@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>递归</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id='box'>
+            
+    </div>
+</body>
+<script>
+    var arr = [
+        {
+            title:'标题1',
+            children:[
+                {
+                    title:'标题1-1',
+                    children:[
+                        {
+                            title:'标题1-1-1'
+                        }
+                    ]
+                },
+                {
+                    title:'标题1-2'
+                }
+            ]
+        },
+        {
+            title:'标题2',
+        },
+        {
+            title:'标题3',
+            children:[
+                {
+                    title:'标题3-1',
+                    children:[
+                        {
+                            title:'标题3-1-1'
+                        }
+                    ]
+                },
+                {
+                    title:'标题3-2'
+                }
+            ]
+        }
+    ]
+    var oBox = document.querySelector('#box');
+    var str = '';
+    function tab(arr){
+        str += '<ul>'
+        for(var i =0;i<arr.length;i++){
+            str +='<li><span>' + arr[i].title + '</span>';
+            if(arr[i].children){
+                tab(arr[i].children);
+            }
+            str += '</li>';
+        }
+        str += '</ul>'
+        return str;
+    }
+    // function createUl(data){
+	// 			var html = '<ul>'
+	// 			for( var i = 0; i < data.length; i++ ){
+	// 				html += '<li><span>'+data[i].title+'</span>';
+
+	// 				if(data[i].children){
+	// 					// 传入一个数组，返回ul结构
+	// 					html += createUl(data[i].children)
+	// 				}
+
+	// 				html += '</li>'	
+	// 			}	
+
+	// 			html += '</ul>'
+
+	// 			return html;
+	// 		}
+
+    // function tab(arr){
+    //     str += '<ul>'
+    //     for(var i = 0;i < arr.length;i++){
+    //     str += '<li><span>' + arr[i].title + '</span>';
+    //         if(arr[i].children){
+    //             str += tab(arr[i].children);
+    //         }
+    //     str += '</li>';    
+    //     }
+    //     str += '<ul>'
+    //     return str;
+    // }
+    oBox.innerHTML = tab(arr);
+</script>
+</html>

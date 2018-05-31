@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮</button>
+    <div>
+
+    </div>
+</body>
+<script>
+    var oDiv = document.querySelector('div');
+    var btn = document.querySelector('button');
+    var timer = null;
+    btn.onmouseover = function (){
+        oDiv.style.display = 'block';
+    }
+    btn.onmouseout = function (){
+        timer = setTimeout (function (){
+            oDiv.style.display = 'none';
+        },200)
+    }
+    oDiv.onmouseover = function (){
+        clearTimeout(timer);
+    }
+    oDiv.onmouseout = function (){
+        oDiv.style.display = 'none';
+    }
+</script>
+</html>

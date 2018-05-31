@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="slide.css" />
+		<style type="text/css">
+			body{
+				background-color: #ffd800;
+			}
+			.nav .blue {
+				background-color: blue;
+			}
+			.pic img {
+				opacity: 0;
+			}
+		</style>
+		<script>
+			/*
+				当给一个元素添加样式，如没有起作用，第一反应
+
+					检查元素
+			*/
+		</script>
+	</head>
+
+	<body>
+		<div class="slide">
+			<div class="pic">
+				<img src="./ads/1.png" style="opacity: 1;" />
+				<img src="./ads/2.png" />
+				<img src="./ads/3.png" />
+				<img src="./ads/4.png" />
+				<img src="./ads/5.png" />
+			</div>
+			<div class="prev"></div>
+			<div class="next"></div>
+		</div>
+		<script>
+
+			/*
+				1. 左右切换，切换透明度，transition
+				2. 进到网页之后，图片自动切换
+				3. 左右切换的时候，自定切换的停止；
+				4. 离开左右切换的按钮开始继续自动切换
+			*/
+
+			var next = document.querySelector('.next');
+			var imgs = document.querySelectorAll('.pic img');
+			var len = imgs.length;
+			var n = 0;  // 记录展示的图片下标
+			// 切下一张
+			next.onclick = function (){
+				imgs[n].style.opacity = 0;
+				n++;
+				if(n > len - 1) {
+					n = 0;
+				}
+				imgs[n].style.opacity = 1;
+			}
+
+			setInterval(function (){
+				imgs[n].style.opacity = 0;
+				n++;
+				if(n > len - 1) {
+					n = 0;
+				}
+				imgs[n].style.opacity = 1;	
+			},1000)
+		</script>
+	</body>
+
+</html>

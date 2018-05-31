@@ -175,12 +175,11 @@
             //返回今天
             backToday.onclick = function (){
                 var date = new Date();
-                nowY = date.getFullYear();
-                nowM = date.getMonth()+1;
-                console.log(nowY,nowM);
-                tab(nowY,nowM);
-                datasYear.selectedIndex = nowY-1990;
-                datasMonth.selectedIndex = nowM-1;
+                curYear = date.getFullYear();
+                curMonth = date.getMonth()+1;
+                tab(curYear,curMonth);
+                datasYear.selectedIndex = curYear-1990;
+                datasMonth.selectedIndex = curMonth-1;
             }
 		</script>
 	</body>

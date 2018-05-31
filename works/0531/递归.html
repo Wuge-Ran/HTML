@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>递归</title>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    var oBox = document.querySelector('#box');
+    var list = [
+				{
+					title: '菜单1_1',
+					children: [
+						{
+							title: '菜单2_1'
+						},
+						{
+							title: '菜单2_2'
+						},
+						{
+							title: '菜单2_3'
+						}
+					]
+				},
+				{
+					title: '菜单1_2'
+				},
+				{
+					title: '菜单1_3',
+					children: [
+						{
+							title: '菜单2_1'
+						},
+						{
+							title: '菜单2_2',
+							children: [
+								{
+									title: '3'
+								},
+								{
+									title: '3',
+									children: [
+										{
+											title: '4'
+										},
+										{
+											title: '4'
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+    
+    function tab(arr){
+        var str = '<ul>'
+        for(var i = 0;i < arr.length;i++){
+            str += '<li><span>' + arr[i].title + '</span>';
+                if(arr[i].children){
+                    str += tab(arr[i].children);
+                }
+            str += '</li>';    
+            }
+        str += '</ul>';
+        return str;
+    }
+    oBox.innerHTML = tab(list);
+</script>
+</html>

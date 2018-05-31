@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="slide.css" />
+		<style type="text/css">
+			body{
+				background-color: #ffd800;
+			}
+			.nav .blue {
+				background-color: blue;
+			}
+			.pic img {
+				opacity: 0;
+			}
+		</style>
+		<script>
+			/*
+				当给一个元素添加样式，如没有起作用，第一反应
+
+					检查元素
+			*/
+		</script>
+	</head>
+
+	<body>
+		<div class="slide">
+			<div class="pic">
+				<img src="./ads/1.png" style="opacity: 1;" />
+				<img src="./ads/2.png" />
+				<img src="./ads/3.png" />
+				<img src="./ads/4.png" />
+				<img src="./ads/5.png" />
+			</div>
+			<div class="prev"></div>
+			<div class="next"></div>
+		</div>
+		<script>
+			var aImg = document.getElementsByTagName('img');
+			var oPrev = document.getElementsByClassName('prev')[0];
+			var oNext = document.getElementsByClassName('next')[0];
+			var n = 0;
+			var timer = null;
+			function autoPlay(){
+					timer = setInterval(function (){
+					aImg[n].style.opacity = 0;
+					n++;
+					if(n>aImg.length-1){
+						n=0
+					}
+					aImg[n].style.opacity = 1;
+				},1500);
+			}
+			autoPlay();
+			oPrev.onmouseover = function (){
+				clearInterval(timer);
+			};
+			oPrev.onmouseout = function (){
+				autoPlay();
+			};
+			oNext.onmouseover = function (){
+				clearInterval(timer);
+			};
+			oNext.onmouseout = function (){
+				autoPlay();
+			};
+			oPrev.onclick = function (){
+				aImg[n].style.opacity = 0;
+				n--;
+				if(n<0){
+					n=aImg.length-1;
+				}
+				aImg[n].style.opacity = 1;
+			};
+			oNext.onclick = function (){
+				aImg[n].style.opacity = 0;
+				n++;
+				if(n>aImg.length-1){
+					n=0
+				}
+				aImg[n].style.opacity = 1;
+			};
+		</script>
+	</body>
+
+</html>
