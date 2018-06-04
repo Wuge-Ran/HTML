@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倒计时</title>
+</head>
+<body>
+<script>
+    var future = new Date('2018 8 1 00:00:00');
+    var futureTime = future.getTime();
+    function addZero(n){
+        return n<10 ? '0' + n : n;
+    }
+    function tab(){
+        var now = new Date();
+        var nowTime = now.getTime();
+        var difference = (futureTime - nowTime)/1000;
+        var day = addZero(parseInt(difference/84600));
+        var hour = addZero(parseInt(difference%84600/3600));
+        var mins = addZero(parseInt(difference%84600%3600/60));
+        var secs = addZero(parseInt(difference%60));
+        var str = day + '天' + hour + '时' + mins + '分钟' + secs + '秒';
+        console.log(str);
+    }
+    tab();
+    setInterval(tab,1000);
+</script>
+</body>
+</html>

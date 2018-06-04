@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        textarea,p{
+            margin: 0;
+            width: 700px;
+            height: 400px;
+            float: left;
+            font-size: 24px;
+            border: 1px solid royalblue;
+        }
+        p{
+            word-break: break-all;
+        }
+        .m{
+            float: left;
+            padding: 130px 20px 0 20px;
+            height: 270px;
+            width: 110px;
+        }
+        .btn{
+            height: 80px;
+            background-color: darkturquoise;
+            font: 18px/80px '微软雅黑';
+            text-align: center;
+            color: #fff;
+            user-select: none;
+            cursor: pointer;
+        }
+        .count{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <textarea class="input"></textarea>
+    <div class="m">
+        <div class="btn">把文字右移</div>
+        <div class="count">
+            <span class="num"></span>
+            <span>/</span>
+            <span class="all"></span>
+        </div>
+    </div>
+    <p></p>
+    <script>
+        var btn = document.querySelector('.btn');
+        var input = document.querySelector('.input');
+        var  p = document.querySelector('p');
+        var all = document.querySelector('.all');
+        var num = document.querySelector('.num');
+        var bl = true;
+        btn.onclick = function (){
+            if(!bl) return;
+            p.innerHTML = '';
+            num.innerHTML = 0;
+            var n = 0;
+            var str = input.value;
+            var str2 = '';
+            all.innerHTML  = str.length;
+            btn.timer = setInterval(function (){
+                bl = false
+                if(input.value === ''){
+                    clearInterval(btn.timer);
+                    bl = true;
+                    return
+                }
+                str2 = str.substring(0,1);
+                str = str.substring(1);
+                input.value = str;
+                p.innerHTML += str2;
+                n++;
+                num.innerHTML = n;
+            },20)
+        }
+    </script>
+</body>
+</html>

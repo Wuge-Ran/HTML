@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for in</title>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        function creat(option){
+            var defaults = {
+                width:100,
+                height:100,
+                bg: 'red',
+            }
+            for(var key in option){
+                defaults[key] = option[key];
+            }
+            var str = '<div style="width:'+defaults.width+'px;height:'+defaults.height+'px;background:'+defaults.bg+';"></div>';
+            return str;
+        }
+        var oBox = document.querySelector('#box');
+        document.onclick = function (){
+            oBox.innerHTML = creat({
+                width:200,
+                bg: 'blue'
+            });
+        }
+    </script>
+</body>
+</html>

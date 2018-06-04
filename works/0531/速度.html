@@ -14,20 +14,67 @@
     </style>
 </head>
 <body>
-    <button>按钮</button>
+    <button>加宽</button>
+    <button>加高</button>
+    <button>停下</button>
     <div></div>
 </body>
+<script src="tools.js"></script>
 <script>
-    var btn = document.querySelector('button');
+    //  time 已过时间
+    //  begin 起始值
+    //  count 总的运动值
+    //  duration 持续时间
+    //  ele 想要变换的元素
+    //  attr 想要变换的属性
     var oDiv = document.querySelector('div');
-    var date = new Date();
-    btn.onclick = function (){
+    var btns = document.querySelectorAll('button');
+    function oAttr(ele,attr,change){
+        if(arguments.length ===2){
+            return getComputedStyle(ele)[attr];
+        }
+        ele.style[attr] = change + 'px';
+    }
+    function tweenMove(obj){
+        var def = {
+            ele : null,
+            attr : null,
+            target : null,
+            duration : 3000,
+            way : 'linear',
+            callback:function (){}
+        } 
+        for(var key in obj){
+            def[key] = obj[key];
+        }
+        var ele = def.ele;
+        var attr = def.attr;
+        var begin = parseFloat(oAttr(ele,attr));
+        var count = def.target -begin;
+        var duration = def.duration;
+        var way = def.way;
         var start = Date.now();
-        var timer = setInterval(function (){
-            var now = Date.now();
-            var time = now - start;
-            
-        },500);
+        ele['timer_' + attr] = setInterval(function (){
+            var time = Date.now()-start;
+            if( time>duration ){
+                time = duration;
+                ele['timer_' + attr] = null;
+                clearInterval(ele['timer_' + attr]);
+            }
+            var value = Tween[way](time,begin,count,duration);
+            oAttr(ele,attr,value);
+            if(time === duration){
+                callback();
+            }
+        })
+    }
+    btns[0].onclick = function (){
+        tweenMove({
+            ele:oDiv,
+            attr:'width',
+            target:1000,
+            duration:1000
+        })
     }
 </script>
 </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <style>
+            #box{
+                display: flex;
+            }
+            #box > div{
+                height: 210px;
+                overflow: hidden;
+            }
+            img{
+                display: block;
+            }
+            .item>div{
+                position: relative;
+            }
+        </style>
+        <script src="tools.js"></script>
+    </head>
+
+    <body>
+        <div id="box">
+            <div class="item">
+                <div>
+                    <img src="img/0.png" alt="">
+                    <img src="img/1.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/0.png" alt="">
+                    <img src="img/1.png" alt="">
+                </div>
+            </div>
+            <div class="point item">
+                <div>
+                    <img src="img/fuh.png" alt="">
+                </div>
+                
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/0.png" alt="">
+                    <img src="img/1.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/0.png" alt="">
+                    <img src="img/1.png" alt="">
+                </div>
+            </div>
+            <div class="point item">
+                <div>
+                    <img src="img/fuh.png" alt="">
+                </div>
+                
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/0.png" alt="">
+                    <img src="img/1.png" alt="">
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img src="img/0.png" alt="">
+                    <img src="img/1.png" alt="">
+                </div>
+            </div>
+        </div>
+        <script>
+            var box = document.querySelector('#box');
+            var oDiv = document.querySelectorAll('#box>div');
+            var points = document.querySelectorAll('.point img');
+            var bar = document.querySelectorAll('.item>div');
+            function addZero(num){
+                return num >= 10 ? num : '0' + num;
+            }
+            //封装一下得到当前时间的函数
+            function getNow(){
+                var date = new Date();
+                var hour = date.getHours(),
+                    mins = date.getMinutes(),
+                    sec  = date.getSeconds(),
+                    str  =  addZero(hour) + ':' + addZero(mins) + ':' + addZero(sec);
+                    return str;
+            }
+            
+            //初始化
+                var str = getNow();
+                for(var i = 0;i < oDiv.length;i++){
+                    if(str[i] === ':' ){
+                        continue;
+                    }else{
+                        oDiv[i].querySelectorAll('img')[0].src = 'img/' + str[i] + '.png';
+                    }
+                    
+                }
+            //:闪烁在外部设置开关切换状态，每600ms闪一次
+            var bl = true;
+            setInterval (function(){
+                if(bl){
+                    for(var i = 0;i<points.length;i++){
+                        points[i].src = 'img/nfh.png';
+                        bl = false;
+                    }                    
+                }else{
+                    for(var i = 0;i<points.length;i++){
+                        points[i].src = 'img/fuh.png';
+                        bl = true;
+                    }    
+                }
+            },600)
+            function move(i){
+                bar[i].querySelectorAll('img')[1].src = 'img/' + str[i] + '.png';
+                // console.log(i)
+                tweenMove({
+                    ele:bar[i],
+                    attr:'top',
+                    target:-210,
+                    duration:800,
+                    callback:function (){
+                        // console.log(i)
+                        bar[i].querySelectorAll('img')[0].src = 'img/' + str[i] + '.png';
+                        oAttr(bar[i],'top',0);
+                    }
+                })
+            }
+            var oldTime = getNow();
+            setInterval(function (){
+                str = getNow();
+                    for(var i = 0;i < oDiv.length;i++){
+                        if(str[i] === ':' ){
+                            continue;
+                        }else if(oldTime[i]!==str[i]){
+                            // console.log(i);
+                            move(i)
+                        }
+                }
+                //储存一下上一次的时间
+                oldTime = str;
+            },1000) 
+        </script>
+    </body>
+</html>
