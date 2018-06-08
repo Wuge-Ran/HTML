@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+    <ul id="list">
+        <!--哈哈哈-->
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var oList = document.querySelector('#list');
+        console.log(oList.children);
+        console.log(oList.children[0].nodeType);
+        console.log(oList.attributes[0].nodeName);
+        console.log(oList.children[0].nodeName);
+        console.log(oList.childNodes[1].nodeName);
+      oList.lastElementChild.style.background = 'red';
+      console.log(oList.children[0].parentElement);
+    </script>
+</body>
+</html>

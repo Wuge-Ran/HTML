@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="请输入内容">
+    <button>全选</button>
+    <script>
+        var input = document.querySelector('input');
+        var btn = document.querySelector('button');
+        input.onfocus = function (){
+            if(input.value === "请输入内容"){
+                input.value = '';
+            }
+        }
+        input.onblur = function (){
+            if(input.value === "")
+            input.value = "请输入内容";
+        }
+        btn.onclick  = function (){
+            input.select();
+        }
+    </script>
+</body>
+</html>

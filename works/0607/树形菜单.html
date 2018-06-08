@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        span{
+            display: block;
+            padding-left: 20px;
+            user-select: none;
+            cursor: pointer;
+        }
+        .unshow{
+            background: url(img/plus.png) no-repeat 0 center;
+        }
+        .show{
+            background: url(img/minus.png) no-repeat 0 center;
+        }
+        .display{
+            display: block;
+        }
+        ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var body = document.querySelector('body');
+    var str = '';
+    var arr = [{
+        title:'第一级菜单',
+        child:[{
+            title:'第二级菜单',
+        },{
+            title:'第二级菜单',
+            child:[{
+                title:'第三级菜单',
+            },{
+                title:'第三级菜单',
+                child:[{
+                    title:'第四级菜单'
+                }]
+            },{
+                title:'第三级菜单',
+            }]
+        }
+        ]
+    },{
+        title:'第一级菜单',
+        child:[
+            {
+                title:'第二级菜单'
+            },
+            {
+                title:'第二级菜单',
+                child:[
+                    {
+                        title:'第三级菜单',
+                    }
+                ]
+            }
+        ]
+    },{
+        title:'第一级菜单',
+        child:[
+            {
+                title:'第二级菜单',
+                child:[
+                    {
+                        title:'第三级菜单',
+                        child:[
+                    {
+                        title:'第四级菜单',
+                    }
+                ]
+                    },{
+                        title:'第三级菜单' 
+                    }
+                ]
+            }
+        ]
+    }]
+    function tab(arr){
+        var html = '';
+        html += '<ul>';
+        for(var i = 0;i < arr.length;i++){
+            html += '<li><span>' + arr[i].title + '</span>';
+            if(arr[i].child){
+                html += tab(arr[i].child);
+            }
+            html += '</li>'
+        }
+        html += '</ul>';
+        return html
+    }
+    body.innerHTML = tab(arr);
+    var firstUl = body.children;
+    firstUl[0].style.display = 'block';
+    var span = document.querySelectorAll('span');
+    for(var i = 0;i < span.length;i++){
+        if(span[i].nextElementSibling){
+            span[i].className = 'unshow';
+        }
+    }
+    function addClick(ul){
+        var aLi = ul.children;
+        for(var i = 0;i < aLi.length;i++){
+            var span = aLi[i].firstElementChild;
+            console.log(span);
+           if(!span.onclick){
+               console.log('加上点击事件')
+            span.onclick = function (){
+                var bl = this.nextElementSibling.classList.toggle('display');
+                if(bl){
+                    addClick(this.nextElementSibling);
+                }
+            }
+           } 
+        } 
+    }
+    addClick(body.children[0]);
+</script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        span{
+            display: block;
+            padding-left: 20px;
+            user-select: none;
+            cursor: pointer;
+        }
+        .unshow{
+            background: url(img/plus.png) no-repeat 0 center;
+        }
+        .show{
+            background: url(img/minus.png) no-repeat 0 center;
+        }
+        ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<script>
+    var body = document.querySelector('body');
+    var str = '';
+    var arr = [{
+        title:'第一级菜单',
+        child:[{
+            title:'第二级菜单',
+        },{
+            title:'第二级菜单',
+            child:[{
+                title:'第三级菜单',
+            },{
+                title:'第三级菜单',
+                child:[{
+                    title:'第四级菜单'
+                }]
+            },{
+                title:'第三级菜单',
+            }]
+        }
+        ]
+    },{
+        title:'第一级菜单',
+        child:[
+            {
+                title:'第二级菜单'
+            },
+            {
+                title:'第二级菜单',
+                child:[
+                    {
+                        title:'第三级菜单',
+                    }
+                ]
+            }
+        ]
+    },{
+        title:'第一级菜单',
+        child:[
+            {
+                title:'第二级菜单',
+                child:[
+                    {
+                        title:'第三级菜单',
+                        child:[
+                    {
+                        title:'第四级菜单',
+                    }
+                ]
+                    },{
+                        title:'第三级菜单' 
+                    }
+                ]
+            }
+        ]
+    }]
+    function tab(arr){
+        var html = '';
+        html += '<ul>';
+        for(var i = 0;i < arr.length;i++){
+            html += '<li><span>' + arr[i].title + '</span>';
+            if(arr[i].child){
+                html += tab(arr[i].child);
+            }
+            html += '</li>'
+        }
+        html += '</ul>';
+        return html
+    }
+    body.innerHTML = tab(arr);
+    var firstUl = body.children;
+    firstUl[0].style.display = 'block';
+    var span = document.querySelectorAll('span');
+    for(var i = 0;i < span.length;i++){
+        if(span[i].nextElementSibling){
+            span[i].className = 'unshow';
+        }
+    }
+    function point(aUl){
+        var firstLi = aUl.children;
+        for(var i = 0;i < firstLi.length;i++){
+            firstLi[i].firstElementChild.turnOff = false;
+            firstLi[i].firstElementChild.onclick = function (){
+                
+                if(!this.nextElementSibling) return;
+                var borUl = this.nextElementSibling;
+                var fUl = this.parentNode.parentNode;
+                var cUl = fUl.querySelectorAll('ul');
+                for(var i = 0;i < cUl.length;i++){
+                    if(cUl[i]!==borUl){
+                        
+                        cUl[i].style.display = 'none';
+                        cUl[i].previousElementSibling.className = 'unshow';
+                        cUl[i].previousElementSibling.turnOff = false;
+                    }
+                }    
+                if(this.turnOff){
+
+                    this.nextElementSibling.style.display = 'none';
+                    this.className = 'unshow';
+                    this.turnOff = false;
+                }else{
+                    this.nextElementSibling.style.display = 'block';
+                    this.className = 'show';
+                    this.turnOff = true;
+                }
+        } 
+    }
+}
+    var aUl = document.querySelectorAll('ul');
+   for(var i = 0;i < aUl.length;i++){
+        point(aUl[i]);
+   }
+    
+</script>
+</body>
+</html>

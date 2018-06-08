@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加评论</title>
+</head>
+<body>
+    <div id="miaov"></div>
+    <input type="" name="" id="message" />
+    <input type="button" value="提交" id="send" />
+    <ul id="list">
+        <!-- <li>11 <button>删除</button>	</li> -->
+    </ul>
+    <script>
+        var send = document.querySelector('#send');
+        var oUl = send.nextElementSibling;
+        send.onclick = function (){
+            var value = send.previousElementSibling.value;
+            var li = document.createElement('li');
+            var btn = document.createElement('button');
+            li.innerText = value;
+            if(oUl.firstChild){
+                oUl.insertBefore(li,oUl.firstChild);
+            }else{
+                oUl.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

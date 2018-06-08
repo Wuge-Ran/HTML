@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>center</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            border:2px solid red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id='box'></div>
+    <script>
+        function renew(){
+            var box = document.querySelector('#box');
+            var docW = document.documentElement.clientWidth;
+            var docH = document.documentElement.clientHeight;
+            var divW = box.offsetWidth;
+            var divH = box.offsetHeight;
+            box.style.top = (docH - divH)/2 + 'px';
+            box.style.left = (docW - divW)/2 + 'px';
+        }
+        renew();
+        window.onresize = function (){
+            renew();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图片懒加载</title>
+    <style>
+        img{
+            width: 600px;
+            height: 500px;
+            display: block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="img/loading.gif" _src="img/1.jpg" />
+        <img src="img/loading.gif" _src="img/1.jpg" />
+        <img src="img/loading.gif" _src="img/1.jpg" />
+        <img src="img/loading.gif" _src="img/1.jpg" />
+        <img src="img/loading.gif" _src="img/1.jpg" />
+        <img src="img/loading.gif" _src="img/1.jpg" />
+        <img src="img/loading.gif" _src="img/1.jpg" />
+        <img src="img/loading.gif" _src="img/1.jpg" />
+    </div>
+    <script>
+        window.onload = function (){
+            var aImg = document.querySelectorAll('img');
+            var h = document.documentElement.clientHeight;
+            var imgH = aImg[0].offsetHeight;
+            function isView(img){
+                var imgTop = img.getBoundingClientRect().top;
+                return (imgTop+imgH)<0 ? false:imgTop < h;
+            }
+            for(var i = 0;i < aImg.length;i++){
+                if(isView(aImg[i])){
+                    aImg[i].src = aImg[i].getAttribute('_src');
+                    aImg[i].removeAttribute('_src');
+                }
+            }
+            window.onscroll = function (){
+                for(var i = 0;i < aImg.length;i++){
+                    var _src = aImg[i].getAttribute('_src');
+                    if(isView(aImg[i])&&_src){
+                        aImg[i].src = _src;
+                        aImg[i].removeAttribute('_src');
+                    }
+                } 
+            }
+        }
+    </script>
+</body>
+</html>

@@ -5,15 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>倒计时</title>
+    <link rel="stylesheet" href="css/global.css">
+    <style>
+        img{
+            display: block;
+        }
+        .item{
+            height: 210px;
+            overflow: hidden;
+        }
+        .item div{
+            position: relative;
+        }
+    </style>
+    <script src="tools.js"></script>
 </head>
 <body>
+    <div id="box" class="clearfix">
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+        <div class="item point fl">
+            <div>
+                <img src="img/fuh.png" alt="">
+            </div>
+        </div>
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+        <div class="item point fl">
+            <div>
+                <img src="img/fuh.png" alt="">
+            </div>
+        </div>
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+        <div class="item point fl">
+            <div>
+                <img src="img/fuh.png" alt="">
+            </div>
+        </div>
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+        <div class="item fl">
+            <div>
+                <img src="img/0.png" alt="">
+                <img src="img/0.png" alt="">
+            </div>
+        </div>
+    </div>
 <script>
-    var future = new Date('2018 8 1 00:00:00');
+    var future = new Date('2018 6 5 12:00:00');
+    var bar = document.querySelectorAll('.item div')
     var futureTime = future.getTime();
     function addZero(n){
         return n<10 ? '0' + n : n;
     }
-    function tab(){
+    //定义方法获取str
+    function newTime(){
         var now = new Date();
         var nowTime = now.getTime();
         var difference = (futureTime - nowTime)/1000;
@@ -21,11 +102,44 @@
         var hour = addZero(parseInt(difference%84600/3600));
         var mins = addZero(parseInt(difference%84600%3600/60));
         var secs = addZero(parseInt(difference%60));
-        var str = day + '天' + hour + '时' + mins + '分钟' + secs + '秒';
-        console.log(str);
+        var str = day + ':' + hour + ':' + mins + ':' + secs ;
+        return str;
     }
-    tab();
-    setInterval(tab,1000);
+    //初始化
+    var newT = newTime();
+    var html = '';
+    for(var i = 0;i < bar.length;i++){
+        if(newT[i] === ':'){
+            continue;
+        }else{
+            bar[i].querySelectorAll('img')[0].src = 'img/' + newT[i] + '.png';  
+        }
+    }
+    var oldTime = newTime();
+    function change(i){
+        bar[i].querySelectorAll('img')[1].src = 'img/' + newT[i] + '.png';
+            tweenMove({
+                ele:bar[i],
+                attr:'top',
+                target:-210,
+                duration:600,
+                callback:function(){
+                    bar[i].querySelectorAll('img')[0].src = 'img/' + newT[i] + '.png';
+                    oAttr(bar[i],'top',0);
+                }
+            })
+    }
+    setInterval(function (){
+        newT =  newTime();
+        for(var i = 0;i < oldTime.length;i++){
+            if(oldTime[i] ===':'){
+                continue;
+            }else if(oldTime[i] !== newT[i]){
+                change(i);
+            } 
+        }
+        oldTime = newT;
+    },1000);
 </script>
 </body>
 </html>

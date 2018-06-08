@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>懒加载</title>
+</head>
+<body>
+    <img src="img/loading.gif" alt="" _src="img/goddess.jpg">
+    <button>按钮</button>
+    <script>
+        var btn = document.querySelector('button');
+        btn.onclick = function (){
+            var _src = btn.previousElementSibling.getAttribute('_src');
+            if(_src){
+                btn.previousElementSibling.src = _src;
+                btn.previousElementSibling.removeAttribute('_src');
+            }
+        }
+    </script>
+</body>
+</html>

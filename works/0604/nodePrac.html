@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        .none{
+            background: greenyellow;
+        }
+        .active{
+            background-color: aqua;
+        }
+        .aside{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="none">f</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li class="none">l</li>
+    </ul>
+    <script>
+        var oUl = document.querySelector('ul');
+        var aLi = oUl.children;
+        for(var i = 0;i < aLi.length;i++){
+            aLi[i].onmouseover = function (){
+                if(this === oUl.firstElementChild || this === oUl.lastElementChild){
+                    return;
+                }
+                this.classList.add('active');
+
+                this.nextElementSibling.classList.add('aside');
+                this.previousElementSibling.classList.add('aside');
+                oUl.firstElementChild.classList.remove('aside');
+                oUl.lastElementChild.classList.remove('aside');
+            }
+            aLi[i].onmouseout = function (){
+                this.classList.remove('active');
+                this.nextElementSibling.classList.remove('aside');
+                this.previousElementSibling.classList.remove('aside');
+            }
+        }
+    </script>
+</body>
+</html>

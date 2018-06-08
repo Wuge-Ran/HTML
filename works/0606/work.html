@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加作业</title>
+    <style>
+        #box{
+            width: 1050px;
+            height: 747px;
+            margin: 10px auto;
+        }
+        ul{
+            height: 170px;
+        }
+        #box button{
+            display: block;
+            margin-top: 5px;
+        }
+        #box>div{
+            margin-left: 440px;
+        }
+        ul{
+            overflow: hidden;
+        }
+        li{
+            list-style: none;
+            width: 125px;
+            height: 125px;
+            float: left;
+            background: url(img/file.png) no-repeat;
+            border: 1px solid transparent;
+            position: relative;
+        }
+        li:hover{
+            border: 1px solid red;
+        }
+        li div{
+            margin-top:100px; 
+        }
+        i{
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .unchecked{
+            background-image: url(img/unchecked.png);
+        }
+        .checked{
+            background-image: url(img/checked.png);
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul></ul>
+        <div>
+            <button>新建文件夹</button>
+            <button>删除文件夹</button>
+        </div>
+    </div>
+    <script>
+        var oUl = document.querySelector('ul');
+        var btn = document.querySelectorAll('button');
+        btn[0].onclick = function (){
+            var newLi = document.createElement('li');
+            var i = document.createElement('i');
+            var newDiv = document.createElement('div');
+            newDiv.innerText = '新建文件夹';
+            newLi.appendChild(i);
+            newLi.appendChild(newDiv);
+            oUl.appendChild(newLi);
+            var aLi = oUl.querySelectorAll('li');
+            for(var i = 0;i < aLi.length;i++){
+                if(!aLi[i].turnoff){
+                    aLi[i].turnoff = false;
+                }
+                aLi[i].onmouseover = function (){
+                    this.firstElementChild.classList.add('unchecked');
+                }
+                aLi[i].onmouseout = function (){
+                    this.firstElementChild.classList.remove('unchecked');
+                }
+                aLi[i].onclick = function (){
+                    if(this.turnoff){
+                        this.firstElementChild.classList.remove('checked');
+                        this.firstElementChild.classList.add('unchecked');
+                        this.turnoff = false;
+                    }else{
+                        this.firstElementChild.classList.remove('unchecked');
+                        this.firstElementChild.classList.add('checked');
+                        this.turnoff = true;
+                    }
+                }
+            }
+        } 
+        btn[1].onclick = function (){
+            var aLi = oUl.querySelectorAll('li');
+            for(var i = 0;i < aLi.length;i++){
+                if(aLi[i].turnoff){
+                    console.log(aLi[i].turnoff);
+                    oUl.removeChild(aLi[i]);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

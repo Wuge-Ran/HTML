@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>滚动居中</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+        }
+        body{
+            height: 4000px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        var oBox = document.querySelector('#box');
+        var boxH = oBox.offsetWidth;
+        var boxW = oBox.offsetHeight;
+        function renew(){
+            var viewH = document.documentElement.clientHeight;
+            var viewW = document.documentElement.clientWidth;
+            oBox.style.left = (viewW - boxW)/2 + 'px';
+            oBox.style.top = (viewH - boxH)/2 + 'px';
+        }
+        renew();
+        window.onresize = function (){
+            renew();
+            var viewH = document.documentElement.clientHeight;
+            oBox.style.top = ((viewH - boxH)/2 + document.documentElement.scrollTop) + 'px';
+        }
+        window.onscroll = function (){
+            var viewH = document.documentElement.clientHeight;
+            oBox.style.top = ((viewH - boxH)/2 + document.documentElement.scrollTop) + 'px';
+            console.log(oBox.getBoundingClientRect().top);
+        }
+    </script>
+</body>
+</html>
