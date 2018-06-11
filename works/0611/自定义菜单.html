@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>仿select</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<section class="warp">
+		<div class="searchIpt clearFix">
+			<div class="clearFix">
+				<input type="text" class="keyWord" value="">
+				<input type="button" value="GO">
+				<span></span>
+			</div>
+			<ul class="list">
+				<li>html+css</li>
+				<li>html5+css3</li>
+				<li>javascript</li>
+				<li>angular</li>
+				<li>react</li>
+				<li>vue</li>
+				<li>jquery</li>
+				<li>nodejs</li>
+			</ul>
+		</div>
+	</section>
+
+	<script>
+		var keyWord = document.querySelector('.keyWord');
+		var list = document.querySelector('.list');
+		var lis = list.querySelectorAll('li');
+        var searchIpt = document.querySelector('.searchIpt');
+        keyWord.onfocus = function (){
+            list.style.display = 'block';
+        }
+        //这边拦截一下click的冒泡
+        searchIpt.onclick = function (ev){
+            ev.stopPropagation();
+        }
+        //存一下上一个对象然后删除
+        var obj = null;
+        for(var i = 0;i < lis.length;i++){
+            lis[i].onclick = function (ev){
+                if(obj){
+                    obj.classList.remove('active');
+                }
+                this.classList.add('active');
+                obj = this;
+                keyWord.value = this.innerText;
+				list.style.display = 'none';
+            }
+        }
+        document.onclick = function (){
+            list.style.display = 'none';
+        }
+	</script>
+</body>
+</html>

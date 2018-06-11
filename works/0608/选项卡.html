@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			div {
+				width: 300px;
+				height: 300px;
+				background: red;
+				display: inline-block;
+                color: #fff;
+			}
+
+			.blue {
+				background: blue;
+			}
+		</style>
+		<script>
+			/*https://www.baidu.com/
+			https://www.baidu.com/s?wd=11&rsv_spt=1
+			http://www.sohu.com/a/234546817_163726
+			file:///F:/miaov/%E8%AF%BE%E4%BB%B6/2018-05-08%E7%8F%AD%E7%BA%A7/2018-06-08/test.html
+
+			https://www.baidu.com/index.html
+
+			地址：协议:// 域名:端口/路径/路径/路径/资源（html）?search值#hash值
+
+				http://www.miaov.com:80/home/index.html?miaov=ketang&video=study#vip=123&videoId=456
+		
+			    https/http:// 			===>	protocol 	传输协议
+			    miaov.com 			===>	host name 	主机名
+			    80  				===>	port		端口   
+			    home/index.html 		===>	path 		路径
+			    ?miaov=ketang&video=study ===>	search 		查询数据
+			    #vip=123&videoId=456 	===>    hash 		锚点
+			*/
+
+			/*
+				hash值用处
+					锚点 定位页面资源 改变不刷新页面
+					存储一些信息，在刷新页面之后，方便获取信息
+
+				window.location
+					地址栏的信息
+
+				window.location.href 地址栏的地址
+					可读可写
+
+					window.location.href = '地址' 跳转到地址
+
+				window.location.hash 获取地址栏的hash值
+					可读可写
+			*/
+
+		</script>
+	</head>
+
+	<body>
+		<div>
+			新闻
+		</div>
+		<div>
+			娱乐
+		</div>
+        <div>
+            体育
+        </div>
+        <script>
+            var divs = document.querySelectorAll('div');
+            var obj = new Object();
+            var hash = window.location.hash;
+            if(hash){
+                hash = hash.substring(1);
+                divs[hash-1].className = 'blue';
+                obj = divs[hash-1];
+            }
+            
+            for(var i = 0;i < divs.length;i++){
+                divs[i].index = i+1;
+                divs[i].onclick = function (){
+                    if(obj){
+                        obj.className = '';
+                    }
+                    this.className = 'blue';
+                    obj = this;
+                    window.location.hash = this.index;
+                }
+            }
+        </script>
+	</body>
+</html>

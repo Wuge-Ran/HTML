@@ -30,7 +30,7 @@
             var aImg = document.querySelectorAll('img');
             var h = document.documentElement.clientHeight;
             var imgH = aImg[0].offsetHeight;
-            function isView(img){
+         function isView(img){
                 var imgTop = img.getBoundingClientRect().top;
                 return (imgTop+imgH)<0 ? false:imgTop < h;
             }

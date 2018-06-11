@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            width: 100px;
+            height: 200px;
+            background: red;
+            transition: 1s;
+            position: absolute;
+            left: -100px;
+            top: 300px;
+        }
+        #div2{
+            width: 30px;
+            height: 60px;
+            position: absolute;
+            right: -30px;
+            top: 80px;
+            background: black;
+            word-break: break-all;
+            color: #fff;
+            user-select: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">share</div>
+    </div>
+    <script>
+        div1.onmouseover = function (){
+            this.style.left = 0;
+        }
+        div1.onmouseout = function (){
+            
+            this.style.left = -100 + 'px';
+        }
+    </script>
+</body>
+</html>

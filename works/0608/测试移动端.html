@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+ var arr = ['iPhone','iPad','Android'];
+ var userAgent = window.navigator.userAgent;
+ function isMobile(userAgent){
+    var n =0;
+    for(var i = 0;i<arr.length;i++){
+        if(userAgent.indexOf(arr[i])!==-1){
+            n++;
+        }
+    }
+    if(n!==0){
+        alert('是移动端');
+    }else{
+        alert('不是移动端');
+    }
+ }
+ isMobile(userAgent);
+ </script>   
+</body>
+</html>
