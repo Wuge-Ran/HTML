@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 3000px;
+    }
+    input{
+        width: 400px;
+        height: 50px;
+        font-size: 24px;
+    }
+</style>
+<body>
+    <input type="text" value="0">
+    <script>
+        var input = document.querySelector('input');
+        var scrollTop = true;
+        function addWheel(el,fnTop,fnDown){
+            el.onmousewheel = scroll;
+            el.addEventListener('D-OMMouseScroll',scroll);
+            function scroll(e){
+                if(e.wheelDelta){
+                    scrollTop = e.wheelDelta > 0 ? true : false;
+                }else if(e.detail){
+                    scrollTop = e.wheelDelta > 0 ? false : true;
+                }
+                if(scrollTop){
+                    typeof fnTop === 'function' && fnTop();
+                }else{
+                    typeof fnDown === 'function' && fnDown();
+                }
+                e.preventDefault();
+            }
+        }
+        addWheel(input,function (){
+            input.value = ++input.value;
+        },function (){
+            input.value = --input.value;
+        })
+    </script>
+</body>
+</html>

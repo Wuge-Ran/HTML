@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        body{
+            height: 4000px;
+        }
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/1.png" alt="">
+    <script>
+        var img = document.querySelector('img');
+        var mouseX = 0,mouseY = 0,bl = false;
+        img.onmousedown = function (ev){
+            bl = true;
+            ev.preventDefault();
+            mouseX = ev.clientX - img.offsetLeft;
+            mouseY = ev.pageY - img.offsetTop;
+        }
+        document.onmousemove = function (ev){
+            if(bl){
+                img.style.top =(ev.pageY-mouseY)  + 'px';
+                img.style.left =(ev.clientX - mouseX) + 'px';
+            }
+        }
+        document.onmouseup = function (){
+            bl = false;
+        }
+    </script>
+</body>
+</html>

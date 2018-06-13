@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 200px;
+            height: 300px;
+            position: relative;
+            border: 1px solid black;
+            /* overflow:hidden; */
+        }
+        #scroll{
+            width: 20px;
+            height: 300px;
+            border-left: 1px solid red;
+            position: absolute;
+            top:0;
+            right: 0;
+        }
+        #bar{
+            width: 100%;
+            background-color: aqua;
+            position: absolute;
+        }
+        ul{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul></ul>
+        <div id="scroll">
+            <div id="bar"></div>
+        </div>    
+    </div>
+    <script>
+        function getRect(el){
+            return el.getBoundingClientRect();
+        }
+        function addWheel(el,fnTop,fnDown){
+            el.onmousewheel = scroll;
+            el.addEventListener('DOMMouseScroll',scroll);
+            function scroll(e){
+                if(e.wheelDelta){
+                    scrollTop = e.wheelDelta > 0 ? true : false;
+                }else if(e.detail){
+                    scrollTop = e.wheelDelta > 0 ? false : true;
+                }
+                if(scrollTop){
+                    typeof fnTop === 'function' && fnTop();
+                }else{
+                    typeof fnDown === 'function' && fnDown();
+                }
+                e.preventDefault();
+            }
+        }
+        var box = document.querySelector('#box');
+        var ul = box.firstElementChild;
+        var scroll = ul.nextElementSibling;
+        var bar = scroll.firstElementChild;
+        var str = '';
+        for(var i = 0;i < 100;i++){
+            str += '<li>' + (i+1) + '</li>';
+        }
+        
+        ul.innerHTML = str;
+        var barHeight = box.clientHeight/box.scrollHeight*scroll.clientHeight;
+        bar.style.height = barHeight + 'px';
+        if(barHeight === scroll.clientHeight){
+            scroll.style.display = 'none';
+        }
+        var cont = box.scrollHeight
+        var minTop = 0;
+        var maxTop = scroll.clientHeight - bar.offsetHeight;
+        bar.onmousedown = function (e){
+            var mouseX = e.clientX - getRect(bar).left;
+            var mouseY = e.clientY - getRect(bar).top;
+            document.onmousemove = function (e){
+                var t = e.clientY - mouseY;
+                if(t < minTop) t = minTop;
+                if(t > maxTop) t = maxTop;
+                bar.style.top = t + 'px';
+                var ulTop = t/(scroll.clientHeight - bar.offsetHeight)*(cont-box.clientHeight);
+                ul.style.top = -ulTop + 'px';
+            }
+            document.onmouseup = function (){
+                document.onmouseup = document.onmousemove = null;
+            }
+            
+            e.preventDefault();
+        }
+        
+    </script>
+</body>
+</html>

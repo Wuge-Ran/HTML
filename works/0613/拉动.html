@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拉动</title>
+    <style>
+        div{
+            opacity: 0.5;
+            background: yellow;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var body = document.querySelector('body');
+        document.onmousedown = function (e){
+            var div = document.createElement('div');
+            body.appendChild(div);
+            var startX = e.clientX;
+            var startY = e.clientY;
+            div.style.top = e.clientY + 'px';
+            div.style.left = e.clientX + 'px';
+            console.log(div);
+            document.onmousemove = function (e){
+                div.style.top = Math.min(e.clientY,startY)   + 'px';
+                div.style.left = Math.min(e.clientX,startX)  + 'px';
+                div.style.width = Math.abs(e.clientX -startX) + 'px';
+                div.style.height = Math.abs(e.clientY -startY) + 'px';
+            }
+            document.onmouseup = function (){
+                document.onmousemove = document.onmouseup = null;
+            }
+        }
+    </script>
+</body>
+</html>

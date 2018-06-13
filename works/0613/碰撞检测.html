@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .item{
+            width: 150px;
+            height: 150px;
+            background: red;
+            float: left;
+            margin: 20px;
+        }
+        .mask{
+            opacity: 0.5;
+            background: yellow;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <script>
+        var divs = document.querySelectorAll('.item');
+        function getRect(el){
+            return el.getBoundingClientRect();
+        }
+        function hitText(hitEl,hitedEl){
+            var hit = getRect(hitEl);
+            var hited = getRect(hitedEl);
+            if(hit.right < hited.left||
+                hit.bottom < hited.top||
+                hit.left > hited.right||
+                hit.top > hited.bottom){
+                    return false;
+                }else{
+                    return true;
+                }
+        }
+        document.onmousedown = function (e){
+            var div = document.createElement('div');
+            document.body.appendChild(div);
+            div.classList.add('mask');
+            var startX = e.clientX;
+            var startY = e.clientY;
+            div.style.top = e.clientY + 'px';
+            div.style.left = e.clientX + 'px';
+            console.log(div);
+            document.onmousemove = function (e){
+                div.style.top = Math.min(e.clientY,startY)   + 'px';
+                div.style.left = Math.min(e.clientX,startX)  + 'px';
+                div.style.width = Math.abs(e.clientX -startX) + 'px';
+                div.style.height = Math.abs(e.clientY -startY) + 'px';
+                for(var i = 0;i < divs.length;i++){
+                    if(hitText(div,divs[i])){
+                        divs[i].style.backgroundColor = 'green';
+                    }else{
+                        divs[i].style.backgroundColor = 'red';
+                    }
+                }
+                
+            }
+            document.onmouseup = function (){
+                document.onmousemove = document.onmouseup = null;
+                div.remove();
+            }
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>

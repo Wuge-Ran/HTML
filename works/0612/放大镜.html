@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #mask{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+        }
+        #mask img{
+            width: 1240px;
+            position: relative;
+            left: 0;
+        }
+        .block{
+            width: 200px;
+            height: 200px;
+            opacity: 0.5;
+            background-color: yellow;
+            position: absolute;
+        }
+        #preview{
+            display: inline-block;
+            margin: 0 auto;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="preview">
+        <div class="block"></div>
+        <img src="img/cristiano.jpg" alt="">
+    </div>
+    <div id="mask">
+        <img src="img/cristiano.jpg" alt="">
+    </div>
+    <script>
+        window.onload = function (){
+            var preview = document.querySelector('#preview');
+            var block = document.querySelector('.block');
+            var mask = document.querySelector('#mask');
+            var bImg = mask.firstElementChild;
+            function getRect(el){
+                return el.getBoundingClientRect();
+            }
+            var minTop = 0;
+            var minLeft = 0;
+            var maxTop = preview.clientHeight - block.offsetHeight;
+            var maxWidth = preview.clientWidth - block.offsetWidth;
+            var maxBigT = bImg.clientHeight - mask.offsetHeight;
+            var maxBigL = bImg.clientWidth - mask.offsetWidth;
+            var t = 0;
+            var l = 0;
+            preview.onmousemove = function (e){
+                t = e.clientY - getRect(preview).top - block.offsetHeight/2;
+                l = e.clientX - getRect(preview).left - block.offsetWidth/2;
+                if(t < minTop) t = minTop;
+                if(l < minLeft) l = minLeft;
+                if(t > maxTop) t = maxTop;
+                if(l > maxWidth) l = maxWidth;
+                block.style.top = t + 'px';
+                block.style.left = l + 'px';
+                //公式推导：大图移动的距离 = 小图移动的距离/小图最大移动距离*大图可最大移动距离;
+                var bigImgT = t/maxTop*maxBigT;
+                var bigImgH = l/maxWidth*maxBigL;
+                bImg.style.top = -bigImgT+'px';
+                bImg.style.left = -bigImgH+'px';
+            }
+            preview.onmouseout = function (){
+                block.style.display = 'none';
+                mask.style.display = 'none';
+            }
+            preview.onmouseover = function (){
+                block.style.display = 'block';
+                mask.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
