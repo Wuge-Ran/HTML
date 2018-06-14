@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #hit{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: red;
+            z-index: 1;
+        }
+        #hited{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 0;
+            top:0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="hit"></div>
+    <div id="hited"></div>
+    <script>
+        var hit = document.querySelector('#hit');
+        var hited = document.querySelector('#hited');
+        function getRect(el){
+            return el.getBoundingClientRect();
+        }
+        function collision(hit,hited){
+            var hitL = getRect(hit).left;
+            var hitT = getRect(hit).top;
+            var hitR = getRect(hit).right;
+            var hitB = getRect(hit).bottom;
+            var hitedL = getRect(hited).left;
+            var hitedT = getRect(hited).top;
+            var hitedR = getRect(hited).right;
+            var hitedB = getRect(hited).bottom;
+            if(hitR < hitedL||hitB < hitedT||hitL > hitedR||hitT > hitedB){
+                return false;
+            }else{
+                return true;
+            }
+        }
+        hit.onmousedown = function (ev){
+            var mouseX = ev.clientX - getRect(hit).left;
+            var mouseY = ev.clientY - getRect(hit).top;
+            document.onmousemove = function (ev){
+                hit.style.top = ev.clientY - mouseY + 'px';
+                hit.style.left = ev.clientX - mouseX + 'px';
+                if(collision(hit,hited)){
+                    hited.style.background = 'blue';
+                }else{
+                    hited.style.background = 'red';
+                }
+            }
+            document.onmouseup = function (){
+                document.onmousemove = document.onmouseup = null;
+            }
+        }
+    </script>
+</body>
+</html>

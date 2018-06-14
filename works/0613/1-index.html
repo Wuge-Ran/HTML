@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+<link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="wrap" id="box">
+		<header class="head clear">
+			<h1 class="left">
+				<a class="logo" href="javascript:;"></a>
+				|
+				<a href="javascript:;">邮箱</a>
+			</h1>
+			<nav  class="left">
+				<a href="javascript:;">邮箱首页</a>|<a href="javascript:;">设置</a>
+			</nav>
+			<p class="hint1 left"></p>
+			<p class="hint2 left"></p>
+		</header>
+		<div class="section clear">
+			<div class="fuList left">
+				<ul class="fuListBig">
+					<li class="writeLetter">写信</li>
+					<li class="collectLetter">收信</li>
+					<li class="address">通讯录</li>
+				</ul>
+				<ul class="fuListSmall">
+					<li class="inbox active">收件箱</li>
+					<li class="StarMail">星标邮件</li>
+					<li class="groupMail">群邮件</li>
+					<li class="draftBox">草稿箱</li>
+					<li class="beenSent">已发送</li>
+					<li class="beenDel hover">已删除<a class="clearBtn" href="#">清空</a></li>
+					<li class="dustbin">垃圾箱<a class="clearBtn" href="#">清空</a></li>
+				</ul>
+			</div>
+			<div class="tBody left">
+				<div class="title">
+					收件箱(共96封,其中<a href="javascript:;">未读邮件</a>9封)
+				</div>
+				<div class="emailFunctions">
+					<a id="delet" href="javascript:;">删除</a>
+					<a href="javascript:;">彻底删除</a>
+					<a href="javascript:;">转发</a>
+					<a href="javascript:;">举报</a>
+					<a href="javascript:;">全部标为已读</a>
+					<a class="selectIcon" href="javascript:;">标记为...</a>
+					<a class="selectIcon" href="javascript:;">移动到...</a>
+				</div>
+				<div class="emailList" id="emailCheckList">
+					<header class="emailHead">
+						<input type="checkbox" />
+						<p><span></span><span></span></p>
+					</header>
+					<ul class="emailListUl">
+						<!-- <li>
+							<input type="checkbox">
+							<div>
+								<span>秒味课堂1</span>
+								<span>2015-12-30</span>
+							</div>
+							<p>JS拖拽的进一步学习,移动与拉伸JS拖拽的进一步练习</p>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div id="hint3" style="display:none;"></div>
+</body>
+
+<script src="js/data.js"></script>
+<script src="js/utils.js"></script>
+<script>
+	var emailListUl = document.querySelector('.emailListUl');
+	var headerCbox = document.querySelector('.emailHead input');
+	var hint3 = document.querySelector('#hint3');
+	var str = '';
+	for(var i = 0;i < list.length;i++){
+		str += '<li>\
+					<input type="checkbox">\
+					<div>\
+						<span>'+ list[i].caption +'</span>\
+						<span>'+ list[i].time +'</span>\
+					</div>\
+					<p>'+ list[i].desc +'</p>\
+				</li>'
+	}
+	emailListUl.innerHTML = str;
+	var all = false;
+	emailListUl.onclick = function (ev){
+		if(ev.target.nodeName ==='INPUT'){
+			var bl = ev.target.checked;
+			if(bl){
+				ev.target.parentNode.className = 'active';
+			}else{
+				ev.target.parentNode.className = '';
+			}
+		}
+		var lis = emailListUl.children;
+		for(var i = 0;i < lis.length;i++){
+			if(!lis[i].classList.contains('active')){
+				all = false;
+				break;
+			}else{
+				all = true;
+			}
+		}
+		if(all){
+			headerCbox.checked = true;
+		}else{
+			headerCbox.checked = false;
+		}
+	}
+	headerCbox.onclick = function (){
+		var lis = emailListUl.children;
+		if(headerCbox.checked){
+			for(var i = 0;i < lis.length;i++){
+				lis[i].className = 'active';
+				lis[i].firstElementChild.checked = true;
+			}
+			all = true;
+		}else{
+			for(var i = 0;i < lis.length;i++){
+				lis[i].className = '';
+				lis[i].firstElementChild.checked = false;
+			}
+			all = false;
+		}
+	}
+	var beenDel = document.querySelector('.beenDel'); 
+	emailListUl.onmousedown = function (ev){
+		//只能在勾选区域拖动才有效
+		if(ev.target.parentNode.className ==='') return;
+		var lis = emailListUl.children;
+		var n = 0;
+		for(var i = 0;i < lis.length;i++){
+			if(lis[i].className ==='active'){
+				n++;
+			}
+		}
+		var downX = ev.clientX;
+		var downY = ev.clientY;
+		document.onmousemove = function (ev){
+			if((Math.abs(downX-ev.clientX)>10||Math.abs(downY-ev.clientY)>10)){
+				hint3.innerText = '选中'+ n +'封邮件';
+				hint3.style.display = 'block';
+				hint3.style.top = ev.clientY + 'px';
+				hint3.style.left = ev.clientX + 'px';
+			}
+		}
+		document.onmouseup = function (){
+			if(collision(hint3,beenDel)){
+				var lis = emailListUl.querySelectorAll('.active');
+				for(var i = 0;i < lis.length;i++){
+					lis[i].remove();
+				}
+			}
+			hint3.style.display = 'none';
+			document.onmouseup = document.onmousemove = null;
+		}
+		ev.preventDefault();
+	}
+</script>
+
+</html>
+
